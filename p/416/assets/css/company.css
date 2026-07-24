@@ -1,0 +1,484 @@
+/* ============================================================
+   IDEATECH - Company Page Stylesheet  (prefix: ci-)
+   ダークモード・グランドデザインシステム準拠
+   ============================================================ */
+
+/* ----------------------------------------
+   1. 会社概要テーブル
+   ---------------------------------------- */
+.ci-overview {
+  background: var(--kuro2);
+}
+
+.ci-overview__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 96px 40px;
+}
+
+.ci-overview__header {
+  margin-bottom: 48px;
+}
+
+.ci-overview .section__label { color: var(--daidai); }
+.ci-overview .section__title { color: var(--shiro1); }
+
+.ci-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ci-table tr {
+  border-bottom: 0.5px solid var(--kuro4);
+}
+.ci-table tr:first-child {
+  border-top: 0.5px solid var(--kuro4);
+}
+
+.ci-table th {
+  width: 200px;
+  padding: 24px 0 24px 8px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--shiro1);
+  text-align: left;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.ci-table td {
+  padding: 24px 8px 24px 24px;
+  font-family: var(--font-mincho);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--shiro1);
+  line-height: 1.4;
+  vertical-align: top;
+}
+
+.ci-table td .ci-table__sub {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--shiro3);
+  margin-top: 4px;
+}
+
+.ci-table td ul li {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--shiro3);
+  line-height: 1.8;
+}
+
+.ci-table td ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ci-table td ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.ci-table td ul li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 8px;
+  background: var(--daidai);
+  flex-shrink: 0;
+  margin-top: 8px;
+}
+
+/* ----------------------------------------
+   2. 沿革（タイムライン）
+   ---------------------------------------- */
+.ci-history {
+  background: var(--kuro1);
+}
+
+.ci-history__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 96px 40px;
+}
+
+.ci-history__header {
+  margin-bottom: 64px;
+}
+
+.ci-history .section__label { color: var(--daidai); }
+.ci-history .section__title { color: var(--shiro1); }
+
+.ci-timeline {
+  position: relative;
+  max-width: 760px;
+}
+
+/* 縦線 */
+.ci-timeline::before {
+  content: '';
+  position: absolute;
+  left: 120px;
+  top: 0; bottom: 0;
+  width: 0.5px;
+  background: var(--kuro4);
+}
+
+.ci-timeline__item {
+  display: flex;
+  gap: 48px;
+  padding: 0 0 56px;
+  position: relative;
+}
+.ci-timeline__item:last-child { padding-bottom: 0; }
+
+.ci-timeline__year {
+  width: 120px;
+  flex-shrink: 0;
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--daidai);
+  text-align: right;
+  padding-top: 4px;
+}
+
+.ci-timeline__dot {
+  position: absolute;
+  left: 120px;
+  top: 8px;
+  width: 11px;
+  height: 11px;
+  background: var(--daidai);
+  border-radius: 8px;
+  transform: translateX(-5px);
+  flex-shrink: 0;
+}
+
+.ci-timeline__body {
+  padding-left: 20px;
+}
+
+.ci-timeline__event {
+  font-family: var(--font-mincho);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--shiro1);
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.ci-timeline__detail {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--shiro3);
+  line-height: 1.8;
+}
+
+/* ----------------------------------------
+   3. 事業内容
+   ---------------------------------------- */
+.ci-business {
+  background: var(--kuro2);
+}
+
+.ci-business__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 96px 40px;
+}
+
+.ci-business__header {
+  margin-bottom: 64px;
+}
+
+.ci-business .section__label { color: var(--daidai); }
+.ci-business .section__title { color: var(--shiro1); }
+.ci-business .section__desc { color: var(--shiro3); }
+
+.ci-biz-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* 5番目のカードを中央に */
+.ci-biz-grid .ci-biz-card:nth-child(4) {
+  grid-column: 1;
+}
+.ci-biz-grid .ci-biz-card:nth-child(5) {
+  grid-column: 2;
+}
+
+.ci-biz-card {
+  background: var(--kuro3);
+  border-radius: 8px;
+  padding: 36px 32px;
+  border: 0.5px solid var(--kuro4);
+}
+
+.ci-biz-card__num {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--daidai);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.ci-biz-card__icon {
+  width: 48px;
+  height: 48px;
+  background: var(--kuro1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: var(--daidai);
+}
+
+.ci-biz-card__title {
+  font-family: var(--font-mincho);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--shiro1);
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.ci-biz-card__desc {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--shiro3);
+  line-height: 1.8;
+}
+
+.ci-biz-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 16px;
+}
+
+.ci-biz-card__tag {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  background: var(--kuro1);
+  color: var(--shiro1);
+  padding: 3px 10px;
+  border-radius: 8px;
+  border: 0.5px solid var(--kuro4);
+  letter-spacing: 0.03em;
+}
+
+/* ----------------------------------------
+   4. アクセス
+   ---------------------------------------- */
+.ci-access {
+  background: var(--kuro1);
+}
+
+.ci-access__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 96px 40px;
+}
+
+.ci-access__header {
+  margin-bottom: 56px;
+}
+
+.ci-access .section__label { color: var(--daidai); }
+.ci-access .section__title { color: var(--shiro1); }
+
+.ci-access__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.ci-access__info-label {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--shiro3);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.ci-access__address {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--shiro1);
+  line-height: 1.7;
+  margin-bottom: 6px;
+}
+
+.ci-access__address-note {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--shiro3);
+  margin-bottom: 32px;
+}
+
+.ci-access__tel {
+  margin-bottom: 32px;
+}
+
+.ci-access__tel-num {
+  font-family: var(--font-heading);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--shiro1);
+  letter-spacing: 0.04em;
+}
+
+.ci-access__tel-label {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--shiro3);
+  margin-top: 4px;
+}
+
+.ci-access__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  background: var(--kuro3);
+  color: var(--shiro1);
+  border-radius: 8px;
+  border: 0.5px solid var(--kuro4);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+.ci-access__btn:hover {
+  background: var(--kuro4);
+  opacity: 1;
+}
+
+.ci-access__map {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 0.5px solid var(--kuro4);
+  aspect-ratio: 4/3;
+}
+
+.ci-access__map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* ----------------------------------------
+   5. CTA
+   ---------------------------------------- */
+.ci-cta {
+  background: var(--kuro2);
+}
+
+.ci-cta__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 96px 40px;
+  text-align: center;
+}
+
+.ci-cta__label {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  color: var(--daidai);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.ci-cta__title {
+  font-family: var(--font-mincho);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--shiro1);
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.ci-cta__desc {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--shiro3);
+  margin-bottom: 40px;
+}
+
+.ci-cta__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ----------------------------------------
+   6. Responsive
+   ---------------------------------------- */
+@media (max-width: 900px) {
+  .ci-biz-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ci-biz-grid .ci-biz-card:nth-child(4),
+  .ci-biz-grid .ci-biz-card:nth-child(5) {
+    grid-column: auto;
+  }
+  .ci-access__body {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .ci-overview__inner,
+  .ci-history__inner,
+  .ci-business__inner,
+  .ci-access__inner,
+  .ci-cta__inner {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .ci-table th {
+    width: 110px;
+    font-size: 13px;
+  }
+  .ci-table td {
+    font-size: 14px;
+  }
+
+  .ci-timeline::before { left: 80px; }
+  .ci-timeline__year { width: 80px; font-size: 14px; }
+  .ci-timeline__dot { left: 80px; }
+  .ci-timeline__item { gap: 28px; }
+
+  .ci-biz-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ci-access__tel-num { font-size: 20px; }
+}

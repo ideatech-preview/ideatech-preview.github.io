@@ -1,0 +1,867 @@
+/* ============================================================
+   IDEATECH - Seminar Page Stylesheet  (prefix: sm-)
+   グランドデザインシステム準拠
+   ============================================================ */
+
+/* ----------------------------------------
+   1. Hero（共通）
+   ---------------------------------------- */
+.sm-hero {
+  background: var(--kuro1);
+  padding-top: var(--header-h);
+  position: relative;
+  overflow: hidden;
+}
+
+.sm-hero__inner {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 72px 40px 80px;
+}
+
+.sm-hero__breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--shiro3);
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+.sm-hero__breadcrumb a { color: var(--shiro3); }
+.sm-hero__breadcrumb a:hover { color: var(--shiro1); opacity: 1; }
+.sm-hero__breadcrumb-sep { color: var(--kuro4); }
+.sm-hero__breadcrumb-current { color: var(--shiro3); }
+
+.sm-hero__label {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  color: var(--daidai);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.sm-hero__title {
+  font-family: var(--font-mincho);
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--shiro1);
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  margin-bottom: 20px;
+}
+
+.sm-hero__desc {
+  font-size: 16px;
+  color: var(--shiro3);
+  line-height: 1.8;
+  max-width: 520px;
+  margin-bottom: 48px;
+}
+
+.sm-hero__stats {
+  display: flex;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.sm-hero__stat-num {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--shiro1);
+  line-height: 1;
+}
+.sm-hero__stat-num span {
+  font-size: 16px;
+  font-weight: 700;
+  margin-left: 4px;
+  color: var(--shiro3);
+}
+
+.sm-hero__stat-label {
+  font-size: 13px;
+  color: var(--shiro3);
+  margin-top: 6px;
+  letter-spacing: 0.05em;
+}
+
+/* ----------------------------------------
+   2. 開催予定セミナー
+   ---------------------------------------- */
+.sm-upcoming {
+  background: var(--kuro2);
+}
+
+.sm-upcoming__inner {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 80px;
+}
+
+.sm-upcoming__header {
+  margin-bottom: 56px;
+}
+.sm-upcoming .section__label { color: var(--daidai); }
+.sm-upcoming .section__title { color: var(--shiro1); }
+.sm-upcoming .section__desc { color: var(--shiro3); }
+
+.sm-event-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.sm-event-card {
+  background: var(--shiro1);
+  border-radius: 8px;
+  border: 0.5px solid var(--shiro3);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.sm-event-card__head {
+  background: var(--shiro3);
+  padding: 24px 28px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.sm-event-card__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  background: var(--daidai);
+  color: var(--kuro1);
+  padding: 4px 10px;
+  border-radius: 8px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.sm-event-card__date-block {
+  flex: 1;
+}
+
+.sm-event-card__date {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--kuro1);
+  line-height: 1.4;
+}
+
+.sm-event-card__time {
+  font-size: 13px;
+  color: var(--kuro4);
+  margin-top: 4px;
+}
+
+.sm-event-card__body {
+  padding: 28px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.sm-event-card__category {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--daidai);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.sm-event-card__title {
+  font-family: var(--font-mincho);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--kuro1);
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.sm-event-card__desc {
+  font-size: 13px;
+  color: var(--kuro4);
+  line-height: 1.8;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.sm-event-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+  list-style: none;
+}
+
+.sm-event-card__meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--kuro4);
+}
+.sm-event-card__meta-item svg {
+  color: var(--daidai);
+  flex-shrink: 0;
+}
+
+.sm-event-card__foot {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ----------------------------------------
+   3. 過去セミナーアーカイブ
+   ---------------------------------------- */
+.sm-past {
+  background: var(--kuro3);
+}
+
+.sm-past__inner {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 80px;
+}
+
+.sm-past__header {
+  margin-bottom: 56px;
+}
+.sm-past .section__label { color: var(--daidai); }
+.sm-past .section__title { color: var(--shiro1); }
+.sm-past .section__desc { color: var(--shiro3); }
+
+.sm-past__list {
+  display: flex;
+  flex-direction: column;
+  border-top: 0.5px solid var(--kuro4);
+  list-style: none;
+}
+
+.sm-past-item {
+  display: grid;
+  grid-template-columns: 160px 1fr auto;
+  gap: 24px;
+  align-items: center;
+  padding: 28px 16px;
+  border-bottom: 0.5px solid var(--kuro4);
+  transition: background 0.15s;
+}
+
+.sm-past-item__date {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--shiro3);
+  flex-shrink: 0;
+}
+
+.sm-past-item__cat {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--daidai);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.sm-past-item__title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--shiro1);
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+
+.sm-past-item__meta {
+  font-size: 13px;
+  color: var(--shiro3);
+}
+
+.sm-past-item__action {
+  flex-shrink: 0;
+}
+
+.sm-past-item__nodl {
+  font-size: 13px;
+  color: var(--shiro3);
+}
+
+/* ----------------------------------------
+   4. セミナーの特徴
+   ---------------------------------------- */
+.sm-features {
+  background: var(--kuro1);
+}
+
+.sm-features__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 96px 40px;
+}
+
+.sm-features__header {
+  margin-bottom: 56px;
+}
+
+.sm-feat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.sm-feat-card {
+  background: var(--kuro3);
+  border: 0.5px solid var(--kuro4);
+  border-radius: 8px;
+  padding: 36px 28px;
+}
+
+.sm-feat-card__icon {
+  width: 48px;
+  height: 48px;
+  background: var(--kuro2);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--daidai);
+  margin-bottom: 20px;
+}
+
+.sm-feat-card__num {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--daidai);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.sm-feat-card__title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--shiro1);
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.sm-feat-card__desc {
+  font-size: 13px;
+  color: var(--shiro3);
+  line-height: 1.8;
+}
+
+/* ----------------------------------------
+   5. FAQ
+   ---------------------------------------- */
+.sm-faq {
+  background: var(--kuro2);
+}
+
+.sm-faq__inner {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 80px;
+}
+
+.sm-faq__header {
+  margin-bottom: 56px;
+}
+.sm-faq .section__label { color: var(--daidai); }
+.sm-faq .section__title { color: var(--shiro1); }
+
+.sm-faq-list {
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  list-style: none;
+}
+
+.sm-faq-item {
+  border: 0.5px solid var(--kuro4);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.sm-faq-item summary {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px;
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--shiro1);
+  line-height: 1.6;
+  background: var(--kuro3);
+}
+.sm-faq-item summary::-webkit-details-marker { display: none; }
+
+.sm-faq-item summary .sm-faq-item__chevron {
+  margin-left: auto;
+  flex-shrink: 0;
+  color: var(--shiro1);
+  transition: transform 0.15s;
+}
+.sm-faq-item[open] summary .sm-faq-item__chevron {
+  transform: rotate(-180deg);
+}
+
+.sm-faq-item__answer {
+  padding: 24px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--shiro3);
+  line-height: 1.8;
+  background: var(--kuro1);
+}
+
+/* ----------------------------------------
+   6. CTA
+   ---------------------------------------- */
+.sm-cta {
+  background: var(--kuro1);
+  position: relative;
+  overflow: hidden;
+}
+
+.sm-cta__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 96px 40px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.sm-cta__label {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  color: var(--daidai);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.sm-cta__title {
+  font-family: var(--font-mincho);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--shiro1);
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.sm-cta__desc {
+  font-size: 16px;
+  color: var(--shiro3);
+  margin-bottom: 40px;
+}
+
+.sm-cta__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ========================================================
+   DETAIL PAGE
+   ======================================================== */
+
+/* ----------------------------------------
+   Detail Layout
+   ---------------------------------------- */
+.sm-detail {
+  background: var(--shiro1);
+}
+
+.sm-detail__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 80px 40px 96px;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.sm-detail__sidebar {
+  background: var(--shiro2);
+  border-radius: 8px;
+  border: 0.5px solid var(--kuro4);
+  padding: 32px 28px;
+  position: sticky;
+  top: calc(var(--header-h) + 24px);
+}
+
+.sm-detail__sidebar-heading {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--daidai);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 0.5px solid var(--kuro4);
+}
+
+.sm-detail__info {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.sm-detail__info-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sm-detail__info-row dt {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--kuro4);
+  letter-spacing: 0.05em;
+}
+
+.sm-detail__info-row dd {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--kuro1);
+  line-height: 1.5;
+}
+
+.sm-detail__body {
+  font-size: 16px;
+  color: var(--kuro1);
+  line-height: 1.8;
+}
+
+.sm-detail__body h2 {
+  font-family: var(--font-mincho);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--kuro1);
+  margin-top: 48px;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 0.5px solid var(--kuro4);
+}
+
+.sm-detail__body h3 {
+  font-family: var(--font-mincho);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--kuro1);
+  margin-top: 32px;
+  margin-bottom: 12px;
+}
+
+.sm-detail__body p {
+  margin-bottom: 16px;
+}
+
+.sm-detail__body ul,
+.sm-detail__body ol {
+  margin-bottom: 16px;
+  padding-left: 1.5em;
+}
+
+.sm-detail__body li {
+  margin-bottom: 6px;
+}
+
+/* ========================================================
+   ARCHIVE PAGE
+   ======================================================== */
+
+/* ----------------------------------------
+   7. アーカイブ フィルター
+   ---------------------------------------- */
+.sm-arc-filter {
+  background: var(--shiro2);
+  border-bottom: 0.5px solid var(--kuro4);
+  position: sticky;
+  top: var(--header-h);
+  z-index: 10;
+}
+
+.sm-arc-filter__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 16px 40px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.sm-arc-filter__label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--kuro4);
+  letter-spacing: 0.08em;
+  flex-shrink: 0;
+}
+
+.sm-arc-filter__btns {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.sm-arc-filter__btn {
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: 0.5px solid var(--kuro4);
+  background: var(--shiro1);
+  color: var(--kuro4);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+.sm-arc-filter__btn:hover,
+.sm-arc-filter__btn.is-active {
+  background: var(--kuro1);
+  color: var(--shiro1);
+  border-color: var(--kuro1);
+}
+
+/* ----------------------------------------
+   8. アーカイブ 年別リスト
+   ---------------------------------------- */
+.sm-arc-body {
+  background: var(--shiro1);
+}
+
+.sm-arc-body__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 80px 40px 96px;
+}
+
+.sm-arc-year-group {
+  margin-bottom: 64px;
+}
+.sm-arc-year-group:last-child { margin-bottom: 0; }
+
+.sm-arc-year-label {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--kuro1);
+  border-bottom: 0.5px solid var(--kuro4);
+  padding-bottom: 12px;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sm-arc-year-label__count {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--kuro4);
+  background: var(--shiro2);
+  padding: 4px 10px;
+  border-radius: 8px;
+}
+
+.sm-arc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+}
+
+.sm-arc-item {
+  background: var(--shiro2);
+  border-radius: 8px;
+  border: 0.5px solid var(--kuro4);
+  padding: 28px 32px;
+  display: grid;
+  grid-template-columns: 140px 1fr auto;
+  gap: 24px;
+  align-items: start;
+}
+
+.sm-arc-item__date {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--kuro1);
+  display: block;
+}
+
+.sm-arc-item__format {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  background: var(--kuro1);
+  color: var(--shiro1);
+  padding: 3px 8px;
+  border-radius: 8px;
+  margin-top: 6px;
+}
+
+.sm-arc-item__cat {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--daidai);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.sm-arc-item__title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--kuro1);
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.sm-arc-item__speaker {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--kuro4);
+  margin-bottom: 10px;
+}
+
+.sm-arc-item__desc {
+  font-size: 13px;
+  color: var(--kuro4);
+  line-height: 1.6;
+}
+
+.sm-arc-item__action {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.sm-arc-item__participants {
+  font-size: 13px;
+  color: var(--kuro4);
+  text-align: right;
+}
+
+/* ----------------------------------------
+   9. Responsive
+   ---------------------------------------- */
+@media (max-width: 900px) {
+  .sm-detail__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .sm-detail__sidebar {
+    position: static;
+    order: -1;
+  }
+  .sm-event-grid {
+    grid-template-columns: 1fr;
+  }
+  .sm-feat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sm-past-item {
+    grid-template-columns: 120px 1fr;
+    grid-template-rows: auto auto;
+  }
+  .sm-past-item__action {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .sm-arc-item {
+    grid-template-columns: 120px 1fr;
+    grid-template-rows: auto auto;
+  }
+  .sm-arc-item__action {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 0.5px solid var(--kuro4);
+    padding-top: 16px;
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 640px) {
+  .sm-hero__inner,
+  .sm-upcoming__inner,
+  .sm-past__inner,
+  .sm-features__inner,
+  .sm-faq__inner,
+  .sm-cta__inner,
+  .sm-arc-body__inner,
+  .sm-detail__inner {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .sm-arc-filter__inner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .sm-hero__stats {
+    gap: 28px;
+  }
+
+  .sm-feat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sm-past-item {
+    grid-template-columns: 1fr;
+  }
+  .sm-past-item__action {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .sm-arc-item {
+    grid-template-columns: 1fr;
+  }
+  .sm-arc-item__date-col {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+}

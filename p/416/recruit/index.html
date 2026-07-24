@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RECRUIT | 株式会社IDEATECH - アイデアとテクノロジーで、世の中を魅了する。</title>
+<meta name="description" content="株式会社IDEATECHの採用情報。新卒・中途・インターンを募集しています。BtoB領域の戦略PR・リサーチマーケティング・LLMO（AI検索最適化）を手がけるIDEATECHで、アイデアとテクノロジーの融合を共に推進する仲間を求めています。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0a0a0f;
+    --ink-2: #14141c;
+    --ink-3: #1d1d28;
+    --paper: #f5f2ec;
+    --paper-2: #ebe6dc;
+    --fog: rgba(245, 242, 236, 0.6);
+    --fog-2: rgba(245, 242, 236, 0.12);
+    --border: rgba(245, 242, 236, 0.15);
+    --rgb-r: #ff3d51;
+    --rgb-g: #00d084;
+    --rgb-b: #3d7dff;
+    --sans: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+    --serif: "Shippori Mincho", "Noto Serif JP", serif;
+    --mono: "JetBrains Mono", "Menlo", monospace;
+    --display: "Archivo", "Zen Kaku Gothic New", sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; background: var(--ink); color-scheme: dark; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--ink);
+    color: var(--paper);
+    line-height: 1.8;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* === Grid noise overlay === */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(rgba(245,242,236,.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(245,242,236,.02) 1px, transparent 1px);
+    background-size: 80px 80px;
+    z-index: 0;
+  }
+
+  .wrap { max-width: 1280px; margin: 0 auto; padding: 0 32px; position: relative; z-index: 2; }
+
+  /* === Nav === */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    padding: 20px 32px;
+    display: flex; justify-content: space-between; align-items: center;
+    z-index: 100;
+    background: rgba(10, 10, 15, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .logo {
+    display: inline-flex; align-items: center;
+    text-decoration: none;
+    transition: opacity .2s;
+  }
+  .logo:hover { opacity: 0.8; }
+  .logo img { display: block; height: 28px; width: auto; }
+  .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
+  .nav-links a {
+    color: var(--fog);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    transition: color .2s;
+  }
+  .nav-links a:hover { color: var(--paper); }
+  .nav-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #2E938E;
+    color: #ffffff !important;
+    padding: 10px 20px;
+    border-radius: 999px;
+    font-size: clamp(15px, 1.4vw, 17px);
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(46, 147, 142, 0.35);
+    transition: transform .2s, box-shadow .2s, background .2s;
+  }
+  .nav-cta:hover {
+    transform: translateY(-1px);
+    background: #1f1e1d;
+    color: #ffffff !important;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  }
+  .nav-cta svg { width: 14px; height: 14px; stroke: #ffffff; }
+  .nav-media {
+    color: var(--paper);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: color .2s, background .2s;
+  }
+  .nav-media:hover { color: var(--ink); background: var(--paper); }
+  .nav-mobile-toggle { display: none; }
+
+  /* === Hero === */
+  .hero {
+    min-height: 100vh;
+    padding: 160px 0 100px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: var(--ink);
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 40% 30% at 20% 30%, rgba(255,61,81,0.12), transparent 70%),
+      radial-gradient(ellipse 40% 30% at 80% 40%, rgba(0,208,132,0.10), transparent 70%),
+      radial-gradient(ellipse 40% 40% at 50% 80%, rgba(61,125,255,0.10), transparent 70%);
+    z-index: 1;
+  }
+  .hero-inner { position: relative; z-index: 2; width: 100%; }
+  .hero-eyebrow {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    color: var(--fog);
+    margin-bottom: 28px;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .hero-eyebrow::before {
+    content: "";
+    width: 36px; height: 1px;
+    background: var(--fog);
+  }
+  .hero-title {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: clamp(36px, 7vw, 72px);
+    line-height: 1.22;
+    letter-spacing: -0.01em;
+    margin-bottom: 40px;
+  }
+  .hero-title .line { display: block; }
+  .hero-title .fragment { display: inline-block; animation: rise 1s cubic-bezier(.2,.8,.2,1) both; }
+  .hero-title .line:nth-child(1) .fragment { animation-delay: .1s; }
+  .hero-title .line:nth-child(2) .fragment { animation-delay: .3s; }
+  .hero-title .line:nth-child(3) .fragment { animation-delay: .5s; }
+  @keyframes rise {
+    from { transform: translateY(24px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  .hero-title .accent-r { color: var(--rgb-r); }
+  .hero-title .accent-g { color: var(--rgb-g); }
+  .hero-title .accent-b { color: var(--rgb-b); }
+
+  .hero-body {
+    max-width: 640px;
+    font-size: 18px;
+    color: var(--fog);
+    line-height: 2;
+    margin-bottom: 52px;
+    animation: rise 1s cubic-bezier(.2,.8,.2,1) both .6s;
+  }
+  .hero-meta {
+    display: flex; gap: 40px; flex-wrap: wrap;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+    animation: rise 1s cubic-bezier(.2,.8,.2,1) both .8s;
+  }
+  .hero-meta-item .label {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    color: var(--fog);
+    margin-bottom: 6px;
+    display: block;
+  }
+  .hero-meta-item .value {
+    font-family: var(--display);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  /* === Section base === */
+  section { padding: 120px 0; position: relative; }
+  .section-head { margin-bottom: 72px; }
+  .section-tag {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    color: var(--fog);
+    margin-bottom: 18px;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .section-tag::before {
+    content: "";
+    width: 24px; height: 1px;
+    background: currentColor;
+  }
+  .section-title {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: clamp(24px, 4vw, 36px);
+    line-height: 1.25;
+    letter-spacing: -0.005em;
+    max-width: 900px;
+  }
+  .section-title .jp-small { font-size: 0.55em; color: var(--fog); font-weight: 500; display: block; margin-bottom: 14px; font-family: var(--sans); letter-spacing: 0.1em; }
+
+  /* === About / Why === */
+  .about { background: var(--ink); }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .about-lead {
+    font-family: var(--serif);
+    font-size: clamp(24px, 4vw, 36px);
+    line-height: 1.85;
+    font-weight: 500;
+  }
+  .about-lead em {
+    font-style: normal;
+    color: var(--rgb-g);
+    border-bottom: 2px solid var(--rgb-g);
+    padding-bottom: 2px;
+  }
+  .about-body p {
+    color: var(--fog);
+    font-size: clamp(15px, 1.4vw, 17px);
+    line-height: 2.05;
+    margin-bottom: 20px;
+  }
+  .about-body p:last-child { margin-bottom: 0; }
+  .about-body strong { color: var(--paper); font-weight: 600; }
+
+  /* === Stats === */
+  .stats {
+    background: var(--paper);
+    color: var(--ink);
+    padding: 100px 0;
+  }
+  .stats .section-tag { color: rgba(10,10,15,.5); }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: rgba(10,10,15,.1);
+    border: 1px solid rgba(10,10,15,.1);
+    margin-top: 56px;
+  }
+  .stat {
+    background: var(--paper);
+    padding: 48px 32px;
+    position: relative;
+  }
+  .stat-number {
+    font-family: var(--display);
+    font-weight: 900;
+    font-size: clamp(36px, 7vw, 72px);
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin-bottom: 18px;
+    color: var(--ink);
+  }
+  .stat-number sup { font-size: 0.45em; font-weight: 700; vertical-align: super; margin-left: 4px; color: rgba(10,10,15,.5); }
+  .stat-number .unit { font-size: 0.4em; margin-left: 4px; font-weight: 700; }
+  .stat-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--ink);
+    line-height: 1.6;
+  }
+  .stat-sub {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    color: rgba(10,10,15,.4);
+    margin-top: 8px;
+    display: block;
+  }
+
+  /* === Mission / Vision / Philosophy === */
+  .mvv {
+    background: var(--ink);
+    padding: 140px 0;
+  }
+  .mvv-list { display: grid; gap: 0; }
+  .mvv-item {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 48px;
+    padding: 56px 0;
+    border-top: 1px solid var(--border);
+    align-items: start;
+  }
+  .mvv-item:last-child { border-bottom: 1px solid var(--border); }
+  .mvv-label {
+    font-family: var(--display);
+    font-size: clamp(15px, 1.4vw, 17px);
+    font-weight: 800;
+    letter-spacing: 0.3em;
+  }
+  .mvv-label.label-m { color: var(--rgb-r); }
+  .mvv-label.label-v { color: var(--rgb-g); }
+  .mvv-label.label-p { color: var(--rgb-b); }
+  .mvv-main {
+    font-family: var(--serif);
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 600;
+    line-height: 1.45;
+    letter-spacing: -0.005em;
+    margin-bottom: 18px;
+  }
+  .mvv-desc {
+    color: var(--fog);
+    font-size: clamp(15px, 1.4vw, 17px);
+    line-height: 2;
+    max-width: 720px;
+  }
+
+  /* === BE values === */
+  .be {
+    background: var(--paper);
+    color: var(--ink);
+    padding: 140px 0;
+    overflow: hidden;
+  }
+  .be .section-tag { color: rgba(10,10,15,.5); }
+  .be-lead {
+    font-family: var(--serif);
+    font-size: clamp(24px, 4vw, 36px);
+    line-height: 1.75;
+    max-width: 760px;
+    margin-bottom: 72px;
+    color: var(--ink);
+  }
+  .be-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+  }
+  .be-card {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 40px 28px;
+    border-radius: 2px;
+    position: relative;
+    min-height: 360px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform .35s cubic-bezier(.2,.8,.2,1);
+  }
+  .be-card::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; top: 0;
+    height: 3px;
+    background: #9b5cff;
+  }
+  .be-card:nth-child(2)::after { background: #00c6ff; }
+  .be-card:nth-child(3)::after { background: #ffd000; }
+  .be-card:nth-child(4)::after { background: #95c11f; }
+  .be-card:nth-child(5)::after { background: #ff3d51; }
+  .be-card:hover { transform: translateY(-6px); }
+  .be-num {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.25em;
+    color: var(--fog);
+    margin-bottom: 24px;
+  }
+  .be-kw {
+    font-family: var(--display);
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+  .be-card:nth-child(1) .be-kw { color: #9b5cff; }
+  .be-card:nth-child(2) .be-kw { color: #00c6ff; }
+  .be-card:nth-child(3) .be-kw { color: #ffd000; }
+  .be-card:nth-child(4) .be-kw { color: #95c11f; }
+  .be-card:nth-child(5) .be-kw { color: #ff3d51; }
+  .be-jp {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+  .be-desc {
+    font-size: clamp(15px, 1.4vw, 17px);
+    line-height: 1.95;
+    color: var(--fog);
+    margin-top: auto;
+  }
+
+  /* === Business === */
+  .biz {
+    background: var(--ink);
+    padding: 140px 0;
+  }
+  .biz-intro {
+    font-family: var(--serif);
+    font-size: clamp(24px, 4vw, 36px);
+    line-height: 1.75;
+    max-width: 860px;
+    margin-bottom: 72px;
+  }
+  .biz-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  .biz-item {
+    background: var(--ink);
+    padding: 40px 32px;
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    transition: background .3s;
+  }
+  .biz-item:hover { background: var(--ink-2); }
+  .biz-mark {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    color: var(--fog);
+    margin-bottom: 24px;
+  }
+  .biz-name {
+    font-family: var(--display);
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+  }
+  .biz-name sup { font-size: 0.45em; vertical-align: super; margin-left: 2px; }
+  .biz-tag {
+    font-size: 12px;
+    color: var(--fog);
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  .biz-desc {
+    font-size: clamp(15px, 1.4vw, 17px);
+    line-height: 1.85;
+    color: var(--fog);
+    margin-top: auto;
+  }
+
+  /* === Why join === */
+  .why { background: var(--ink); padding: 140px 0; border-top: 1px solid var(--border); }
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+  }
+  .why-item {
+    padding: 40px 36px;
+    border: 1px solid var(--border);
+    background: var(--ink-2);
+    position: relative;
+  }
+  .why-item-num {
+    position: absolute;
+    top: 32px; right: 36px;
+    font-family: var(--display);
+    font-size: clamp(36px, 7vw, 72px);
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--fog-2);
+    line-height: 1;
+  }
+  .why-item h3 {
+    font-family: var(--serif);
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    max-width: 85%;
+  }
+  .why-item p {
+    color: var(--fog);
+    font-size: clamp(15px, 1.4vw, 17px);
+    line-height: 2;
+  }
+
+  /* === Positions === */
+  .positions {
+    background: var(--paper);
+    color: var(--ink);
+    padding: 140px 0;
+  }
+  .positions .section-tag { color: rgba(10,10,15,.5); }
+  .positions-intro {
+    font-family: var(--serif);
+    font-size: clamp(24px, 4vw, 36px);
+    line-height: 1.75;
+    max-width: 840px;
+    margin-bottom: 72px;
+  }
+  .position-tabs {
+    display: flex; gap: 0;
+    border-bottom: 1px solid rgba(10,10,15,.15);
+    margin-bottom: 56px;
+  }
+  .position-tab {
+    padding: 20px 36px;
+    background: none;
+    border: none;
+    font-family: var(--sans);
+    font-size: clamp(15px, 1.4vw, 17px);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: rgba(10,10,15,.4);
+    cursor: pointer;
+    position: relative;
+    transition: color .2s;
+  }
+  .position-tab::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: -1px;
+    height: 2px;
+    background: var(--ink);
+    transform: scaleX(0);
+    transition: transform .3s;
+  }
+  .position-tab.active { color: var(--ink); }
+  .position-tab.active::after { transform: scaleX(1); }
+  .position-tab .en {
+    display: block;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.25em;
+    margin-top: 4px;
+    font-weight: 500;
+  }
+
+  .position-panel { display: none; }
+  .position-panel.active { display: block; animation: fadeUp .4s ease; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+
+  .position-hero {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 64px;
+    padding-bottom: 56px;
+    border-bottom: 1px solid rgba(10,10,15,.1);
+    margin-bottom: 56px;
+  }
+  .position-kicker {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.25em;
+    color: rgba(10,10,15,.5);
+    margin-bottom: 20px;
+  }
+  .position-title {
+    font-family: var(--serif);
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 28px;
+  }
+  .position-summary {
+    font-size: clamp(15px, 1.4vw, 17px);
+    line-height: 2;
+    color: rgba(10,10,15,.75);
+  }
+  .position-quick {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 32px;
+    align-self: start;
+  }
+  .position-quick dt {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.25em;
+    color: var(--fog);
+    margin-bottom: 6px;
+  }
+  .position-quick dd {
+    font-size: clamp(15px, 1.4vw, 17px);
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+  }
+  .position-quick dd:last-child { margin-bottom: 0; padding-bottom: 0; border: 0; }
+
+  .position-detail {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 24px;
+    padding: 28px 0;
+    border-bottom: 1px solid rgba(10,10,15,.1);
+  }
+  .position-detail:last-of-type { border-bottom: 0; }
+  .position-detail h4 {
+    font-family: var(--display);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: rgba(10,10,15,.55);
+    padding-top: 4px;
+  }
+  .position-detail .h4-jp {
+    display: block;
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0;
+    color: var(--ink);
+    margin-top: 6px;
+    text-transform: none;
+  }
+  .position-detail-body { font-size: clamp(15px, 1.4vw, 17px); line-height: 2; color: rgba(10,10,15,.85); }
+  .position-detail-body ul { list-style: none; }
+  .position-detail-body li {
+    padding-left: 28px;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  .position-detail-body li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 0.85em;
+    width: 16px; height: 1px;
+    background: var(--ink);
+  }
+  .position-detail-body li:last-child { margin-bottom: 0; }
+  .position-detail-body strong { font-weight: 700; color: var(--ink); }
+  .tag-note { display: inline-block; background: rgba(10,10,15,.08); padding: 2px 8px; font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; margin-left: 6px; }
+
+  .position-cta {
+    margin-top: 48px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .btn-primary {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 18px 40px;
+    border-radius: 999px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    transition: transform .25s, box-shadow .25s;
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 40px rgba(10,10,15,.2); }
+  .btn-primary svg { width: 18px; height: 18px; }
+  .btn-ghost {
+    padding: 18px 40px;
+    border-radius: 999px;
+    border: 1px solid rgba(10,10,15,.3);
+    color: var(--ink);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    transition: background .25s;
+  }
+  .btn-ghost:hover { background: rgba(10,10,15,.06); }
+
+  /* === Process === */
+  .process {
+    background: var(--ink);
+    padding: 140px 0;
+  }
+  .process-flow {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin-top: 56px;
+  }
+  .process-step {
+    background: var(--ink);
+    padding: 40px 28px;
+  }
+  .process-num {
+    font-family: var(--display);
+    font-size: clamp(15px, 1.4vw, 17px);
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    color: var(--rgb-g);
+    margin-bottom: 18px;
+  }
+  .process-name {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .process-desc {
+    color: var(--fog);
+    font-size: 12px;
+    line-height: 1.85;
+  }
+
+  /* === Message from leadership === */
+  .message {
+    background: var(--paper);
+    color: var(--ink);
+    padding: 140px 0;
+  }
+  .message .section-tag { color: rgba(10,10,15,.5); }
+  .message-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+  }
+  .message-card {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 56px 44px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .message-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 44px; right: 44px;
+    height: 3px;
+    background: var(--rgb-r);
+  }
+  .message-card.second::before { background: var(--rgb-b); }
+  .message-quote {
+    font-family: var(--serif);
+    font-size: clamp(24px, 4vw, 36px);
+    line-height: 1.7;
+    font-weight: 600;
+    margin-bottom: 36px;
+  }
+  .message-body {
+    color: var(--fog);
+    font-size: clamp(15px, 1.4vw, 17px);
+    line-height: 2;
+    margin-bottom: 40px;
+    flex-grow: 1;
+  }
+  .message-body p { margin-bottom: 14px; }
+  .message-sig {
+    padding-top: 28px;
+    border-top: 1px solid var(--border);
+  }
+  .message-sig .name {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .message-sig .role {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    color: var(--fog);
+  }
+
+  /* === Final CTA === */
+  .final {
+    background: var(--ink);
+    padding: 160px 0 120px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .final::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 25% 50%, rgba(255,61,81,0.14), transparent 45%),
+      radial-gradient(circle at 50% 50%, rgba(0,208,132,0.14), transparent 45%),
+      radial-gradient(circle at 75% 50%, rgba(61,125,255,0.14), transparent 45%);
+  }
+  .final-inner { position: relative; z-index: 2; }
+  .final h2 {
+    font-family: var(--serif);
+    font-size: clamp(36px, 7vw, 72px);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 36px;
+    letter-spacing: -0.01em;
+  }
+  .final p {
+    max-width: 600px;
+    margin: 0 auto 48px;
+    color: var(--fog);
+    font-size: 18px;
+    line-height: 2;
+  }
+  .btn-final {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--paper);
+    color: var(--ink);
+    padding: 24px 52px;
+    border-radius: 999px;
+    font-weight: 800;
+    font-size: clamp(15px, 1.4vw, 17px);
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    transition: transform .25s, box-shadow .25s;
+  }
+  .btn-final:hover { transform: translateY(-3px); box-shadow: 0 20px 50px rgba(245,242,236,.15); }
+  .btn-final svg { width: 20px; height: 20px; }
+  .btn-final-note { margin: 16px 0 0; font-size: 12px; color: rgba(245,242,236,.55); letter-spacing: 0.02em; }
+
+  /* === Footer === */
+  footer {
+    background: var(--ink);
+    padding: 60px 0 40px;
+    border-top: 1px solid var(--border);
+  }
+  .foot-inner {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    flex-wrap: wrap; gap: 32px;
+  }
+  .foot-company { font-size: clamp(15px, 1.4vw, 17px); color: var(--fog); line-height: 1.9; }
+  .foot-company strong { color: var(--paper); font-weight: 700; font-size: clamp(15px, 1.4vw, 17px); display: block; margin-bottom: 4px; }
+  .foot-copy { font-family: var(--mono); font-size: 12px; letter-spacing: 0.2em; color: var(--fog); }
+
+  /* === Responsive === */
+  @media (max-width: 1024px) {
+    .about-grid, .message-grid, .why-grid { grid-template-columns: 1fr; gap: 40px; }
+    .stats-grid, .biz-list { grid-template-columns: repeat(2, 1fr); }
+    .be-grid { grid-template-columns: repeat(2, 1fr); }
+    .ourway-grid { grid-template-columns: 1fr !important; }
+    .process-flow { grid-template-columns: repeat(2, 1fr); }
+    .position-hero { grid-template-columns: 1fr; gap: 40px; }
+    .position-detail { grid-template-columns: 1fr; gap: 12px; }
+    .position-detail h4 { padding-top: 0; }
+    .mvv-item { grid-template-columns: 1fr; gap: 20px; }
+  }
+  @media (max-width: 680px) {
+    .wrap { padding: 0 20px; }
+    nav { padding: 16px 20px; }
+    .nav-links { display: none; }
+    .nav-cta { padding: 8px 16px; font-size: 12px; }
+    section { padding: 80px 0; }
+    .hero { padding: 120px 0 80px; min-height: auto; }
+    .hero-meta { gap: 24px; }
+    .hero-meta-item .value { font-size: clamp(15px, 1.4vw, 17px); }
+    .section-title { font-size: clamp(24px, 4vw, 36px); }
+    .stats-grid, .biz-list, .be-grid, .process-flow { grid-template-columns: 1fr; }
+    .position-tabs { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .position-tab { padding: 16px 20px; font-size: clamp(15px, 1.4vw, 17px); flex-shrink: 0; }
+    .position-quick { padding: 24px; }
+    .message-card { padding: 40px 28px; }
+    .stat { padding: 32px 24px; }
+    .stat-number { font-size: clamp(36px, 7vw, 72px); }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/p/416/" class="logo" aria-label="IDEATECH トップへ">
+    <img src="/p/416/images/logo_yoko1_w.svg" alt="IDEATECH" />
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">ABOUT</a></li>
+    <li><a href="#mvv">MVV</a></li>
+    <li><a href="#be">BE VALUES</a></li>
+    <li><a href="#biz">BUSINESS</a></li>
+    <li><a href="#positions">POSITIONS</a></li>
+    <li><a href="/p/416/recruit/media/" class="nav-media">MEDIA</a></li>
+    <li><a href="#entry" class="nav-cta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2 7 12 14 22 7"/></svg>メール応募</a></li>
+  </ul>
+</nav>
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-eyebrow">STRATEGIC PR IN THE AI ERA / CAREERS 2027</div>
+    <h1 class="hero-title">
+      <span class="line"><span class="fragment">世の中の<span class="accent-r">基準</span>を、</span></span>
+      <span class="line"><span class="fragment"><span class="accent-b">作り変える</span><span class="accent-g">。</span></span></span>
+    </h1>
+    <p class="hero-body">
+      IDEATECHは、AI時代の戦略PR会社です。戦略PRとは、単なる広報活動ではありません。「何を基準にそのサービスを選ぶか」、その土俵そのものを作り変える仕事です。独自の調査データでファクトを作り、メディアを通じて第三者の声として社会に届け、AI時代にはLLMOで生成AIにも正しく語られる企業にする。2010年の創業以来、800社を超える企業の事業を前へ進めてきました。
+    </p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <span class="label">FOUNDED</span>
+        <span class="value">2010</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="label">HQ</span>
+        <span class="value">東京・南青山</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="label">OPEN POSITIONS</span>
+        <span class="value">新卒 / 中途 / インターン</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ABOUT ========== -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">01 / WHAT WE DO</div>
+      <h2 class="section-title">
+        <span class="jp-small">戦略PRとは何か</span>
+        <em style="font-style:normal;color:var(--rgb-r)">基準</em>を作り変える。<br>それが、戦略PRという仕事。
+      </h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-lead">
+        戦略PRは、ただ商品を宣伝することではありません。人が何かを選ぶとき、そこには必ず<em>「選ぶ基準」</em>があります。その基準そのものを作り変え、自社のサービスが自然に選ばれる土俵を設計する。これが、私たちの考える戦略PRです。
+      </div>
+      <div class="about-body">
+        <p>たとえば、ある業界で「価格と納期」だけで選ばれていたカテゴリに、「品質保証の仕組み」という新しい基準を持ち込むことができれば、その基準を満たしているブランドが自然と上位に来ます。広告で押し込むのではなく、<strong>判断の物差し自体を変える</strong>。これが戦略PRの本質です。</p>
+        <p>その武器が、<strong>独自の調査データ</strong>です。世の中にまだ言語化されていないファクトを、私たちが調査で可視化する。そのデータがメディアを通じて第三者の声として広がるとき、社会は新しい基準を受け入れ始めます。2010年の創業以来、<strong>800社以上、調査プロジェクト2,500件以上</strong>を通じて、この方法論を磨いてきました。</p>
+        <p>そしていま、AIが情報の検索と推薦を担う時代になりました。戦略PRの舞台は、メディアだけでなく生成AIにも広がっています。ChatGPTやPerplexityに「正しく語られる企業」になる<strong>LLMO（AI検索最適化）</strong>も、私たちは戦略PRの一部として設計しています。IDEATECHが<strong>AI時代の戦略PR会社</strong>を名乗る理由が、ここにあります。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== STATS ========== -->
+<section class="stats">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">02 / BY THE NUMBERS</div>
+      <h2 class="section-title">
+        <span class="jp-small">数字で見るIDEATECH</span>
+        BtoBの現場で積み上げてきた実績。
+      </h2>
+    </div>
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="stat-number">800<span class="unit">+</span></div>
+        <div class="stat-label">累計取引企業数</div>
+        <span class="stat-sub">CUMULATIVE CLIENTS</span>
+      </div>
+      <div class="stat">
+        <div class="stat-number">2,500<span class="unit">+</span></div>
+        <div class="stat-label">調査プロジェクト実行数</div>
+        <span class="stat-sub">RESEARCH PROJECTS</span>
+      </div>
+      <div class="stat">
+        <div class="stat-number">15<span class="unit">年</span></div>
+        <div class="stat-label">BtoB PR・マーケティング支援の歴史</div>
+        <span class="stat-sub">YEARS OF EXPERIENCE</span>
+      </div>
+      <div class="stat">
+        <div class="stat-number">6</div>
+        <div class="stat-label">主力サービスラインナップ</div>
+        <span class="stat-sub">CORE SERVICES</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== MVV ========== -->
+<section class="mvv" id="mvv">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">03 / MISSION, VISION, PHILOSOPHY</div>
+      <h2 class="section-title">
+        <span class="jp-small">私たちが掲げるもの</span>
+        なぜ、この仕事をしているのか。
+      </h2>
+    </div>
+    <div class="mvv-list">
+      <div class="mvv-item">
+        <div class="mvv-label label-m">MISSION</div>
+        <div>
+          <div class="mvv-main">アイデアとテクノロジーで、世の中を魅了する。</div>
+          <div class="mvv-desc">常識を疑い、新しい切り口でファクトを作る。最先端のテクノロジーを道具として使い倒し、世の中の「選ばれる基準」を作り変える。戦略PRという仕事を通じて、業界そのものに新しい価値観を持ち込むことが、私たちの使命です。</div>
+        </div>
+      </div>
+      <div class="mvv-item">
+        <div class="mvv-label label-v">VISION</div>
+        <div>
+          <div class="mvv-main">グローバル・アイデアプラットフォーマーになる。</div>
+          <div class="mvv-desc">PR・マーケティングのアイデアが必要になったとき、世界中の人が真っ先にIDEATECHを思い浮かべる。戦略PRの型と、AI時代の新しいコンテンツ基盤を、日本から世界へ広げていきたい。そういう存在を目指しています。</div>
+        </div>
+      </div>
+      <div class="mvv-item">
+        <div class="mvv-label label-p">PHILOSOPHY</div>
+        <div>
+          <div class="mvv-main">身体と脳で、汗をかこう。</div>
+          <div class="mvv-desc">いい仕事は、思考と行動の両輪から生まれます。手を動かし、現場に立ち、自分の頭で考え抜く。そして、短い数字の動きだけを見るのではなく、十年後に残る価値まで想像して今日を決める。派手さではなく、地に足のついた試行錯誤を大切にする文化がIDEATECHにはあります。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== OUR WAY (原典の香り) ========== -->
+<section class="be" id="ourway" style="padding:120px 0;">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">04 / OUR WAY</div>
+      <h2 class="section-title">
+        <span class="jp-small">私たちが大切にしていること</span>
+        譲れない、3つの姿勢。
+      </h2>
+    </div>
+    <p class="be-lead">
+      BtoBのPR・マーケティングは、短期の数字だけで走ると、長く続く価値が痩せていく領域です。だからこそ、私たちはこの3つを日々の判断軸に置いています。
+    </p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;" class="ourway-grid">
+      <div style="border:1px solid rgba(10,10,15,.15);padding:44px 36px;background:#fff;border-radius:2px;position:relative;min-height:320px;display:flex;flex-direction:column;">
+        <div style="position:absolute;top:0;left:44px;right:44px;height:3px;background:var(--rgb-r);"></div>
+        <div style="font-family:var(--mono);font-size: 12px;letter-spacing:0.25em;color:rgba(10,10,15,.5);margin-bottom:24px;">01 / WAY</div>
+        <div style="font-family:var(--serif);font-size: clamp(24px, 4vw, 36px);font-weight:700;line-height:1.45;margin-bottom:20px;color:var(--ink);">短い成果と、<br>長く続く価値。<br>両方をあきらめない。</div>
+        <div style="font-size: clamp(15px, 1.4vw, 17px);line-height:2;color:rgba(10,10,15,.7);margin-top:auto;">今週の売上も、十年後に残る信頼も、どちらも大事にする。今日の数字だけで判断すると、長い信頼を壊してしまうことがある。短い時間軸と長い時間軸を同時に見ながら、仕事をしていきます。</div>
+      </div>
+      <div style="border:1px solid rgba(10,10,15,.15);padding:44px 36px;background:#fff;border-radius:2px;position:relative;min-height:320px;display:flex;flex-direction:column;">
+        <div style="position:absolute;top:0;left:44px;right:44px;height:3px;background:var(--rgb-g);"></div>
+        <div style="font-family:var(--mono);font-size: 12px;letter-spacing:0.25em;color:rgba(10,10,15,.5);margin-bottom:24px;">02 / WAY</div>
+        <div style="font-family:var(--serif);font-size: clamp(24px, 4vw, 36px);font-weight:700;line-height:1.45;margin-bottom:20px;color:var(--ink);">稼ぎ方まで、<br>含めて成果と呼ぶ。</div>
+        <div style="font-size: clamp(15px, 1.4vw, 17px);line-height:2;color:rgba(10,10,15,.7);margin-top:auto;">利益を出すことは恥じない。でも、人の不安を必要以上に煽る仕事や、誇張でごまかす仕事はしない。どう稼いだかまで含めて、IDEATECHの仕事になる。売上の数字と、その稼ぎ方への誇り、両方を揃えたい。</div>
+      </div>
+      <div style="border:1px solid rgba(10,10,15,.15);padding:44px 36px;background:#fff;border-radius:2px;position:relative;min-height:320px;display:flex;flex-direction:column;">
+        <div style="position:absolute;top:0;left:44px;right:44px;height:3px;background:var(--rgb-b);"></div>
+        <div style="font-family:var(--mono);font-size: 12px;letter-spacing:0.25em;color:rgba(10,10,15,.5);margin-bottom:24px;">03 / WAY</div>
+        <div style="font-family:var(--serif);font-size: clamp(24px, 4vw, 36px);font-weight:700;line-height:1.45;margin-bottom:20px;color:var(--ink);">自立した人同士で、<br>支え合う。</div>
+        <div style="font-size: clamp(15px, 1.4vw, 17px);line-height:2;color:rgba(10,10,15,.7);margin-top:auto;">一人で抱え込む組織にも、甘え合いの馴れ合いにもならない。それぞれが自分の責任を引き受けたうえで、困ったときは素直に助けを求め、誰かが困っていたら手を伸ばす。そのバランスが、長く働ける場をつくる。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== BE VALUES ========== -->
+<section class="be" id="be" style="padding-top:80px;">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">05 / BE VALUES</div>
+      <h2 class="section-title">
+        <span class="jp-small">5つの行動指針</span>
+        IDEATECHで働く人が、日々体現している姿勢。
+      </h2>
+    </div>
+    <p class="be-lead">
+      スキルは後からでも身につきます。でも「どう在るか」は、その人の仕事そのものを決めます。OUR WAY が会社としての判断軸なら、BE VALUES は一人ひとりが日々の現場で体現する姿勢です。
+    </p>
+    <div class="be-grid">
+      <div class="be-card">
+        <div class="be-num">01 / VALUE</div>
+        <div class="be-kw">be RITA.</div>
+        <div class="be-jp">利他の心こそ繁栄の道</div>
+        <div class="be-desc">自分より先に相手の幸せを考え行動することが、長期的な信頼と成長を生む。</div>
+      </div>
+      <div class="be-card">
+        <div class="be-num">02 / VALUE</div>
+        <div class="be-kw">be WATER.</div>
+        <div class="be-jp">水のように柔軟に</div>
+        <div class="be-desc">どんな状況にも形を変えて適応し、しなやかに変化し続ける力がイノベーションを生む。</div>
+      </div>
+      <div class="be-card">
+        <div class="be-num">03 / VALUE</div>
+        <div class="be-kw">be POTATO.</div>
+        <div class="be-jp">泥臭く、生命力をもって</div>
+        <div class="be-desc">華やかさより実直さ。土の中でも力強く育つジャガイモのような粘り強さを大切に。</div>
+      </div>
+      <div class="be-card">
+        <div class="be-num">04 / VALUE</div>
+        <div class="be-kw">be WASABI.</div>
+        <div class="be-jp">ワサビのように良き引き立て役に</div>
+        <div class="be-desc">主役を輝かせる脇役としての誇り。クライアントの魅力を最大に引き出す。</div>
+      </div>
+      <div class="be-card">
+        <div class="be-num">05 / VALUE</div>
+        <div class="be-kw">be FIRE.</div>
+        <div class="be-jp">情熱を灯し、未来を照らす</div>
+        <div class="be-desc">熱意なき行動に価値はない。自ら燃え、周囲を照らす炎のような情熱を持ち続ける。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== BUSINESS ========== -->
+<section class="biz" id="biz">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">06 / OUR BUSINESS</div>
+      <h2 class="section-title">
+        <span class="jp-small">戦略PRを構成する6つのサービス</span>
+        基準を作り変えるための、道具と仕組み。
+      </h2>
+    </div>
+    <p class="biz-intro">
+      戦略PRは、一つの大きな戦略のもとに、複数の道具を組み合わせて実行する仕事です。IDEATECHは、この戦略PRを実装するための6つの主力サービスを自社で持っています。どれか一つを売るのではなく、クライアントの課題に合わせて組み合わせる。そこがPR会社とも、マーケティング会社とも違います。
+    </p>
+    <div class="biz-list">
+      <div class="biz-item">
+        <div class="biz-mark">CORE — 戦略PRの武器</div>
+        <div class="biz-name">リサピー<sup>®</sup></div>
+        <div class="biz-tag">独自調査によるファクト創出</div>
+        <div class="biz-desc">戦略PRで最も重要な「基準を支えるファクト」を作る中核サービス。独自のアンケート調査で世の中に新しい事実を生み出し、それをメディア、ホワイトペーパー、営業資料まで横展開。2,500件以上の実績を持つIDEATECHの代表サービスです。</div>
+      </div>
+      <div class="biz-item">
+        <div class="biz-mark">ASSET — 戦略PRの資産化</div>
+        <div class="biz-name">ハクピー<sup>®</sup></div>
+        <div class="biz-tag">ホワイトペーパー制作</div>
+        <div class="biz-desc">調査で生み出したファクトを、リード獲得と商談化につながる資産コンテンツに変えるサービス。戦略PRで作った「新しい基準」を、営業の現場まで届くかたちに落とし込みます。</div>
+      </div>
+      <div class="biz-item">
+        <div class="biz-mark">AMPLIFY — 戦略PRの拡張</div>
+        <div class="biz-name">コラピー<sup>®</sup></div>
+        <div class="biz-tag">コラボレーションPR</div>
+        <div class="biz-desc">業界他社や有識者との協業で、戦略PRの社会的信頼を厚くするサービス。一社だけでは言いにくい主張も、共同調査や共著の形にすることで、より広い基準として社会に定着させます。</div>
+      </div>
+      <div class="biz-item">
+        <div class="biz-mark">LEGACY — 戦略PRの残置</div>
+        <div class="biz-name">レポピー<sup>®</sup></div>
+        <div class="biz-tag">業界レポート/資産型コンテンツ</div>
+        <div class="biz-desc">戦略PRで作った基準を、長く残る業界レポートとして形にするサービス。一時の話題で消費されずに、業界の参照される文書として資産化することを狙います。</div>
+      </div>
+      <div class="biz-item">
+        <div class="biz-mark">AI ERA — 次世代の戦略PR</div>
+        <div class="biz-name">IDEA LLMO</div>
+        <div class="biz-tag">AI検索最適化（LLMO）</div>
+        <div class="biz-desc">生成AIが情報の推薦を担う時代の戦略PR。ChatGPTやPerplexityに正しく語られる企業になるためのコンサルティングです。「メディアに載る」だけでなく「AIに推薦される」まで含めて戦略PRを再定義した、IDEATECH独自のメソッド。</div>
+      </div>
+      <div class="biz-item">
+        <div class="biz-mark">ENABLER — クライアント内製化支援</div>
+        <div class="biz-name">IDEA AI</div>
+        <div class="biz-tag">生成AI研修サービス</div>
+        <div class="biz-desc">戦略PR時代を生き抜く企業の内製化を支える、生成AI研修プログラム。営業、PR、バックオフィスの実務で使える活用法を60分×10回で提供。法人向け研修サービスです。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== WHY IDEATECH ========== -->
+<section class="why">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">07 / WHY IDEATECH</div>
+      <h2 class="section-title">
+        <span class="jp-small">IDEATECHで働く、ということ</span>
+        なぜ、ここを選ぶ人が多いのか。
+      </h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="why-item-num">01</div>
+        <h3>戦略PRの、最前線に立てる。</h3>
+        <p>「基準を作り変える」戦略PRを、主事業として体系的に実践している会社はそう多くありません。IDEATECHには、調査設計からメディアリレーション、LLMO対策まで、戦略PRを構成するすべての武器が揃っています。ここで身につけた戦略PRのスキルは、事業会社のマーケ責任者として独立する際にも強い武器になります。</p>
+      </div>
+      <div class="why-item">
+        <div class="why-item-num">02</div>
+        <h3>全員が、マネジメントメンバー。</h3>
+        <p>「下積みから数年、役職はまだ先」という考え方を、私たちは取りません。新卒もインターンも、入社した日から事業判断と顧客対応の当事者。自分の意思決定がクライアントの成果に直結する環境を、入社初年度から経験できます。</p>
+      </div>
+      <div class="why-item">
+        <div class="why-item-num">03</div>
+        <h3>AI時代の、最前線で働く。</h3>
+        <p>LLMO、AI研修、社内AI活用。私たちはAIを「道具として使い倒す」ことを前提に事業を組んでいます。戦略PRの舞台がメディアから生成AIにも広がっていく時代、その最前線で仕組みを設計する経験は、どの業界でも通用する資産になります。</p>
+      </div>
+      <div class="why-item">
+        <div class="why-item-num">04</div>
+        <h3>小さな会社の、裁量の大きさ。</h3>
+        <p>社員数は約20名。代表や経営陣との距離が近く、事業方針に対してメンバーの声が反映されやすい規模です。「こういう戦略PRを試したい」「こういう新サービスがあってもいい」という提案が、実際に形になっていく現場です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== POSITIONS ========== -->
+<section class="positions" id="positions">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">08 / OPEN POSITIONS</div>
+      <h2 class="section-title">
+        <span class="jp-small">募集職種</span>
+        新卒、中途、インターン。3つの入り口があります。
+      </h2>
+    </div>
+    <p class="positions-intro">
+      いずれの採用枠でも、単なる「作業者」は求めていません。「選ばれる基準を作り変える」という戦略PRの仕事に、自分のアイデアと言葉で挑みたい方と一緒に働きたいと思っています。まずは気になるポジションの詳細をご覧ください。
+    </p>
+
+    <div class="position-tabs">
+      <button class="position-tab active" data-tab="grad">新卒採用<span class="en">NEW GRADUATE</span></button>
+      <button class="position-tab" data-tab="mid">中途採用<span class="en">MID CAREER</span></button>
+      <button class="position-tab" data-tab="intern">インターン<span class="en">INTERNSHIP</span></button>
+    </div>
+
+    <!-- ========== NEW GRADUATE ========== -->
+    <div class="position-panel active" id="panel-grad">
+      <div class="position-hero">
+        <div>
+          <div class="position-kicker">2027年4月入社 / 総合職</div>
+          <h3 class="position-title">戦略PRプランナー<br>候補</h3>
+          <p class="position-summary">
+            BtoB企業の事業課題に深く入り込み、「その業界の選ばれる基準を、どう作り変えるか」を設計するポジションです。調査企画、メディア戦略、LLMO設計までを一気通貫で担当し、入社初年度からクライアント対応と企画の主担当を任せます。戦略PRという領域を、自分の専門にしていきたい方に向いています。
+          </p>
+        </div>
+        <dl class="position-quick">
+          <dt>雇用形態</dt><dd>正社員（試用期間3ヶ月）</dd>
+          <dt>想定給与</dt><dd>月給25〜30万円 ※応相談</dd>
+          <dt>勤務地</dt><dd>東京都港区南青山</dd>
+          <dt>勤務形態</dt><dd>ハイブリッド（出社＋在宅）</dd>
+        </dl>
+      </div>
+
+      <div class="position-detail">
+        <h4>JOB SCOPE<span class="h4-jp">仕事内容</span></h4>
+        <div class="position-detail-body">
+          <p>入社後は先輩とのペアから始め、3〜6ヶ月以内に主担当として案件を持ちます。</p>
+          <ul>
+            <li>クライアントの事業課題から、戦略PRの全体設計（基準をどう作り変えるか）</li>
+            <li>独自調査（リサピー®）の企画、調査票設計、データ分析</li>
+            <li>プレスリリース、ホワイトペーパー、業界レポートのコンテンツディレクション</li>
+            <li>メディアリレーション、記者発表、セミナー・イベントの企画運営</li>
+            <li>IDEA LLMOの設計・実行支援（AI時代の戦略PR）</li>
+            <li>クライアントとの定例ミーティングの主導</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="position-detail">
+        <h4>REQUIREMENTS<span class="h4-jp">応募資格</span></h4>
+        <div class="position-detail-body">
+          <ul>
+            <li>2027年3月までに四年制大学または大学院を卒業・修了見込みの方</li>
+            <li>学部・学科不問（理系歓迎）</li>
+            <li>文章を書くこと、調べて考えることが好きな方</li>
+            <li>BtoB事業、戦略PR、メディア、AIのいずれかに強い関心のある方</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="position-detail">
+        <h4>WE LOVE<span class="h4-jp">こんな方を歓迎します</span></h4>
+        <div class="position-detail-body">
+          <ul>
+            <li>「選ばれる基準そのものを作り変える」という仕事に、知的な面白さを感じる方</li>
+            <li>自分のアイデアで、社会や業界を動かしたいと本気で思っている方</li>
+            <li>正解のない問いに、粘り強く向き合える方</li>
+            <li>生成AIを自分の武器にしていきたい方</li>
+            <li>長期インターン、学生起業、メディア運営、研究などで「手を動かした経験」がある方</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="position-detail">
+        <h4>COMPENSATION<span class="h4-jp">給与・待遇</span></h4>
+        <div class="position-detail-body">
+          <ul>
+            <li><strong>月給</strong>：25〜30万円（想定）<span class="tag-note">※要確定</span></li>
+            <li><strong>昇給</strong>：年1回（実績・評価に基づく）</li>
+            <li><strong>賞与</strong>：業績連動<span class="tag-note">※要確定</span></li>
+            <li><strong>休日</strong>：完全週休2日制、祝日、年末年始、夏季休暇／年間休日120日以上</li>
+            <li><strong>福利厚生</strong>：各種社会保険完備、家賃手当、交通費支給</li>
+            <li><strong>研修</strong>：新卒研修、マーケティング研修、営業研修、マネジメント研修</li>
+            <li><strong>備考</strong>：業務時間内での書籍購入補助、生成AIツール利用費の会社負担</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="position-cta">
+        <a href="#entry" class="btn-primary">
+          新卒エントリーする
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="#process" class="btn-ghost">選考フローを見る</a>
+      </div>
+    </div>
+
+    <!-- ========== MID CAREER ========== -->
+    <div class="position-panel" id="panel-mid">
+      <div class="position-hero">
+        <div>
+          <div class="position-kicker">即戦力 / 随時採用</div>
+          <h3 class="position-title">戦略PRコンサルタント／<br>LLMOコンサルタント</h3>
+          <p class="position-summary">
+            「業界の選ばれる基準を作り変える」戦略PRを、クライアントの事業責任者と並走して設計・実行するポジションです。調査起点のPRからLLMO対策まで、一人あたりの担当領域が広く、自分で考えて動かせる余地が大きい働き方を望む方に向いています。
+          </p>
+        </div>
+        <dl class="position-quick">
+          <dt>雇用形態</dt><dd>正社員（試用期間3ヶ月）</dd>
+          <dt>想定年収</dt><dd>500〜900万円 ※経験に応じて</dd>
+          <dt>勤務地</dt><dd>東京都港区南青山</dd>
+          <dt>勤務形態</dt><dd>ハイブリッド（出社＋在宅）</dd>
+        </dl>
+      </div>
+
+      <div class="position-detail">
+        <h4>POSITIONS<span class="h4-jp">募集ポジション</span></h4>
+        <div class="position-detail-body">
+          <ul>
+            <li><strong>戦略PRコンサルタント／プランナー</strong>：調査起点の戦略PRを企画から実行まで一貫して担当。基準づくりを軸にしたクライアントワーク</li>
+            <li><strong>LLMOコンサルタント</strong>：AI時代の戦略PR。ChatGPT・Perplexity等に「正しく推薦される企業」を設計する</li>
+            <li><strong>リサーチャー／アナリスト</strong>：戦略PRの核となる独自調査の設計、データ分析、インサイト抽出</li>
+            <li><strong>コンテンツディレクター</strong>：調査データを資産コンテンツ（ホワイトペーパー、業界レポート等）に変換するディレクション</li>
+            <li><strong>アカウントマネージャー／セールス</strong>：戦略PR案件の新規・既存企業への提案、プロジェクトマネジメント</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="position-detail">
+        <h4>JOB SCOPE<span class="h4-jp">仕事内容</span></h4>
+        <div class="position-detail-body">
+          <p>いずれのポジションも、戦略PRの全体設計に深く関わります。</p>
+          <ul>
+            <li>クライアントの事業課題のヒアリングと、戦略PR仮説の構築（どの基準を作り変えるか）</li>
+            <li>独自調査の企画、調査票設計、データ分析、インサイト抽出</li>
+            <li>メディア戦略、パブリシティ設計、LLMO戦略の立案と実行</li>
+            <li>クライアントとの定例会議、戦略レビュー、レポーティング</li>
+            <li>社内ディレクター、ライター、デザイナーとの協働</li>
+            <li>新規サービスの企画、既存サービスの改善提案</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="position-detail">
+        <h4>REQUIREMENTS<span class="h4-jp">応募資格</span></h4>
+        <div class="position-detail-body">
+          <ul>
+            <li>BtoB領域で3年以上のPR、マーケティング、コンテンツ制作、営業のいずれかの実務経験</li>
+            <li>または、広告代理店、PR会社、事業会社のマーケティング部門での実務経験</li>
+            <li>複数プロジェクトを並行して進められる自律性</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="position-detail">
+        <h4>WE LOVE<span class="h4-jp">こんな方を歓迎します</span></h4>
+        <div class="position-detail-body">
+          <ul>
+            <li>調査設計、統計、データ分析に明るい方</li>
+            <li>BtoB SaaS、製造業、人材、金融、スタートアップいずれかの業界知見</li>
+            <li>LLMO、SEO、オウンドメディア運用の経験がある方</li>
+            <li>書く、企画する、プロジェクトを動かすのいずれかに強い自負がある方</li>
+            <li>事業会社で一人マーケとして裁量を持って動いてきた方</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="position-detail">
+        <h4>COMPENSATION<span class="h4-jp">給与・待遇</span></h4>
+        <div class="position-detail-body">
+          <ul>
+            <li><strong>年収</strong>：500〜900万円<span class="tag-note">※経験・スキルに応じて決定</span></li>
+            <li><strong>昇給</strong>：年1回（実績・評価に基づく）</li>
+            <li><strong>賞与</strong>：業績連動</li>
+            <li><strong>休日</strong>：完全週休2日制、祝日、年末年始、夏季休暇／年間休日120日以上</li>
+            <li><strong>福利厚生</strong>：各種社会保険完備、家賃手当、交通費支給</li>
+            <li><strong>備考</strong>：副業可（業務に支障のない範囲）、書籍購入補助、生成AIツール利用費の会社負担</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="position-cta">
+        <a href="#entry" class="btn-primary">
+          中途エントリーする
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="#process" class="btn-ghost">選考フローを見る</a>
+      </div>
+    </div>
+
+    <!-- ========== INTERN ========== -->
+    <div class="position-panel" id="panel-intern">
+      <div class="position-hero">
+        <div>
+          <div class="position-kicker">長期インターン / 通年採用</div>
+          <h3 class="position-title">戦略PR<br>／リサーチインターン</h3>
+          <p class="position-summary">
+            学生のうちから、戦略PRの本物の現場に入り込めるインターンです。「資料整理」や「議事録取り」で終わる仕事ではありません。プロジェクトメンバーの一人として、独自調査の設計、コンテンツ制作、LLMO実行に手を動かしていただきます。AI時代の戦略PR会社で、これからの10年に必要なスキルを、実務の中で身につけられます。
+          </p>
+        </div>
+        <dl class="position-quick">
+          <dt>雇用形態</dt><dd>業務委託／アルバイト</dd>
+          <dt>時給</dt><dd>1,500円〜 ※経験に応じて</dd>
+          <dt>勤務地</dt><dd>東京・南青山／リモート可</dd>
+          <dt>稼働</dt><dd>週2〜3日、1日4時間〜</dd>
+        </dl>
+      </div>
+
+      <div class="position-detail">
+        <h4>JOB SCOPE<span class="h4-jp">仕事内容</span></h4>
+        <div class="position-detail-body">
+          <p>本人のスキルと関心に応じて、下記のいずれかを中心に担当していただきます。</p>
+          <ul>
+            <li>戦略PRの核となる独自調査のアシスタント（調査票設計、データ分析、レポート作成）</li>
+            <li>コンテンツ制作サポート（ホワイトペーパー、プレスリリース等の執筆補助）</li>
+            <li>LLMO支援業務（AI時代の戦略PR：競合モニタリング、データ整備、レポート作成）</li>
+            <li>社内AI活用プロジェクト（プロンプト設計、業務フロー改善）</li>
+            <li>SNS発信、メルマガ、ウェビナー運営サポート</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="position-detail">
+        <h4>REQUIREMENTS<span class="h4-jp">応募資格</span></h4>
+        <div class="position-detail-body">
+          <ul>
+            <li>大学生・大学院生（学年・学部不問）</li>
+            <li>週2〜3日、半年以上の稼働が可能な方</li>
+            <li>自走して業務を進められる方</li>
+            <li>ChatGPT、Claudeなどの生成AIを日常的に使っている／使ってみたい方</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="position-detail">
+        <h4>WE LOVE<span class="h4-jp">こんな方を歓迎します</span></h4>
+        <div class="position-detail-body">
+          <ul>
+            <li>将来、PR・マーケティング・事業開発の領域で活躍したいと考えている方</li>
+            <li>文章を書くのが好きな方、調べて考えることが得意な方</li>
+            <li>スタートアップや事業会社で、すでに長期インターンの経験がある方</li>
+            <li>BtoB、生成AI、SaaSなどのテーマに強い興味を持っている方</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="position-detail">
+        <h4>COMPENSATION<span class="h4-jp">給与・待遇</span></h4>
+        <div class="position-detail-body">
+          <ul>
+            <li><strong>時給</strong>：1,500円〜（経験・スキルに応じて）<span class="tag-note">※要確定</span></li>
+            <li><strong>交通費</strong>：実費支給</li>
+            <li><strong>勤務形態</strong>：リモート可（出社との併用）</li>
+            <li><strong>備考</strong>：社内AIツール利用可、実務で得た知見は成果物として持ち出し可</li>
+            <li><strong>キャリア</strong>：新卒採用への接続実績あり</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="position-cta">
+        <a href="#entry" class="btn-primary">
+          インターンにエントリーする
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="#process" class="btn-ghost">選考フローを見る</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PROCESS ========== -->
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">09 / SELECTION PROCESS</div>
+      <h2 class="section-title">
+        <span class="jp-small">選考フロー</span>
+        応募から内定まで、3〜4週間が目安です。
+      </h2>
+    </div>
+    <div class="process-flow">
+      <div class="process-step">
+        <div class="process-num">STEP 01</div>
+        <div class="process-name">エントリー</div>
+        <div class="process-desc">応募フォームから履歴書、職務経歴書（該当者）、ポートフォリオ（任意）を送付いただきます。</div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">STEP 02</div>
+        <div class="process-name">書類選考</div>
+        <div class="process-desc">応募内容を確認し、1週間以内に合否をご連絡します。</div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">STEP 03</div>
+        <div class="process-name">一次面接</div>
+        <div class="process-desc">現場メンバーとの面接。お互いの理解を深めるカジュアルなトーンで実施します。</div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">STEP 04</div>
+        <div class="process-name">最終面接</div>
+        <div class="process-desc">代表・専務との面接。事業方針、カルチャー、キャリアについて率直に対話します。</div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">STEP 05</div>
+        <div class="process-name">内定／入社</div>
+        <div class="process-desc">オファー面談を経て、内定。入社時期は相談のうえ決定します。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== MESSAGE ========== -->
+<section class="message">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">10 / MESSAGE</div>
+      <h2 class="section-title">
+        <span class="jp-small">経営陣からのメッセージ</span>
+        なぜ、IDEATECHで働くのか。
+      </h2>
+    </div>
+    <div class="message-grid">
+      <div class="message-card">
+        <div class="message-quote">「正解のない領域でしか、<br>本当の差は生まれない。」</div>
+        <div class="message-body">
+          <p>戦略PRは、答えが一つに決まる仕事ではありません。クライアントごとに事業が違い、業界の競争構造が違い、作り変えるべき基準も違う。そういう曖昧さのなかで、自分の頭で考え、手を動かし、結果で証明する。そのプロセスを楽しめる人が、IDEATECHには向いています。</p>
+          <p>私たちが求めているのは、専門知識よりも姿勢です。「泥臭く取り組み、柔軟に学び、チームと仲間に還元する」この姿勢さえあれば、専門性は必ず後からついてきます。私自身、創業からここに至るまで、何度も方針を変えながら走ってきました。AI時代の戦略PR会社として、次の10年をつくる仲間を探しています。</p>
+        </div>
+        <div class="message-sig">
+          <div class="name">石川 友夫</div>
+          <div class="role">REPRESENTATIVE DIRECTOR / CEO</div>
+        </div>
+      </div>
+      <div class="message-card second">
+        <div class="message-quote">「基準を作り変える仕事は、<br>業界そのものを動かす。」</div>
+        <div class="message-body">
+          <p>戦略PRの仕事の本当の面白さは、個別企業のPRで終わらないところにあります。ある業界で「何を基準に選ぶか」を変えることは、その業界の競争のルールそのものを変えるということ。クライアント一社の成果が、業界の価値観を書き換え、働く人や消費者の選択までも変えていく。この連鎖に関われるのが、戦略PRの醍醐味です。</p>
+          <p>そしていま、戦略PRの舞台はメディアだけでなく、生成AIにも広がっています。ChatGPTやPerplexityが「どの会社を推薦するか」を決めるAI時代に、戦略PRの仕事はむしろ重要性を増しています。この時代のど真ん中で、新しい戦略PRの型を作る。そこに興味と覚悟がある方に来てほしいと思っています。</p>
+        </div>
+        <div class="message-sig">
+          <div class="name">競 仁志</div>
+          <div class="role">EXECUTIVE DIRECTOR / SENIOR MANAGING DIRECTOR</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FINAL CTA ========== -->
+<section class="final" id="entry">
+  <div class="wrap final-inner">
+    <h2>基準を作り変える側に、<br>一緒に立とう。</h2>
+    <p>IDEATECHは、AI時代の戦略PRという新しい領域の型を作っていく局面にいます。調査データとメディアとLLMOを組み合わせて、業界の基準を動かしていく仕事。短い成果と長く続く価値、その両方をあきらめずに挑みたい方からのエントリーをお待ちしています。</p>
+    <a href="mailto:recruit@ideatech.jp?subject=【応募】IDEATECH%20採用エントリー" class="btn-final">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="width:20px;height:20px;"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2 7 12 14 22 7"/></svg>
+      メールで応募する
+    </a>
+    <p class="btn-final-note">※お使いのメールアプリが起動します（recruit@ideatech.jp）</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-inner">
+    <div class="foot-company">
+      <strong>株式会社IDEATECH</strong>
+      東京都港区南青山<br>
+      <a href="https://ideatech.jp/" style="color:var(--fog);text-decoration:underline;">https://ideatech.jp/</a>
+    </div>
+    <div class="foot-copy">© 2026 IDEATECH INC. ALL RIGHTS RESERVED.</div>
+  </div>
+</footer>
+
+<script>
+  // Position tabs
+  const tabs = document.querySelectorAll('.position-tab');
+  const panels = document.querySelectorAll('.position-panel');
+  tabs.forEach(t => {
+    t.addEventListener('click', () => {
+      const target = t.dataset.tab;
+      tabs.forEach(x => x.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+      t.classList.add('active');
+      document.getElementById('panel-' + target).classList.add('active');
+    });
+  });
+
+  // Fade-in on scroll for sections
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.section-head, .about-grid, .stats-grid, .mvv-list, .be-grid, .biz-list, .why-grid, .positions-intro, .position-tabs, .process-flow, .message-grid').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1)';
+    io.observe(el);
+  });
+</script>
+
+</body>
+</html>
