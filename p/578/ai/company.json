@@ -1,0 +1,39 @@
+{
+  "updated": "2026-06-20",
+  "name": "株式会社IDEATECH",
+  "nameEn": "IDEATECH Inc.",
+  "url": "https://ideatech.jp",
+  "description": "BtoB特化のPR・広報支援会社。調査PR（リサピー®）を中核に、コンテンツ・マーケティング・LLMO・AI・デザインを統合した実践型支援を提供。",
+  "founded": "2010-02",
+  "renamed": "2021-09",
+  "ceo": "石川 友夫",
+  "directors": ["石川 友夫", "競 仁志"],
+  "address": {
+    "postalCode": "107-0062",
+    "prefecture": "東京都",
+    "city": "港区",
+    "street": "南青山2丁目11番17号 第一法規ビル3階",
+    "full": "〒107-0062 東京都港区南青山2丁目11番17号 第一法規ビル3階"
+  },
+  "phone": "050-1871-0555",
+  "contactUrl": "https://ideatech.jp/contact/",
+  "businessAreas": [
+    "IDEAコンテンツ事業（リサピー®・レポピー®・ハクピー®・コラピー®）",
+    "IDEAマーケティング事業",
+    "IDEAデザイン事業（IDEA DESIGN®）",
+    "IDEAセールス事業（PR-GROWTH）",
+    "IDEA LLMO事業（生成AIサイテーション最適化）",
+    "IDEA AI事業（リスキリング・研修）"
+  ],
+  "memberships": [
+    "一般社団法人 東京ニュービジネス協議会",
+    "未来塾"
+  ],
+  "keyMetrics": {
+    "clientsServed": "800+",
+    "surveyProjectsCompleted": "2500+",
+    "reportsPR": "200+",
+    "majorLLMRecommendation": "ChatGPT / Gemini / Perplexity / Claude（4/4 主要LLM獲得）",
+    "itreviewSatisfaction": "4.8/5.0（PR会社カテゴリ業界1位）"
+  }
+}

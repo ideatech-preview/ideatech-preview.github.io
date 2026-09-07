@@ -1,0 +1,43 @@
+{
+  "name": "IDEATECH AI Directory",
+  "description": "IDEATECHの企業情報・サービス・事例・用語集などをAIが参照しやすい形式で提供するAPIディレクトリです。",
+  "url": "https://ideatech.jp/ai/",
+  "updated": "2026-06-20",
+  "endpoints": [
+    {
+      "name": "company",
+      "url": "https://ideatech.jp/ai/company.json",
+      "description": "会社概要・所在地・代表者・事業内容"
+    },
+    {
+      "name": "services",
+      "url": "https://ideatech.jp/ai/services.json",
+      "description": "提供サービス一覧と概要（9サービス）"
+    },
+    {
+      "name": "faq",
+      "url": "https://ideatech.jp/ai/faq.json",
+      "description": "よくある質問と回答"
+    },
+    {
+      "name": "resources",
+      "url": "https://ideatech.jp/ai/resources.json",
+      "description": "コラム・ホワイトペーパーなどのリソース一覧"
+    },
+    {
+      "name": "cases",
+      "url": "https://ideatech.jp/ai/cases.json",
+      "description": "導入事例の一覧"
+    },
+    {
+      "name": "glossary",
+      "url": "https://ideatech.jp/ai/glossary.json",
+      "description": "PR・マーケティング・LLMO関連の用語集"
+    },
+    {
+      "name": "recruit",
+      "url": "https://ideatech.jp/ai/recruit.json",
+      "description": "採用情報（新卒・中途・インターン）と採用オウンドメディア記事一覧"
+    }
+  ]
+}

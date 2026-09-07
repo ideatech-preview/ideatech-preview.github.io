@@ -1,0 +1,317 @@
+<!DOCTYPE html><html lang="ja"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- 計測タグ（GA4 + Clarity）は共通コンポーネントに集約 --><!-- Google tag (gtag.js) - GA4 --><script async src="https://www.googletagmanager.com/gtag/js?id=G-L86HGPXW6F"></script> <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-L86HGPXW6F');
+</script> <!-- Microsoft Clarity --><script>
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "xawjup0xoa");
+</script><link rel="icon" href="/p/578/favicon.svg" type="image/svg+xml"><link rel="icon" href="/p/578/favicon.ico" sizes="any"><link rel="apple-touch-icon" href="/p/578/apple-touch-icon.png"><title>調査PRはなぜLLMOに効くのか｜AI引用の仕組みから徹底解説 | コラム | 株式会社IDEATECH</title><meta name="description" content="調査PRはなぜLLMOに効くのか｜AI引用の仕組みから徹底解説 | コラム — IDEATECH"><link rel="canonical" href="https://ideatech.jp/column/llmo-c003/"><meta property="og:type" content="website"><meta property="og:title" content="調査PRはなぜLLMOに効くのか｜AI引用の仕組みから徹底解説 | コラム | 株式会社IDEATECH"><meta property="og:description" content="調査PRはなぜLLMOに効くのか｜AI引用の仕組みから徹底解説 | コラム — IDEATECH"><meta property="og:site_name" content="IDEATECH"><meta property="og:locale" content="ja_JP"><meta property="og:url" content="https://ideatech.jp/column/llmo-c003/"><meta property="og:image" content="https://ideatech.jp/images/column/LLMO-c003/cover-b4fddf5f.webp"><meta property="og:image:alt" content="調査PRはなぜLLMOに効くのか｜AI引用の仕組みから徹底解説 | コラム | 株式会社IDEATECH"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="調査PRはなぜLLMOに効くのか｜AI引用の仕組みから徹底解説 | コラム | 株式会社IDEATECH"><meta name="twitter:description" content="調査PRはなぜLLMOに効くのか｜AI引用の仕組みから徹底解説 | コラム — IDEATECH"><meta name="twitter:image" content="https://ideatech.jp/images/column/LLMO-c003/cover-b4fddf5f.webp"><meta name="twitter:image:alt" content="調査PRはなぜLLMOに効くのか｜AI引用の仕組みから徹底解説 | コラム | 株式会社IDEATECH"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"><meta name="theme-color" content="#0B1D3E"><link rel="alternate" hreflang="ja" href="https://ideatech.jp/column/llmo-c003/"><link rel="alternate" hreflang="x-default" href="https://ideatech.jp/column/llmo-c003/"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"https://ideatech.jp/#website","name":"IDEATECH","alternateName":"株式会社IDEATECH","url":"https://ideatech.jp","inLanguage":"ja","publisher":{"@id":"https://ideatech.jp/#organization"},"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://ideatech.jp/column/?q={search_term_string}"},"query-input":"required name=search_term_string"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://ideatech.jp/#organization","name":"株式会社IDEATECH","alternateName":["アイデアテック","IDEATECH","IDEATECH Inc."],"legalName":"株式会社IDEATECH","url":"https://ideatech.jp","logo":{"@type":"ImageObject","url":"https://ideatech.jp/images/logo_yoko1_w.svg","width":200,"height":44},"description":"BtoB特化のPR・広報支援会社。リサピー®で2,500件超の調査PR実績、Yahoo!ニュース300件以上、NHK・日経新聞等への掲載実績を持つ。","foundingDate":"2010-02","founder":{"@type":"Person","name":"石川友夫","jobTitle":"代表取締役"},"areaServed":"JP","address":{"@type":"PostalAddress","streetAddress":"南青山2-11-17 第一法規ビル3F","addressLocality":"港区","addressRegion":"東京都","postalCode":"107-0062","addressCountry":"JP"},"contactPoint":{"@type":"ContactPoint","telephone":"+81-50-1871-0555","contactType":"customer support","areaServed":"JP","availableLanguage":["Japanese"]},"sameAs":["https://twitter.com/researchprjp","https://prtimes.jp/main/html/searchrlp/company_id/56536"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"調査PRはなぜLLMOに効くのか｜AI引用の仕組みから徹底解説","description":"","author":{"@type":"Organization","name":"IDEATECH","url":"https://ideatech.jp"},"publisher":{"@type":"Organization","name":"IDEATECH","logo":{"@type":"ImageObject","url":"https://ideatech.jp/assets/images/logo.webp"}},"datePublished":"2026-08-23","mainEntityOfPage":{"@type":"WebPage","@id":"https://ideatech.jp/column/llmo-c003/"},"keywords":["コラム","AI","LLMO"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://ideatech.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://ideatech.jp/column/"},{"@type":"ListItem","position":3,"name":"調査PRはなぜLLMOに効くのか｜AI引用の仕組みから徹底解説","item":"https://ideatech.jp/column/llmo-c003/"}]}</script><!-- Google Fonts --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Shippori+Mincho:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/p/578/assets/css/style.css"><link rel="stylesheet" href="/p/578/_astro/_slug_.UJ6WLy0-.css">
+<link rel="stylesheet" href="/p/578/_astro/_slug_.p0TcAfBm.css"><script type="module" src="/p/578/_astro/hoisted.Bce5PGyg.js"></script></head> <body data-mode="light"> <a href="#main" class="skip-to-content">メインコンテンツへスキップ</a> <!-- スプラッシュスクリーン --> <div class="splash" id="splash" aria-hidden="true"> <img src="/p/578/images/logo_w.svg" alt="" class="splash__logo" width="200" height="200"> </div> <header class="header" id="header" role="banner" data-astro-cid-3ef6ksr2> <div class="header__inner" data-astro-cid-3ef6ksr2> <div class="header__logo-group" data-astro-cid-3ef6ksr2> <a href="/p/578/" class="header__logo" aria-label="IDEATECH トップページ" data-astro-cid-3ef6ksr2> <img src="/p/578/images/logo_yoko1_w.svg" alt="IDEATECH" height="44" width="auto" data-astro-cid-3ef6ksr2> </a>  </div> <nav class="header__nav" id="nav" aria-label="メインナビゲーション" data-astro-cid-3ef6ksr2> <ul class="header__nav-list" data-astro-cid-3ef6ksr2> <!-- サービス ドロップダウン --> <li class="header__has-dropdown" id="serviceDropdownWrap" data-astro-cid-3ef6ksr2> <button class="header__dropdown-btn" id="serviceDropdownBtn" aria-haspopup="true" aria-expanded="false" aria-controls="serviceDropdownMenu" type="button" data-astro-cid-3ef6ksr2>
+サービス
+<svg class="header__dropdown-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-3ef6ksr2> <path d="M2 4l4 4 4-4" data-astro-cid-3ef6ksr2></path> </svg> </button> <div class="header__mega" id="serviceDropdownMenu" role="menu" data-astro-cid-3ef6ksr2> <div class="header__mega-inner" data-astro-cid-3ef6ksr2> <section class="header__mega-group" data-astro-cid-3ef6ksr2> <p class="header__mega-heading" data-astro-cid-3ef6ksr2>FLAGSHIP</p> <ul class="header__mega-list" role="none" data-astro-cid-3ef6ksr2> <li role="none" data-astro-cid-3ef6ksr2> <a href="/p/578/service/idea-llmo/" role="menuitem" class="header__mega-item" data-astro-cid-3ef6ksr2> <span class="header__mega-icon" data-astro-cid-3ef6ksr2> <img src="/p/578/images/logo_b.svg" alt="" loading="lazy" data-astro-cid-3ef6ksr2> </span> <span class="header__mega-text" data-astro-cid-3ef6ksr2> <span class="header__mega-label" data-astro-cid-3ef6ksr2>IDEA LLMO</span> <span class="header__mega-desc" data-astro-cid-3ef6ksr2>LLMO戦略</span> </span> </a> </li><li role="none" data-astro-cid-3ef6ksr2> <a href="/p/578/service/idea-llmo-board/" role="menuitem" class="header__mega-item" data-astro-cid-3ef6ksr2> <span class="header__mega-icon" data-astro-cid-3ef6ksr2> <img src="/p/578/images/logo_b.svg" alt="" loading="lazy" data-astro-cid-3ef6ksr2> </span> <span class="header__mega-text" data-astro-cid-3ef6ksr2> <span class="header__mega-label" data-astro-cid-3ef6ksr2>IDEA LLMO BOARD</span> <span class="header__mega-desc" data-astro-cid-3ef6ksr2>LLMOの計器盤</span> </span> </a> </li> </ul> </section><section class="header__mega-group" data-astro-cid-3ef6ksr2> <p class="header__mega-heading" data-astro-cid-3ef6ksr2>コンテンツマーケティング</p> <ul class="header__mega-list" role="none" data-astro-cid-3ef6ksr2> <li role="none" data-astro-cid-3ef6ksr2> <a href="/p/578/service/research-pr/" role="menuitem" class="header__mega-item" data-astro-cid-3ef6ksr2> <span class="header__mega-icon" data-astro-cid-3ef6ksr2> <img src="/p/578/images/icon_resapy.webp" alt="" loading="lazy" data-astro-cid-3ef6ksr2> </span> <span class="header__mega-text" data-astro-cid-3ef6ksr2> <span class="header__mega-label" data-astro-cid-3ef6ksr2>リサピー®</span> <span class="header__mega-desc" data-astro-cid-3ef6ksr2>リサーチマーケティング</span> </span> </a> </li><li role="none" data-astro-cid-3ef6ksr2> <a href="/p/578/service/report-pr/" role="menuitem" class="header__mega-item" data-astro-cid-3ef6ksr2> <span class="header__mega-icon" data-astro-cid-3ef6ksr2> <img src="/p/578/images/icon_repopy.webp" alt="" loading="lazy" data-astro-cid-3ef6ksr2> </span> <span class="header__mega-text" data-astro-cid-3ef6ksr2> <span class="header__mega-label" data-astro-cid-3ef6ksr2>レポピー®</span> <span class="header__mega-desc" data-astro-cid-3ef6ksr2>レポートマーケティング</span> </span> </a> </li><li role="none" data-astro-cid-3ef6ksr2> <a href="/p/578/service/hakupee/" role="menuitem" class="header__mega-item" data-astro-cid-3ef6ksr2> <span class="header__mega-icon" data-astro-cid-3ef6ksr2> <img src="/p/578/images/icon_hakupee.webp" alt="" loading="lazy" data-astro-cid-3ef6ksr2> </span> <span class="header__mega-text" data-astro-cid-3ef6ksr2> <span class="header__mega-label" data-astro-cid-3ef6ksr2>ハクピー®</span> <span class="header__mega-desc" data-astro-cid-3ef6ksr2>ソートリーダーシップマーケティング</span> </span> </a> </li><li role="none" data-astro-cid-3ef6ksr2> <a href="/p/578/service/colapy/" role="menuitem" class="header__mega-item" data-astro-cid-3ef6ksr2> <span class="header__mega-icon" data-astro-cid-3ef6ksr2> <img src="/p/578/images/icon_colapy.webp" alt="" loading="lazy" data-astro-cid-3ef6ksr2> </span> <span class="header__mega-text" data-astro-cid-3ef6ksr2> <span class="header__mega-label" data-astro-cid-3ef6ksr2>コラピー®</span> <span class="header__mega-desc" data-astro-cid-3ef6ksr2>LLMOコンテンツ</span> </span> </a> </li><li role="none" data-astro-cid-3ef6ksr2> <a href="/p/578/service/content-sales/" role="menuitem" class="header__mega-item" data-astro-cid-3ef6ksr2> <span class="header__mega-icon" data-astro-cid-3ef6ksr2> <img src="/p/578/images/logo_b.svg" alt="" loading="lazy" data-astro-cid-3ef6ksr2> </span> <span class="header__mega-text" data-astro-cid-3ef6ksr2> <span class="header__mega-label" data-astro-cid-3ef6ksr2>コンテンツセールス®</span> <span class="header__mega-desc" data-astro-cid-3ef6ksr2>コンテンツ起点の受注・LTV向上</span> </span> </a> </li> </ul> </section><section class="header__mega-group" data-astro-cid-3ef6ksr2> <p class="header__mega-heading" data-astro-cid-3ef6ksr2>AI・テクノロジー</p> <ul class="header__mega-list" role="none" data-astro-cid-3ef6ksr2> <li role="none" data-astro-cid-3ef6ksr2> <a href="/p/578/service/idea-ai/" role="menuitem" class="header__mega-item" data-astro-cid-3ef6ksr2> <span class="header__mega-icon" data-astro-cid-3ef6ksr2> <img src="/p/578/images/logo_b.svg" alt="" loading="lazy" data-astro-cid-3ef6ksr2> </span> <span class="header__mega-text" data-astro-cid-3ef6ksr2> <span class="header__mega-label" data-astro-cid-3ef6ksr2>IDEA AI</span> <span class="header__mega-desc" data-astro-cid-3ef6ksr2>AI研修・AI開発</span> </span> </a> </li><li role="none" data-astro-cid-3ef6ksr2> <a href="/p/578/service/idea-design/" role="menuitem" class="header__mega-item" data-astro-cid-3ef6ksr2> <span class="header__mega-icon" data-astro-cid-3ef6ksr2> <img src="/p/578/images/icon_idea-design.webp" alt="" loading="lazy" data-astro-cid-3ef6ksr2> </span> <span class="header__mega-text" data-astro-cid-3ef6ksr2> <span class="header__mega-label" data-astro-cid-3ef6ksr2>IDEA DESIGN®</span> <span class="header__mega-desc" data-astro-cid-3ef6ksr2>変化し続けるWEBサイト</span> </span> </a> </li> </ul> </section><section class="header__mega-group" data-astro-cid-3ef6ksr2> <p class="header__mega-heading" data-astro-cid-3ef6ksr2>組織・グロース</p> <ul class="header__mega-list" role="none" data-astro-cid-3ef6ksr2> <li role="none" data-astro-cid-3ef6ksr2> <a href="/p/578/service/pr-growth/" role="menuitem" class="header__mega-item" data-astro-cid-3ef6ksr2> <span class="header__mega-icon" data-astro-cid-3ef6ksr2> <img src="/p/578/images/logo_b.svg" alt="" loading="lazy" data-astro-cid-3ef6ksr2> </span> <span class="header__mega-text" data-astro-cid-3ef6ksr2> <span class="header__mega-label" data-astro-cid-3ef6ksr2>PR-GROWTH</span> <span class="header__mega-desc" data-astro-cid-3ef6ksr2>PR組織構築伴走</span> </span> </a> </li> </ul> </section> </div> <div class="header__mega-foot" data-astro-cid-3ef6ksr2> <a href="/p/578/service/" role="menuitem" class="header__mega-all" data-astro-cid-3ef6ksr2>
+サービス一覧をすべて見る
+<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-3ef6ksr2> <path d="M3 7h8M7 3l4 4-4 4" data-astro-cid-3ef6ksr2></path> </svg> </a> </div> </div> </li> <li data-astro-cid-3ef6ksr2> <a href="/p/578/customer-voice/" class="header__nav-link" data-astro-cid-3ef6ksr2> 導入事例  </a> </li><li data-astro-cid-3ef6ksr2> <a href="/p/578/seminar/" class="header__nav-link header__nav-link--badge" data-astro-cid-3ef6ksr2> セミナー <span class="header__nav-badge" aria-label="開催予定あり" data-astro-cid-3ef6ksr2></span> </a> </li><li data-astro-cid-3ef6ksr2> <a href="/p/578/news/" class="header__nav-link" data-astro-cid-3ef6ksr2> ニュース  </a> </li> <!-- コラム --> <li data-astro-cid-3ef6ksr2> <a href="/p/578/column/" aria-current="page" class="header__nav-link" data-astro-cid-3ef6ksr2>
+コラム
+ </a> </li> <!-- 採用情報 ドロップダウン --> <li class="header__has-dropdown" id="recruitDropdownWrap" data-astro-cid-3ef6ksr2> <button class="header__dropdown-btn" id="recruitDropdownBtn" aria-haspopup="true" aria-expanded="false" aria-controls="recruitDropdownMenu" type="button" data-astro-cid-3ef6ksr2>
+採用情報
+<svg class="header__dropdown-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-3ef6ksr2> <path d="M2 4l4 4 4-4" data-astro-cid-3ef6ksr2></path> </svg> </button> <ul class="header__dropdown-menu" id="recruitDropdownMenu" role="menu" data-astro-cid-3ef6ksr2> <li role="none" data-astro-cid-3ef6ksr2> <a href="/p/578/recruit/" role="menuitem" data-astro-cid-3ef6ksr2> 採用メッセージ </a> </li><li role="none" data-astro-cid-3ef6ksr2> <a href="/p/578/recruit/media/" role="menuitem" data-astro-cid-3ef6ksr2> 採用オウンドメディア </a> </li> </ul> </li> <!-- 会社情報 ドロップダウン --> <li class="header__has-dropdown" id="companyDropdownWrap" data-astro-cid-3ef6ksr2> <button class="header__dropdown-btn" id="companyDropdownBtn" aria-haspopup="true" aria-expanded="false" aria-controls="companyDropdownMenu" type="button" data-astro-cid-3ef6ksr2>
+会社情報
+<svg class="header__dropdown-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-3ef6ksr2> <path d="M2 4l4 4 4-4" data-astro-cid-3ef6ksr2></path> </svg> </button> <ul class="header__dropdown-menu" id="companyDropdownMenu" role="menu" data-astro-cid-3ef6ksr2> <li role="none" data-astro-cid-3ef6ksr2> <a href="/p/578/info/company/" role="menuitem" data-astro-cid-3ef6ksr2> 会社概要 </a> </li><li role="none" data-astro-cid-3ef6ksr2> <a href="/p/578/info/about/" role="menuitem" data-astro-cid-3ef6ksr2> 私たちについて </a> </li><li role="none" data-astro-cid-3ef6ksr2> <a href="/p/578/info/message/" role="menuitem" data-astro-cid-3ef6ksr2> 代表挨拶 </a> </li><li role="none" data-astro-cid-3ef6ksr2> <a href="/p/578/info/member/" role="menuitem" data-astro-cid-3ef6ksr2> メンバー </a> </li><li role="none" data-astro-cid-3ef6ksr2> <a href="/p/578/info/genten/" role="menuitem" data-astro-cid-3ef6ksr2> 原典 </a> </li><li role="none" data-astro-cid-3ef6ksr2> <a href="https://fxyltrgw.gensparkspace.com/" role="menuitem" target="_blank" rel="noopener noreferrer" data-astro-cid-3ef6ksr2> IDEATECH 農園日記<span aria-hidden="true" style="margin-left:4px;font-size:0.85em;" data-astro-cid-3ef6ksr2>↗</span> </a> </li> <li role="none" class="header__dropdown-divider" aria-hidden="true" data-astro-cid-3ef6ksr2></li> <li role="none" data-astro-cid-3ef6ksr2> <a href="/p/578/info/" role="menuitem" data-astro-cid-3ef6ksr2>
+会社情報一覧
+</a> </li> </ul> </li> </ul> <div class="header__nav-cta mode-dark" data-astro-cid-3ef6ksr2> <a href="/p/578/contact/" class="cta-kuro" data-astro-cid-3ef6ksr2>お問い合わせ</a> <a href="/p/578/download/" class="cta-shiro header__cta--with-badge" data-astro-cid-3ef6ksr2>
+お役立ち資料
+<span class="header__nav-badge" aria-label="新着あり" data-astro-cid-3ef6ksr2></span> </a> </div> </nav> <div class="header__cta mode-dark" data-astro-cid-3ef6ksr2> <a href="/p/578/contact/" class="cta-kuro" data-astro-cid-3ef6ksr2>お問い合わせ</a> <a href="/p/578/download/" class="cta-shiro header__cta--with-badge" data-astro-cid-3ef6ksr2>
+お役立ち資料
+<span class="header__nav-badge" aria-label="新着あり" data-astro-cid-3ef6ksr2></span> </a> </div> <button class="header__menu-btn" id="menuBtn" aria-controls="nav" aria-expanded="false" aria-label="メニューを開く" data-astro-cid-3ef6ksr2> <span data-astro-cid-3ef6ksr2></span><span data-astro-cid-3ef6ksr2></span><span data-astro-cid-3ef6ksr2></span> </button> </div> </header>   <nav class="breadcrumb" aria-label="パンくずリスト"> <ol class="breadcrumb__list" itemscope itemtype="https://schema.org/BreadcrumbList"> <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"> <a href="/p/578/" class="breadcrumb__link" itemprop="item"> <span itemprop="name">TOP</span> </a> <meta itemprop="position" content="1"> </li><li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"> <a href="/p/578/column/" class="breadcrumb__link" itemprop="item"> <span itemprop="name">コラム</span> </a> <meta itemprop="position" content="2"> </li><li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"> <span class="breadcrumb__current" itemprop="name">調査PRはなぜLLMOに効くのか｜AI引用の仕組みから徹底解説</span> <meta itemprop="position" content="3"> </li> </ol> </nav> <main id="main">  <div class="tpi-page cla"> <!-- HERO --> <section class="cla-hero"> <div class="cla-hero__cover" aria-hidden="true"> <img src="/p/578/images/column/LLMO-c003/cover-b4fddf5f.webp" alt="" loading="eager"> </div> <div class="cla-hero__inner"> <span class="cla-hero__chip">// コラム</span> <h1 class="cla-hero__title">調査PRはなぜLLMOに効くのか｜AI引用の仕組みから徹底解説</h1>  <div class="cla-hero__meta"> <time class="cla-hero__date" datetime="2026-08-23">2026年8月23日</time> <div class="cla-hero__tags"> <span class="cla-hero__tag">AI</span><span class="cla-hero__tag">LLMO</span> </div> </div> </div> </section> <!-- BODY: 2-column --> <section class="cla-body"> <div class="cla-body__inner"> <article class="cla-article">  <details class="cla-toc" open> <summary class="cla-toc__toggle"><span>// INDEX</span></summary> <ol class="cla-toc__list"> <li class="cla-toc__item cla-toc__item--lv2"> <a href="#1-この記事で使う4つの言葉llmoサイテーションルールメイク調査pr" class="cla-toc__link">1. この記事で使う4つの言葉（LLMO/サイテーション/ルールメイク/調査PR）</a> </li><li class="cla-toc__item cla-toc__item--lv2"> <a href="#2-aiはどうやって引用する情報を選んでいるのか" class="cla-toc__link">2. AIはどうやって「引用する情報」を選んでいるのか</a> </li><li class="cla-toc__item cla-toc__item--lv3"> <a href="#ai引用の84は第三者が書いた情報" class="cla-toc__link">AI引用の84%は「第三者が書いた情報」</a> </li><li class="cla-toc__item cla-toc__item--lv3"> <a href="#検索順位とai引用はもはや連動していない" class="cla-toc__link">検索順位とAI引用は、もはや連動していない</a> </li><li class="cla-toc__item cla-toc__item--lv3"> <a href="#では何がai引用を決めているのか" class="cla-toc__link">では、何がAI引用を決めているのか</a> </li><li class="cla-toc__item cla-toc__item--lv3"> <a href="#補足aiが情報を使う2つの経路" class="cla-toc__link">補足：AIが情報を使う2つの経路</a> </li><li class="cla-toc__item cla-toc__item--lv2"> <a href="#3-調査prがllmoに効く3つの理由一次データ第三者掲載ルールメイク" class="cla-toc__link">3. 調査PRがLLMOに効く3つの理由（一次データ/第三者掲載/ルールメイク）</a> </li><li class="cla-toc__item cla-toc__item--lv3"> <a href="#理由①一次データをそもそも存在しない状態から作れる" class="cla-toc__link">理由①：一次データを、そもそも存在しない状態から作れる</a> </li><li class="cla-toc__item cla-toc__item--lv3"> <a href="#理由②第三者掲載によってアーンドメディアそのものになれる" class="cla-toc__link">理由②：第三者掲載によって、アーンドメディアそのものになれる</a> </li><li class="cla-toc__item cla-toc__item--lv3"> <a href="#理由③選定基準そのものを設計できるルールメイク" class="cla-toc__link">理由③：選定基準そのものを設計できる（ルールメイク）</a> </li><li class="cla-toc__item cla-toc__item--lv3"> <a href="#3つの理由は独立していない" class="cla-toc__link">3つの理由は、独立していない</a> </li><li class="cla-toc__item cla-toc__item--lv2"> <a href="#4-効く調査prの設計切り口設問見出し数字" class="cla-toc__link">4. 効く調査PRの設計：切り口・設問・見出し数字</a> </li><li class="cla-toc__item cla-toc__item--lv3"> <a href="#切り口の設計何を聞くかではなくどんな見出しを取りたいか" class="cla-toc__link">切り口の設計：「何を聞くか」ではなく「どんな見出しを取りたいか」</a> </li><li class="cla-toc__item cla-toc__item--lv3"> <a href="#設問の設計認知と実態のギャップを作る" class="cla-toc__link">設問の設計：認知と実態のギャップを作る</a> </li><li class="cla-toc__item cla-toc__item--lv3"> <a href="#サンプル設計属性定義を曖昧にしない" class="cla-toc__link">サンプル設計：属性定義を曖昧にしない</a> </li><li class="cla-toc__item cla-toc__item--lv3"> <a href="#見出し数字の想定企画段階で割がを描けているか" class="cla-toc__link">見出し数字の想定：企画段階で「◯割が〜」を描けているか</a> </li><li class="cla-toc__item cla-toc__item--lv3"> <a href="#社会的関心とのブリッジも設計に含める" class="cla-toc__link">社会的関心とのブリッジも設計に含める</a> </li><li class="cla-toc__item cla-toc__item--lv2"> <a href="#5-効果測定の考え方言及率とサイテーションで見る" class="cla-toc__link">5. 効果測定の考え方：言及率とサイテーションで見る</a> </li><li class="cla-toc__item cla-toc__item--lv3"> <a href="#3層で計測する" class="cla-toc__link">3層で計測する</a> </li><li class="cla-toc__item cla-toc__item--lv3"> <a href="#計測方法そのものを開示できるかが信頼の目安になる" class="cla-toc__link">計測方法そのものを開示できるかが、信頼の目安になる</a> </li><li class="cla-toc__item cla-toc__item--lv2"> <a href="#6-自社実証ai推薦がほぼ0から3ヶ月で獲得できた話" class="cla-toc__link">6. 自社実証：AI推薦がほぼ0から3ヶ月で獲得できた話</a> </li><li class="cla-toc__item cla-toc__item--lv3"> <a href="#結果おすすめ軸の全プロンプトで推薦候補に" class="cla-toc__link">結果：「おすすめ軸」の全プロンプトで推薦候補に</a> </li><li class="cla-toc__item cla-toc__item--lv3"> <a href="#なぜうまくいったのかaiの選定軸とリサピーの強みが一致した" class="cla-toc__link">なぜうまくいったのか：AIの選定軸とリサピー®の強みが一致した</a> </li><li class="cla-toc__item cla-toc__item--lv3"> <a href="#まだ空白の軸がある" class="cla-toc__link">まだ空白の軸がある</a> </li><li class="cla-toc__item cla-toc__item--lv3"> <a href="#注意事実の範囲でしか語らない" class="cla-toc__link">注意：事実の範囲でしか語らない</a> </li><li class="cla-toc__item cla-toc__item--lv2"> <a href="#7-ideatechリサピーの一気通貫体制" class="cla-toc__link">7. IDEATECH（リサピー®）の一気通貫体制</a> </li><li class="cla-toc__item cla-toc__item--lv3"> <a href="#一気通貫でつながる4つの工程" class="cla-toc__link">一気通貫でつながる4つの工程</a> </li><li class="cla-toc__item cla-toc__item--lv3"> <a href="#ideatechの実績基盤" class="cla-toc__link">IDEATECHの実績基盤</a> </li><li class="cla-toc__item cla-toc__item--lv2"> <a href="#8-まとめとfaq" class="cla-toc__link">8. まとめとFAQ</a> </li><li class="cla-toc__item cla-toc__item--lv3"> <a href="#この記事の要点" class="cla-toc__link">この記事の要点</a> </li><li class="cla-toc__item cla-toc__item--lv3"> <a href="#faq" class="cla-toc__link">FAQ</a> </li><li class="cla-toc__item cla-toc__item--lv3"> <a href="#次の一歩" class="cla-toc__link">次の一歩</a> </li><li class="cla-toc__item cla-toc__item--lv2"> <a href="#出典一覧" class="cla-toc__link">出典一覧</a> </li> </ol> </details> <div class="cla-content"> <p><strong>AIは「世の中に存在する調査データ・ファクト」から、選定基準そのものを学びます。</strong><br>
+<strong>だからこそ、自社に有利な一次データを設計し、第三者メディアへの掲載まで実行する「調査PR」は、AI推薦の源泉を直接つくる最有力の手段です。</strong><br>
+<strong>この効果はIDEATECH自身が実証済みで、自社の生成AI推薦がほぼ0だった状態から、約3ヶ月でChatGPT・Gemini・Google AI Overviewの推薦候補入りを達成しています。</strong></p>
+<p>「LLMO対策として何をすればいいのか」と聞かれたとき、多くの会社がまずサイトの構造化やFAQの追加を思い浮かべます。</p>
+<p>しかし、AIが引用する情報の大半は、自社サイトの中には存在しません。</p>
+<p>この記事では、なぜ調査PRという手法がAIの引用構造そのものに効くのかを、仕組みから実務レベルまで一気に解説します。</p>
+<hr>
+<h2 id="1-この記事で使う4つの言葉llmoサイテーションルールメイク調査pr">1. この記事で使う4つの言葉（LLMO/サイテーション/ルールメイク/調査PR）</h2>
+<p><img src="/p/578/images/column/LLMO-c003/01-13d69b40.webp" alt=""></p>
+<p>まず、この記事で繰り返し使う4つの言葉を定義します。</p>
+<p>言葉の定義がずれたまま「調査PRは効果があるのか」を議論すると、話がかみ合わなくなるためです。</p>
+<p><strong>LLMO（Large Language Model Optimization）</strong>とは、ChatGPT・Gemini・Claude・Google AI Overviewなどの対話型生成AIが回答をつくるときに、自社や自社サービスが正しく引用され、比較候補として推薦されやすい状態をつくる取り組みです。</p>
+<p>検索エンジンに見つけてもらうためのSEO（検索エンジン最適化）とは、最適化する相手も、効く打ち手も異なります。</p>
+<p><strong>サイテーション（citation/言及</strong>）とは、第三者が自社の名前・データ・見解に言及することです。</p>
+<p>リンクが張られているかどうかは問いません。</p>
+<p>リンクのない単なる言及であっても、AIの可視性には強く効きます。</p>
+<p><strong>調査PR</strong>とは、独自調査で一次データを設計・実施し、プレスリリースや取材を通じて第三者メディアに掲載することで、引用される状態をつくるPR手法です。</p>
+<p>調査を実施すること自体が目的ではなく、<strong>「第三者に載る」ところまでを設計に含む</strong>点が特徴です。</p>
+<p><strong>ルールメイク</strong>とは、市場やAIが「何を基準に選ぶか」という判断軸そのものを、調査データで設計する行為です。</p>
+<p>自社の機能を訴求するのではなく、「この条件で選ぶべき」という物差しを先に置く発想です。</p>
+<p>この記事の核心は、<strong>調査PRという手法が、この4つの言葉すべてを同時に成立させられる</strong>という点にあります。</p>
+<p>以降で、その理由を仕組みから説明します。</p>
+<hr>
+<h2 id="2-aiはどうやって引用する情報を選んでいるのか">2. AIはどうやって「引用する情報」を選んでいるのか</h2>
+<p><img src="/p/578/images/column/LLMO-c003/02-1ffc89f6.webp" alt=""></p>
+<p><strong>結論：AIが引用する情報の約84%は、企業が自分で書いた情報ではなく、第三者が書いた情報です。だから、自社サイトの中だけを最適化しても、引用される情報そのものは増えません。</strong></p>
+<p>まず、AIが実際に何を根拠に回答を組み立てているのかを、公開データで確認します。</p>
+<h3 id="ai引用の84は第三者が書いた情報">AI引用の84%は「第三者が書いた情報」</h3>
+<p>PRプラットフォームのMuck Rackが2026年5月に公開した調査「What is AI Reading?」は、ChatGPT・Claude・Geminiが実際に引用した2,500万本超のリンクを17業種にわたって分析しています。</p>
+<p>その結果、<strong>AI引用の84%がアーンドメディア（第三者が書いた報道・専門メディア・レビューなどの情報）由来</strong>であり、広告・記事広告が占める割合はわずか0.3%でした。</p>
+<p>ジャーナリズム由来の引用だけで27%を占めます。</p>
+<p>この傾向は2025年7月からの3版を通じて82〜89%で安定しており、一時的なアルゴリズムの偏りではなく、AIの構造的な選好であることが示されています。</p>
+<p>さらに、モデルごとに引用の癖も異なります。</p>
+<p>ChatGPTは回答の96%で出典を提示し、Geminiは82%、Claudeは55%と最も選択的です。</p>
+<p>どのAIで見られたいかによって、必要な露出の型も変わるということです。</p>
+<h3 id="検索順位とai引用はもはや連動していない">検索順位とAI引用は、もはや連動していない</h3>
+<p>「SEOで上位を取れば、AIにも引用される」という前提は、データによって否定されています。</p>
+<p>Ahrefsが863,000キーワード・400万件のAI Overview URLを分析した調査では、AI Overviewに引用されたページのうち、同じキーワードの検索トップ10に入っていたのはわずか37.9%でした。</p>
+<p>2025年7月時点の76%から、約半年で半減しています。</p>
+<p>さらにAhrefsが15,000件のロングテールクエリで検証した2026年5月の調査では、AIアシスタントが引用したURLと検索トップ10の重複は約11%という結果も出ています。</p>
+<p>「1位を取ること」と「AIに引用されること」は、もはや別のゲームです。</p>
+<h3 id="では何がai引用を決めているのか">では、何がAI引用を決めているのか</h3>
+<p>Ahrefsが75,000ブランドを分析した研究では、AI上でのブランド可視性と最も強く相関する要因は、ブランドへのWeb言及（サイテーション）で相関係数0.664でした。</p>
+<p>一方、従来のSEOで最重視されてきた被リンク数の相関は0.218にとどまります。</p>
+<p>言及の相関は、被リンクの約3倍です。</p>
+<p>自社が自分で書いた情報よりも、第三者が自社について語った情報のほうを、AIは信頼するということです。</p>
+<p>この一点が、「なぜ調査PRがLLMOに効くのか」という問いの出発点になります。</p>
+<h3 id="補足aiが情報を使う2つの経路">補足：AIが情報を使う2つの経路</h3>
+<p>AIが情報を使う経路は、大きく2つあります。</p>
+<p>一つは、モデルが過去に学習した情報（コーパス）です。</p>
+<p>もう一つは、回答時にWebなど外部情報をその場で探して使う仕組み（RAG）です。</p>
+<p>どちらの経路でも、第三者に多く言及されている情報ほど、候補に入り参照されやすくなります。</p>
+<p>だからこそ、一度きりの発信ではなく、第三者メディアでの言及を継続的に積み上げることが効いてきます。</p>
+<p>これは、自社サイトの改修という一過性の作業では代替できません。</p>
+<hr>
+<h2 id="3-調査prがllmoに効く3つの理由一次データ第三者掲載ルールメイク">3. 調査PRがLLMOに効く3つの理由（一次データ/第三者掲載/ルールメイク）</h2>
+<p><img src="/p/578/images/column/LLMO-c003/03-f15e9498.webp" alt=""></p>
+<p><strong>結論：調査PRが刺さるのは、単発のPR施策だからではありません。AI引用の源泉である「第三者情報」を、一次データ・第三者掲載・ルールメイクという3つの経路で、同時に作り出せるからです。</strong></p>
+<p>前章で見たとおり、AIは第三者が書いた情報を信頼します。</p>
+<p>では、その「第三者に書いてもらう情報」は、どうすれば生まれるのでしょうか。</p>
+<p>調査PRは、この問いに対する最も直接的な答えになります。</p>
+<h3 id="理由①一次データをそもそも存在しない状態から作れる">理由①：一次データを、そもそも存在しない状態から作れる</h3>
+<p>AIが引用できるのは、すでに世の中に存在する情報だけです。</p>
+<p>自社の強みや課題感が、まだ数字として世の中に存在していなければ、AIはそれを引用しようがありません。</p>
+<p>調査PRは、独自調査によって「まだ世の中にない数字」をゼロから作り出します。</p>
+<p>たとえば「現場担当者の8割が、ある課題に気づいていない」といった数字は、調査を実施しない限り存在しません。</p>
+<p>この一次データこそが、AIにとっての新しい引用元になります。</p>
+<h3 id="理由②第三者掲載によってアーンドメディアそのものになれる">理由②：第三者掲載によって、アーンドメディアそのものになれる</h3>
+<p>一次データを作るだけでは、まだ自社の発信物にすぎません。</p>
+<p>調査PRは、そのデータをプレスリリースや取材を通じて、報道・業界メディアに掲載するところまでを設計に含みます。</p>
+<p>掲載された瞬間、そのデータは自社発信ではなく、第三者（メディア）が報じた情報に変わります。</p>
+<p>AI引用の84%を占めるアーンドメディアに、自らなりに行くということです。</p>
+<p>さらに掲載が良質であれば、他のメディアやブロガーがその数字を引用し、二次引用が自走します。</p>
+<p>これがAIから見た「複数の独立した情報源が同じことを言っている」という状態、すなわち信頼の根拠になります。</p>
+<h3 id="理由③選定基準そのものを設計できるルールメイク">理由③：選定基準そのものを設計できる（ルールメイク）</h3>
+<p>最も強力なのが、このルールメイクです。</p>
+<p>生成AIは、「◯◯の会社を選ぶときのポイントは」と問われたとき、世の中に存在する調査データ・記事・解説を根拠に判断軸を組み立てます。</p>
+<p>その判断軸のもとになる情報を、自社が一次データとして先に作って第三者メディアに載せておけば、AIはその軸で回答を組み立てるようになります。</p>
+<p>自社の機能を訴求するのではなく、選ばれ方そのものを設計する発想です。</p>
+<p>分かりやすい例が、かつての洗剤市場です。</p>
+<p>選定基準が「白さ」だった市場に、「除菌」という新しい軸を提示することで、競争の土俵ごと動かした事例が知られています。</p>
+<p>性能競争に勝つのではなく、評価軸を変えることで勝てる位置に移動するという考え方です。</p>
+<h3 id="3つの理由は独立していない">3つの理由は、独立していない</h3>
+<p>ここで重要なのは、この3つが別々の施策ではなく、<strong>一本の調査PRの中で同時に進む</strong>という点です。</p>
+<p>一次データを作る設計の時点で、どの基準を置きたいかを決めておく（ルールメイク）。</p>
+<p>その基準を裏づける数字を、報道されやすい切り口で設計する（一次データ）。</p>
+<p>そして実際に第三者メディアに掲載する（アーンドメディア化）。</p>
+<p>この一連の流れを一気通貫で担えるかどうかが、調査PRの効果を左右します。</p>
+<p>どこか一つの工程が抜けると、効果は大きく目減りします。</p>
+<hr>
+<h2 id="4-効く調査prの設計切り口設問見出し数字">4. 効く調査PRの設計：切り口・設問・見出し数字</h2>
+<p><img src="/p/578/images/column/LLMO-c003/04-0f50a4cf.webp" alt=""></p>
+<p><strong>結論：調査を実施できることと、メディアが取り上げたくなる調査を企画できることは、まったく別の能力です。効く調査PRには、切り口・設問・見出し数字という3つの設計ポイントがあります。</strong></p>
+<p>「調査を実施すれば、自動的に第三者メディアに載る」というのは誤解です。</p>
+<p>調査会社に依頼するとPR視点が不足し、PR会社に依頼すると調査設計が甘くなる、という構造的な課題がしばしば指摘されます。</p>
+<p>ここでは、効く調査PRに共通する設計の勘所を3つに整理します。</p>
+<h3 id="切り口の設計何を聞くかではなくどんな見出しを取りたいか">切り口の設計：「何を聞くか」ではなく「どんな見出しを取りたいか」</h3>
+<p>多くの調査は、「何を聞くべきか」から設計を始めてしまいます。</p>
+<p>しかし、メディアに取り上げられる調査は、逆の順番で設計されています。</p>
+<p><strong>「どんな見出しを取りたいか」を先に決め、そこから逆算して設問を組む</strong>のです。</p>
+<p>たとえば「現場の4割が、方式の違いを知らずに選定している」という見出しを狙うなら、認知と実態のギャップを浮き彫りにする設問構成が必要になります。</p>
+<p>自社の強みが自然に伝わる切り口を、最初に定義しておくことが出発点です。</p>
+<h3 id="設問の設計認知と実態のギャップを作る">設問の設計：認知と実態のギャップを作る</h3>
+<p>ニュースになりやすい調査には、共通のパターンがあります。</p>
+<p>「思っていること」と「実際に起きていること」のギャップを数字で示す構成です。</p>
+<p>たとえば「連動すると思うか」という認知を聞く設問と、「実際に連動しているか」という実態を聞く設問を、同じ調査の中に両方入れます。</p>
+<p>このギャップが大きいほど、意外性のある見出しになり、報道価値が高まります。</p>
+<h3 id="サンプル設計属性定義を曖昧にしない">サンプル設計：属性定義を曖昧にしない</h3>
+<p>パブリシティ（自発的な報道掲載）を狙うのであれば、回答者の属性定義を明確にしておく必要があります。</p>
+<p>「BtoBマーケ担当者」のような曖昧な括りではなく、「従業員300名以上・LLMO対策を検討中の担当者」のように条件を絞り込むほど、その数字が持つ意味は明確になり、引用されやすくなります。</p>
+<h3 id="見出し数字の想定企画段階で割がを描けているか">見出し数字の想定：企画段階で「◯割が〜」を描けているか</h3>
+<p>効く調査には、企画の初期段階で「◯割が〜」という見出し候補がすでに見えています。</p>
+<p>この想定ができていない調査は、実施後に「で、何が言えるのか」が定まらず、リリースの訴求力が弱くなります。</p>
+<h3 id="社会的関心とのブリッジも設計に含める">社会的関心とのブリッジも設計に含める</h3>
+<p>自社に有利な数字であっても、それが社会的な関心・公益性と重ならなければ、メディアは取り上げません。</p>
+<p>「AI検索の急拡大」×「上位表示でも引用されない」という意外性のように、時事性のある文脈と接続することで、報道されやすさが大きく変わります。</p>
+<p>自社都合を、社会の問いに翻訳できるか。</p>
+<p>効く調査PRを設計できるかどうかは、この翻訳力に集約されます。</p>
+<hr>
+<h2 id="5-効果測定の考え方言及率とサイテーションで見る">5. 効果測定の考え方：言及率とサイテーションで見る</h2>
+<p><img src="/p/578/images/column/LLMO-c003/05-a3e13278.webp" alt=""></p>
+<p><strong>結論：LLMO対策の効果測定でもっとも多い失敗は、「AIでの言及数」だけを追ってしまうことです。言及数は結果指標にすぎず、それ単体では次の打ち手に接続できません。</strong></p>
+<p>IDEATECHがBtoB担当者329名に実施した調査では、LLMO対策に取り組む担当者の86.6%が課題・ハードルを実感しており、その第1位は「施策の効果を定量的に測定する方法が確立されていないこと」で54.4%でした。</p>
+<p>以下、「BtoBの専門用語や商習慣を反映したコンテンツ設計が難しいこと」（44.2%）、「AIに引用されるコンテンツの具体的な作り方がわからないこと」（41.4%）と続きます。</p>
+<p>測定方法が確立していないという課題は、業界全体でかなり広く共有されています。</p>
+<h3 id="3層で計測する">3層で計測する</h3>
+<p>効果測定は、次の3つの層に分けて設計すると、改善につながりやすくなります。</p>
+<p><strong>プロセス指標（プロンプト別の言及率）</strong></p>
+<p>特定のプロンプト（想定される検索・質問文）に対して、自社が推薦候補として言及される頻度を継続的に計測します。</p>
+<p>どのプロンプトで言及され、どのプロンプトでまだ言及されていないかが分かれば、次に埋めるべき空白が見えてきます。</p>
+<p><strong>成果指標（LLM経由の流入・参照）</strong></p>
+<p>AIの回答をきっかけに自社サイトへ訪れたユーザーの動きを追います。</p>
+<p>言及されているだけでなく、実際に流入や参照につながっているかを確認する層です。</p>
+<p><strong>コンバージョン指標（問い合わせ・商談化）</strong></p>
+<p>最終的に、問い合わせや商談化につながっているかを見る層です。</p>
+<p>言及数だけを見ていると、この層への接続が見えなくなります。</p>
+<h3 id="計測方法そのものを開示できるかが信頼の目安になる">計測方法そのものを開示できるかが、信頼の目安になる</h3>
+<p>計測を正しく行っている会社ほど、「どのプロンプトを、どのAIで、どの頻度で計測したか」を具体的に開示できます。</p>
+<p>逆に、「AIで常に1位です」「No.1です」といった断定的な表現は、計測条件次第で容易に変動するため、根拠として弱いと考えられます。</p>
+<p>「推薦候補として登場している」「特定の文脈では第一想起を取れている」といった、条件つきの表現のほうが、実態に即しています。</p>
+<hr>
+<h2 id="6-自社実証ai推薦がほぼ0から3ヶ月で獲得できた話">6. 自社実証：AI推薦がほぼ0から3ヶ月で獲得できた話</h2>
+<p><img src="/p/578/images/column/LLMO-c003/06-4c653673.webp" alt=""></p>
+<p><strong>結論：ここまでの理屈は、IDEATECH自身が自社サービス「リサピー®」で実証しています。2025年12月時点でAI推薦がほぼ0だった状態から、約3ヶ月後の2026年3月に、主要な生成AIで推薦候補として登場する状態に至りました。</strong></p>
+<p>IDEATECHは、調査PR市場において生成AIが自社をどう推薦するかを継続的に計測しています。</p>
+<p>2026年7月には、27のプロンプト×主要4〜5のLLMという設計で、自社の推奨状況を可視化するダッシュボードを構築・計測しました。</p>
+<h3 id="結果おすすめ軸の全プロンプトで推薦候補に">結果：「おすすめ軸」の全プロンプトで推薦候補に</h3>
+<p>計測の結果、リサピー®は「おすすめ軸」に該当するプロンプトすべてで、AIの推薦候補として登場していることが確認できました。</p>
+<p>一定の第一想起は取れている状態です。</p>
+<p>特にペルソナB（権威性・メディア露出を重視する文脈）が最も強く、「業界で語れる立場をつくる調査PR」という問いでは、AIが挙げた唯一の企業として登場しました。</p>
+<h3 id="なぜうまくいったのかaiの選定軸とリサピーの強みが一致した">なぜうまくいったのか：AIの選定軸とリサピー®の強みが一致した</h3>
+<p>計測を通じて分かったのは、AIが調査PR会社の選定軸として実際に語っていたのは、論点設計力・二次活用や啓蒙展開・掲載実績・PR視点（ニュースになる設問設計）・調査品質だったということです。</p>
+<p>これらはいずれも、リサピー®が強みとしてきた領域と高く一致していました。</p>
+<p>理屈だけでなく、実際にAIの回答の中で選ばれる基準と、自社の実力が噛み合っていたということです。</p>
+<h3 id="まだ空白の軸がある">まだ空白の軸がある</h3>
+<p>一方で、「AIに引用される一次データ資産をつくれるか（LLMO/GEOの観点）」という軸は、まだどの会社も選定基準として前面に出していない状態でした。</p>
+<p>つまり、この軸はまだ空白です。</p>
+<p>この記事や関連するコンテンツを通じて、この軸を言語化し実績化していくこと自体が、次のルールメイクの実践です。</p>
+<h3 id="注意事実の範囲でしか語らない">注意：事実の範囲でしか語らない</h3>
+<p>この実証は、あくまで特定の条件下（対象プロンプト・計測時点・対象LLM）での結果です。</p>
+<p>「常に1位」「No.1」といった状態を保証するものではありません。</p>
+<p>成果を保証するものでもなく、効果が出る時期は、認知状況・競合状況・掲載獲得量・AI側の更新タイミングによって変わります。</p>
+<hr>
+<h2 id="7-ideatechリサピーの一気通貫体制">7. IDEATECH（リサピー®）の一気通貫体制</h2>
+<p><img src="/p/578/images/column/LLMO-c003/07-5aee95cb.webp" alt=""></p>
+<p><strong>結論：調査PRの効果は、工程が分断された瞬間に目減りします。IDEATECHは、調査企画から第三者掲載、二次活用、効果計測までを一気通貫で担う体制を強みにしています。</strong></p>
+<p>IDEATECHの調査でも、この分断が実際の不満につながっていることが分かっています。</p>
+<p>外部支援会社への委託経験者（n=223）のうち50.2%が、「コンテンツ制作と情報発信（PR配信等）が別々の会社に分かれ、連携がうまくいかなかった」と回答しました。</p>
+<p>また、支援会社選定時に重視するポイントとしても、「戦略設計からコンテンツ制作・情報発信まで一貫して対応できること」が34.7%で第3位に入っています。</p>
+<h3 id="一気通貫でつながる4つの工程">一気通貫でつながる4つの工程</h3>
+<p><strong>① 調査企画・設計</strong></p>
+<p>置きたい選定基準（ルールメイク）から逆算し、見出しになる数字を想定して設問を設計します。</p>
+<p><strong>② 実査・分析</strong></p>
+<p>回答者の属性を明確にした上で調査を実施し、認知と実態のギャップを分析します。</p>
+<p><strong>③ 第三者メディアへの掲載</strong></p>
+<p>プレスリリースの作成からメディアアプローチまでを担い、報道・業界メディアへの掲載を実行します。</p>
+<p><strong>④ 二次活用・効果計測</strong></p>
+<p>掲載された調査結果を、コラムやホワイトペーパー、営業資料へと展開しながら、プロンプト別の言及率を継続的に計測します。</p>
+<p>この4つを同じ体制で担うことで、工程間の翻訳ロスが発生しません。</p>
+<p>調査設計者・PR担当・ライター・アナリストが同じチームにいることが、再現性を支えています。</p>
+<h3 id="ideatechの実績基盤">IDEATECHの実績基盤</h3>
+<p>株式会社IDEATECHは、2010年の創業以来、BtoB企業のPR・マーケティングを支援してきました。</p>
+<p>15年の戦略PR実績、BtoBマーケティング支援800社超、調査企画・実施2,500件超、Yahoo!ニュース掲載300件超を基盤に、BtoB特化のLLMO戦略支援「IDEA LLMO」を提供しています。</p>
+<p>調査PR「リサピー®」は、5年の実績・支援500社超・調査PR2,500件超・ITreview満足度4.8という実績を持ち、調査設計・アンケート実施・プレスリリース作成・二次活用提案・AI対策提案までを標準支援範囲としています。</p>
+<hr>
+<h2 id="8-まとめとfaq">8. まとめとFAQ</h2>
+<p><img src="/p/578/images/column/LLMO-c003/08-0511a5b1.webp" alt=""></p>
+<p><strong>結論：AIは世の中の調査データから選定基準を学びます。だから、一次データを設計し、第三者掲載まで実行する調査PRは、AI推薦の源泉を直接つくる最有力の手段です。技術的なLLMO対策と組み合わせることで、後発企業でも選ばれる土台をつくれます。</strong></p>
+<h3 id="この記事の要点">この記事の要点</h3>
+<ul>
+<li>AI引用の<strong>84%は第三者情報</strong>であり、広告・記事広告は0.3%にとどまります（Muck Rack、2026年5月）。</li>
+<li>AI可視性と最も相関するのは<strong>Web言及（0.664）</strong>で、被リンク（0.218）の約3倍です（Ahrefs、75,000ブランド分析）。</li>
+<li>調査PRは、<strong>一次データ・第三者掲載・ルールメイク</strong>という3つの経路を、一本の施策の中で同時に成立させられます。</li>
+<li>効く調査PRには、<strong>切り口・設問・見出し数字</strong>という3つの設計ポイントがあります。</li>
+<li>効果測定は、<strong>プロセス・成果・コンバージョン</strong>の3層で見る必要があります。</li>
+<li>IDEATECHの自社実証では、<strong>約3ヶ月でAI推薦候補入り</strong>を確認しました。</li>
+</ul>
+<p>なお、SEOや技術的なLLMO対策が不要になるわけではありません。</p>
+<p>構造化やエンティティ整理は、AIに正しく読み取ってもらうための必要条件です。</p>
+<p>技術（関連性）と、第三者性・権威（露出）を二層で組み合わせるのが現実解であり、調査PRは後者の層を担う打ち手です。</p>
+<h3 id="faq">FAQ</h3>
+<p><strong>Q1. 調査PRとSEOは、どちらを優先すべきですか。</strong></p>
+<p>どちらか一方ではなく、二層で考えるのが現実的です。</p>
+<p>構造化やFAQ整備といった技術対応は、AIに正しく読み取ってもらうための土台になります。</p>
+<p>一方、調査PRは、AI引用の84%を占める第三者情報そのものを作る打ち手です。</p>
+<p>技術対応だけでは引用元は増えないため、両方を組み合わせる必要があります。</p>
+<p><strong>Q2. 調査PRの効果は、どれくらいの期間で出ますか。</strong></p>
+<p>市場環境や競合状況によって変わるため、一律には言えません。</p>
+<p>IDEATECHの自社実証では、約3ヶ月でChatGPT・Gemini・Google AI Overviewでの推薦候補入りを確認しました。</p>
+<p>ただし単発の調査で終わらせず、第三者掲載を継続的に積み上げながら、月次で計測・改善する進め方が前提になります。</p>
+<p><strong>Q3. 調査は自社で実施し、掲載だけを依頼することはできますか。</strong></p>
+<p>可能です。</p>
+<p>ただし、効く調査PRは「掲載されやすい設問設計」が前提になるため、調査企画の段階からPR視点を入れておくことが望ましいです。</p>
+<p>調査を実施してから「載せてほしい」と依頼すると、切り口を作り直すことになりやすく、時間もコストもかさみます。</p>
+<p><strong>Q4. 効果測定は、何を見ればよいですか。</strong></p>
+<p>言及数だけを見るのではなく、プロセス指標（プロンプト別の言及率）・成果指標（LLM経由の流入）・コンバージョン指標（問い合わせ・商談化）の3層で見てください。</p>
+<p>言及数はあくまで結果指標であり、単体では次の打ち手を決められません。</p>
+<p><strong>Q5. 小規模な調査でも効果はありますか。</strong></p>
+<p>規模よりも、切り口と設問設計の質が重要です。</p>
+<p>回答者の属性を明確にした小規模な調査でも、認知と実態のギャップが明確であれば、十分に報道価値のある一次データになります。</p>
+<p><strong>Q6. IDEATECH以外に、この手法を実施できる会社はありますか。</strong></p>
+<p>調査会社・PR会社それぞれに強みはありますが、調査設計とPR視点、掲載後の二次活用・効果計測までを一気通貫で担う体制を持つ会社は限られます。</p>
+<p>依頼を検討する際は、この記事の3つの理由（一次データ・第三者掲載・ルールメイク）をすべて自社の言葉で説明できるかを確認することをおすすめします。</p>
+<h3 id="次の一歩">次の一歩</h3>
+<p>本記事で紹介した調査PRの設計手法を、実際に使える企画テンプレート・設問チェックリスト・二次活用マップとしてまとめたダウンロード資料をご用意しています。</p>
+<p>▶ 無料相談はこちら：<a href="https://ideatech.jp/service/idea-llmo/contact/">https://ideatech.jp/service/idea-llmo/contact/</a></p>
+<p>▶ 本テーマの詳細ダウンロード資料はこちら</p>
+<p><img src="/p/578/images/column/LLMO-c003/09-88a3a0a8.webp" alt=""></p>
+<hr>
+<h2 id="出典一覧">出典一覧</h2>
+<ul>
+<li>Muck Rack「What is AI Reading?（2026年5月版）」（ChatGPT・Claude・Gemini/2,500万リンク超・17業種）：<a href="https://muckrack.com/blog/what-is-ai-reading-may-2026">https://muckrack.com/blog/what-is-ai-reading-may-2026</a></li>
+<li>Ahrefs「An Analysis of AI Overview Brand Visibility Factors（75,000ブランド分析）」：<a href="https://ahrefs.com/blog/ai-overview-brand-correlation/">https://ahrefs.com/blog/ai-overview-brand-correlation/</a></li>
+<li>Ahrefs「How AI Overview citations rank in the SERPs」（863,000キーワード・400万AI Overview URL）：<a href="https://ahrefs.com/blog/ai-overview-citations-top-10">https://ahrefs.com/blog/ai-overview-citations-top-10</a></li>
+<li>Ahrefs「Only 12% of AI Cited URLs Rank in Google’s Top 10 for the Original Prompt」（2026年5月）：<a href="https://ahrefs.com/blog/ai-search-overlap/">https://ahrefs.com/blog/ai-search-overlap/</a></li>
+<li>Gartner「Gartner Predicts Search Engine Volume Will Drop 25% by 2026」（2024年2月発表の予測）：<a href="https://www.gartner.com/en/newsroom/press-releases/2024-02-19-gartner-predicts-search-engine-volume-will-drop-25-percent-by-2026-due-to-ai-chatbots-and-other-virtual-agents">https://www.gartner.com/en/newsroom/press-releases/2024-02-19-gartner-predicts-search-engine-volume-will-drop-25-percent-by-2026-due-to-ai-chatbots-and-other-virtual-agents</a></li>
+<li>株式会社IDEATECH「BtoB事業におけるLLMO支援会社の選定に関する実態調査」（リサピー®によるインターネット調査/n=329/2026年3月9日〜10日実施）：<a href="https://ideatech.jp/service/idea-llmo/">https://ideatech.jp/service/idea-llmo/</a></li>
+<li>株式会社IDEATECH プレスリリース「SEO上位でも、AIには引用されない。<br>
+IDEATECH、第三者メディアからの言及を起点にAI推薦を獲得するBtoB特化型LLMO支援「IDEA LLMO」を提供開始」（2026年6月12日）：<a href="https://prtimes.jp/main/html/rd/p/000000662.000045863.html">https://prtimes.jp/main/html/rd/p/000000662.000045863.html</a></li>
+<li>株式会社IDEATECH「リサピー®」サービスページ：<a href="https://ideatech.jp/service/research-pr/">https://ideatech.jp/service/research-pr/</a></li>
+</ul>
+<p>※本記事の数値は各出典の公表値に基づきます。</p>
+<p>相関データについては、出典元が「相関は因果を意味しない」と明記している点にご留意ください。</p>
+<p>効果を保証するものではありません。</p> </div>   </article> <aside class="cla-meta" aria-label="記事情報"> <p class="cla-meta__heading">// ARTICLE INFO</p> <dl class="cla-meta__list"> <div class="cla-meta__row"> <dt>公開日</dt> <dd><time datetime="2026-08-23">2026年8月23日</time></dd> </div> <div class="cla-meta__row"> <dt>カテゴリ</dt> <dd>コラム</dd> </div> <div class="cla-meta__row"> <dt>著者</dt> <dd> IDEATECH </dd> </div> <div class="cla-meta__row"> <dt>タグ</dt> <dd class="cla-meta__tagwrap"> <a href="/p/578/column/?tag=AI" class="cla-meta__tag">AI</a><a href="/p/578/column/?tag=LLMO" class="cla-meta__tag">LLMO</a> </dd> </div> </dl> </aside> </div> </section> <!-- CTA --> <section class="cla-cta" aria-label="お問い合わせ"> <div class="cla-cta__inner"> <p class="cla-cta__label">// LET'S TALK</p> <h2 class="cla-cta__h2">この記事に関するご相談、<br>受け付けています。</h2> <p class="cla-cta__text">BtoB の広報・PR・マーケティング戦略について、無料でご相談いただけます。</p> <div class="cla-cta__btns"> <a href="/p/578/contact/" class="cla-cta__pri">無料で相談する</a> <a href="/p/578/column/" class="cla-cta__sec">他の記事を見る</a> </div> </div> </section> </div>  <script>
+  (function () {
+    const tocLinks = document.querySelectorAll('.cla-toc__link');
+    if (!tocLinks.length) return;
+    const headings = Array.from(tocLinks).map((link) => {
+      const id = link.getAttribute('href')?.slice(1);
+      return id ? document.getElementById(id) : null;
+    }).filter(Boolean);
+    if (!headings.length) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            tocLinks.forEach((l) => l.classList.remove('is-active'));
+            const link = document.querySelector(`.cla-toc__link[href="#${entry.target.id}"]`);
+            link?.classList.add('is-active');
+          }
+        });
+      },
+      { rootMargin: '0px 0px -75% 0px' }
+    );
+    headings.forEach((h) => observer.observe(h));
+  })();
+</script>  </main> <footer class="footer" role="contentinfo"> <div class="footer__inner"> <div class="footer__top"> <div class="footer__brand"> <a href="/p/578/" class="footer__logo"> <img src="/p/578/images/logo_yoko2_w.svg" alt="IDEATECH" height="48" width="auto"> </a> </div> <div class="footer__nav-col"> <p class="footer__nav-heading">サービス</p> <ul> <li><a href="/p/578/service/">サービス一覧</a></li> <li><a href="/p/578/service/research-pr/">リサピー®</a></li> <li><a href="/p/578/service/report-pr/">レポピー®</a></li> <li><a href="/p/578/service/hakupee/">ハクピー®</a></li> <li><a href="/p/578/service/colapy/">コラピー®</a></li> <li><a href="/p/578/service/idea-ai/">IDEA AI</a></li> <li><a href="/p/578/service/idea-design/">IDEA DESIGN®</a></li> <li><a href="/p/578/service/content-sales/">コンテンツセールス®</a></li> <li><a href="/p/578/service/idea-llmo/">IDEA LLMO</a></li> <li><a href="/p/578/service/idea-llmo-board/">IDEA LLMO BOARD</a></li> <li><a href="/p/578/service/pr-growth/">PR-GROWTH</a></li> </ul> </div> <div class="footer__nav-col"> <p class="footer__nav-heading">コンテンツ</p> <ul> <li><a href="/p/578/download/">お役立ち資料</a></li> <li><a href="/p/578/column/">コラム</a></li> <li><a href="/p/578/customer-voice/">事例</a></li> <li><a href="/p/578/seminar/">セミナー</a></li> <li><a href="/p/578/news/">ニュース</a></li> <li><a href="/p/578/news/?tag=お知らせ">- お知らせ</a></li> <li><a href="/p/578/news/?tag=リサピー調査レポート">- リサピー調査レポート</a></li> <li><a href="/p/578/news/?tag=デザインノート">- デザインノート</a></li> </ul> </div> <div class="footer__nav-col"> <p class="footer__nav-heading">会社情報</p> <ul> <li><a href="/p/578/info/">会社情報一覧</a></li> <li><a href="/p/578/info/company/">会社概要</a></li> <li><a href="/p/578/info/about/">私たちについて</a></li> <li><a href="/p/578/info/message/">代表挨拶</a></li> <li><a href="/p/578/info/member/">メンバー</a></li> <li><a href="/p/578/info/genten/">原典</a></li> <li><a href="https://fxyltrgw.gensparkspace.com/" target="_blank" rel="noopener noreferrer">IDEATECH 農園日記<span aria-hidden="true" style="margin-left:4px;font-size:0.85em;">↗</span></a></li> <li><a href="/p/578/recruit/">採用情報（採用メッセージ）</a></li> <li><a href="/p/578/recruit/media/">採用オウンドメディア</a></li> <li><a href="/p/578/contact/">お問い合わせ</a></li> </ul> </div> </div> <div class="footer__bottom"> <span class="footer__badge"> <img src="/p/578/images/octy.gif" alt="Octy" width="22" height="22" loading="lazy">
+Driven by Octy™
+</span> <small class="footer__copy">&copy; 2026 IDEATECH Inc. All rights reserved.</small> <a href="/p/578/ai/" class="footer__sitemap">AI Directory</a> <a href="/p/578/sample/cases-db/" class="footer__sitemap">Database</a> <a href="/p/578/info/design-system/" class="footer__sitemap">Design System</a> <a href="/p/578/privacy/" class="footer__sitemap">Privacy Policy</a> <a href="/p/578/sitemap/" class="footer__sitemap">Sitemap</a> <a href="/p/578/terms/" class="footer__sitemap">Terms of Service</a> </div> </div> </footer> <script src="/p/578/assets/js/main.js"></script> <script>
+    (function () {
+      var splash = document.getElementById('splash');
+      if (!splash) return;
+      if (location.pathname !== '/' || sessionStorage.getItem('splash_shown')) {
+        splash.remove();
+        return;
+      }
+      sessionStorage.setItem('splash_shown', '1');
+      // ロゴフェードイン → 全体フェードアウト
+      setTimeout(function () {
+        splash.classList.add('is-visible');
+      }, 50);
+      setTimeout(function () {
+        splash.classList.add('is-leaving');
+      }, 2400);
+      setTimeout(function () {
+        splash.remove();
+      }, 3200);
+    })();
+  </script> </body> </html>

@@ -1,0 +1,23 @@
+{
+  "updated": "2026-06-20",
+  "cases": [
+    {
+      "company": "モノグサ株式会社",
+      "industry": "EdTech（記憶のプラットフォーム「Monoxer」）",
+      "service": "ハクピー®",
+      "title": "認知拡大から商談創出まで——業界特化の白書が生んだ想定7倍の成果",
+      "url": "https://ideatech.jp/customer-voice/monoxer/",
+      "highlights": ["メディア掲載2件", "バナー広告クリックで想定の約7倍のリード獲得", "新規商談創出"]
+    },
+    {
+      "company": "株式会社KINTO",
+      "industry": "自動車リース・モビリティサービス",
+      "service": "リサピー®",
+      "title": "内製でリサーチPRは難しい！担当者の併走でメディア掲載とサイト訪問者を多数獲得",
+      "url": "https://ideatech.jp/customer-voice/kinto/",
+      "highlights": ["合計9本のリサーチPR実施", "多数のメディア掲載", "オーガニック流入増加"]
+    }
+  ],
+  "totalCases": 13,
+  "caseListUrl": "https://ideatech.jp/customer-voice/"
+}
