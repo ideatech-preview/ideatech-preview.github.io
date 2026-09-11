@@ -1,0 +1,191 @@
+/* ============================================================
+   IDEATECH - Service List Page Stylesheet  (prefix: svl-)
+   ライトモード・グランドデザインシステム準拠
+   ============================================================ */
+
+/* ----------------------------------------
+   1. カテゴリセクション
+   ---------------------------------------- */
+.svl-category {
+  background: var(--shiro1);
+  border-bottom: 0.5px solid var(--shiro3);
+}
+
+.svl-category__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 80px;
+}
+
+.svl-category__header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.svl-category__label {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--kuro4);
+  margin-bottom: 12px;
+}
+
+.svl-category__title {
+  font-family: var(--font-mincho);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--kuro1);
+  margin-bottom: 16px;
+}
+
+.svl-category__desc {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--kuro4);
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* ----------------------------------------
+   2. カードグリッド
+   ---------------------------------------- */
+.svl-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ----------------------------------------
+   3. サービスカード
+   ---------------------------------------- */
+.svl-card {
+  background: var(--shiro2);
+  border: 0.5px solid var(--shiro3);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.svl-card__accent {
+  height: 4px;
+  width: 100%;
+}
+
+.svl-card__accent--sora    { background: var(--sora); }
+.svl-card__accent--daidai  { background: var(--daidai); }
+.svl-card__accent--kinari  { background: var(--kinari); }
+.svl-card__accent--yomogi  { background: var(--yomogi); }
+.svl-card__accent--momo    { background: var(--momo); }
+.svl-card__accent--kasumi  { background: var(--kasumi); }
+.svl-card__accent--karashi { background: var(--karashi); }
+
+.svl-card__body {
+  padding: 28px 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.svl-card__label {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--kuro4);
+  margin-bottom: 8px;
+}
+
+.svl-card__name {
+  font-family: var(--font-mincho);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--kuro1);
+  margin-bottom: 12px;
+}
+
+.svl-card__desc {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--kuro4);
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+.svl-card .cta-more {
+  align-self: flex-start;
+}
+
+/* ----------------------------------------
+   4. CTA
+   ---------------------------------------- */
+.svl-cta {
+  background: var(--shiro2);
+}
+
+.svl-cta__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 80px;
+  text-align: center;
+}
+
+.svl-cta__title {
+  font-family: var(--font-mincho);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--kuro1);
+  margin-bottom: 16px;
+}
+
+.svl-cta__desc {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--kuro4);
+  max-width: 480px;
+  margin: 0 auto 40px;
+}
+
+.svl-cta__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ----------------------------------------
+   5. Responsive
+   ---------------------------------------- */
+@media (max-width: 1199px) {
+  .svl-category__inner,
+  .svl-cta__inner {
+    padding: 64px 40px;
+  }
+  .svl-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .svl-category__inner,
+  .svl-cta__inner {
+    padding: 48px 24px;
+  }
+  .svl-grid {
+    grid-template-columns: 1fr;
+  }
+  .svl-category__title,
+  .svl-cta__title {
+    font-size: 32px;
+  }
+}
