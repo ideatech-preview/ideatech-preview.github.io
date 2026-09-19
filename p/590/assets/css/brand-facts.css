@@ -1,0 +1,658 @@
+/* ============================================================
+   IDEATECH - Brand Facts Page Stylesheet
+   Wikipedia-inspired encyclopedic layout
+   グランドデザインシステム準拠
+   ============================================================ */
+
+/* ----------------------------------------
+   1. Page Header
+   ---------------------------------------- */
+.bf-page-header {
+  background: var(--shiro2);
+  border-bottom: 0.5px solid var(--shiro3);
+  padding-top: var(--header-h);
+}
+
+.bf-page-header__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 40px 40px 36px;
+}
+
+/* Breadcrumb */
+.bf-breadcrumb ol {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--kuro4);
+  flex-wrap: wrap;
+}
+
+.bf-breadcrumb li + li::before {
+  content: '›';
+  margin-right: 8px;
+  color: var(--kuro4);
+}
+
+.bf-breadcrumb a {
+  color: var(--daidai);
+}
+.bf-breadcrumb a:hover { text-decoration: underline; opacity: 1; }
+
+.bf-breadcrumb [aria-current="page"] { color: var(--kuro4); }
+
+/* Meta row */
+.bf-page-header__meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 16px 0 12px;
+  flex-wrap: wrap;
+}
+
+.bf-page-header__type {
+  display: inline-block;
+  padding: 3px 12px;
+  background: var(--kuro1);
+  color: var(--shiro1);
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border-radius: 8px;
+}
+
+.bf-page-header__notice {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--kuro4);
+}
+
+/* Title */
+.bf-page-header__title {
+  font-family: var(--font-mincho);
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--kuro1);
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+
+/* Lead */
+.bf-page-header__lead {
+  font-size: 16px;
+  color: var(--kuro1);
+  line-height: 1.8;
+  max-width: 720px;
+  margin-bottom: 16px;
+}
+
+/* JSON link */
+.bf-page-header__json-link {
+  font-size: 13px;
+  color: var(--kuro4);
+}
+
+.bf-page-header__json-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--daidai);
+  font-weight: 600;
+  font-family: var(--font-heading);
+  font-size: 13px;
+}
+
+.bf-page-header__json-link a:hover {
+  text-decoration: underline;
+  opacity: 1;
+}
+
+/* ----------------------------------------
+   2. Body Layout
+   ---------------------------------------- */
+.bf-body {
+  background: var(--shiro1);
+}
+
+.bf-body__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 48px 40px 96px;
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 56px;
+  align-items: start;
+}
+
+/* ----------------------------------------
+   3. Article
+   ---------------------------------------- */
+.bf-article {
+  min-width: 0;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--kuro1);
+}
+
+.bf-article p + p { margin-top: 1em; }
+
+.bf-article strong { color: var(--kuro1); }
+
+/* ----------------------------------------
+   4. Infobox (Wikipedia-style)
+   ---------------------------------------- */
+.bf-infobox {
+  float: right;
+  clear: right;
+  margin: 0 0 28px 36px;
+  width: 280px;
+  background: var(--shiro2);
+  border: 0.5px solid var(--shiro3);
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 13px;
+}
+
+.bf-infobox__header {
+  background: var(--kuro1);
+  padding: 16px 20px;
+  text-align: center;
+}
+
+.bf-infobox__logo-text {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--shiro1);
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+}
+
+.bf-infobox__tagline {
+  font-size: 13px;
+  color: var(--shiro3);
+  letter-spacing: 0.05em;
+}
+
+.bf-infobox__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bf-infobox__table tr {
+  border-bottom: 0.5px solid var(--shiro3);
+}
+
+.bf-infobox__table tr:last-child {
+  border-bottom: none;
+}
+
+.bf-infobox__table th,
+.bf-infobox__table td {
+  padding: 9px 14px;
+  vertical-align: top;
+  text-align: left;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.bf-infobox__table th {
+  white-space: nowrap;
+  color: var(--kuro4);
+  font-weight: 500;
+  width: 40%;
+  background: var(--shiro2);
+}
+
+.bf-infobox__table td {
+  color: var(--kuro1);
+  font-weight: 500;
+}
+
+.bf-infobox__table a {
+  color: var(--daidai);
+  word-break: break-all;
+}
+
+/* ----------------------------------------
+   5. Table of Contents
+   ---------------------------------------- */
+.bf-toc {
+  clear: left;
+  display: inline-block;
+  min-width: 240px;
+  max-width: 360px;
+  background: var(--shiro2);
+  border: 0.5px solid var(--shiro3);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin: 0 0 36px;
+  font-size: 13px;
+}
+
+.bf-toc__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+  color: var(--kuro1);
+  font-family: var(--font-heading);
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+}
+
+.bf-toc__toggle {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--daidai);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 8px;
+  transition: background 0.15s;
+}
+
+.bf-toc__toggle:hover { background: var(--shiro3); }
+
+.bf-toc__list {
+  list-style: none;
+  counter-reset: toc;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bf-toc__list > li {
+  counter-increment: none;
+}
+
+.bf-toc__list a {
+  color: var(--daidai);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.bf-toc__list a:hover {
+  text-decoration: underline;
+  opacity: 1;
+}
+
+/* Nested list */
+.bf-toc__list ol {
+  list-style: none;
+  margin-top: 5px;
+  padding-left: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bf-toc__list ol a {
+  font-size: 13px;
+  color: var(--kuro4);
+}
+
+.bf-toc__list ol a:hover { color: var(--daidai); }
+
+/* ----------------------------------------
+   6. Article Sections
+   ---------------------------------------- */
+.bf-section {
+  margin-bottom: 48px;
+  padding-bottom: 0;
+}
+
+.bf-section__title {
+  font-family: var(--font-mincho);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--kuro1);
+  padding-bottom: 10px;
+  border-bottom: 0.5px solid var(--kuro1);
+  margin-bottom: 20px;
+  letter-spacing: 0.01em;
+  line-height: 1.4;
+}
+
+.bf-section__subtitle {
+  font-family: var(--font-mincho);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--kuro1);
+  border-left: 0.5px solid var(--daidai);
+  padding-left: 12px;
+  margin: 28px 0 14px;
+}
+
+/* Metrics grid */
+.bf-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 24px 0;
+}
+
+.bf-metric {
+  background: var(--shiro2);
+  border-radius: 8px;
+  padding: 20px;
+  border: 0.5px solid var(--shiro3);
+}
+
+.bf-metric__num {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--kuro1);
+  line-height: 1;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: baseline;
+  gap: 3px;
+  flex-wrap: wrap;
+}
+
+.bf-metric__num span {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--daidai);
+}
+
+.bf-metric__label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--kuro1);
+  margin-bottom: 8px;
+}
+
+.bf-metric__desc {
+  font-size: 13px;
+  color: var(--kuro4);
+  line-height: 1.6;
+  margin-top: 0 !important;
+}
+
+/* Note box */
+.bf-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  background: var(--shiro2);
+  border-left: 0.5px solid var(--kuro4);
+  border-radius: 0 8px 8px 0;
+  padding: 12px 16px;
+  font-size: 13px;
+  color: var(--kuro4);
+  line-height: 1.6;
+  margin-top: 16px;
+}
+
+.bf-note svg { flex-shrink: 0; margin-top: 2px; }
+
+/* ----------------------------------------
+   7. Tables
+   ---------------------------------------- */
+.bf-service-table-wrap {
+  overflow-x: auto;
+  margin: 24px 0;
+  border-radius: 8px;
+  border: 0.5px solid var(--shiro3);
+}
+
+.bf-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.bf-table caption {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--kuro4);
+  text-align: left;
+  padding: 12px 16px 8px;
+  background: var(--shiro2);
+  text-transform: uppercase;
+  border-bottom: 0.5px solid var(--shiro3);
+}
+
+.bf-table thead th {
+  background: var(--kuro1);
+  color: var(--shiro1);
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 12px 16px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.bf-table tbody tr {
+  border-bottom: 0.5px solid var(--shiro3);
+  transition: background 0.15s;
+}
+
+.bf-table tbody tr:last-child { border-bottom: none; }
+.bf-table tbody tr:hover { background: var(--shiro2); }
+
+.bf-table tbody td {
+  padding: 12px 16px;
+  color: var(--kuro1);
+  vertical-align: top;
+  line-height: 1.6;
+}
+
+.bf-table tbody td strong { color: var(--kuro1); }
+
+/* History table */
+.bf-history-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+.bf-history-table tr {
+  border-bottom: 0.5px solid var(--shiro3);
+}
+
+.bf-history-table tr:last-child { border-bottom: none; }
+
+.bf-history-table th {
+  width: 100px;
+  padding: 14px 20px 14px 0;
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--kuro1);
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.bf-history-table td {
+  padding: 14px 0;
+  color: var(--kuro1);
+  line-height: 1.8;
+}
+
+/* Company overview table */
+.bf-company-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+.bf-company-table tr {
+  border-bottom: 0.5px solid var(--shiro3);
+}
+
+.bf-company-table tr:last-child { border-bottom: none; }
+
+.bf-company-table th {
+  width: 160px;
+  padding: 14px 16px 14px 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--kuro4);
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.bf-company-table td {
+  padding: 14px 0;
+  color: var(--kuro1);
+  line-height: 1.8;
+}
+
+.bf-company-table a { color: var(--daidai); }
+.bf-company-table a:hover { text-decoration: underline; opacity: 1; }
+
+/* ----------------------------------------
+   8. Sidebar
+   ---------------------------------------- */
+.bf-sidebar {
+  position: sticky;
+  top: calc(var(--header-h) + 24px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bf-sidebar-widget {
+  background: var(--shiro2);
+  border: 0.5px solid var(--shiro3);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.bf-sidebar-widget__title {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--daidai);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.bf-sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bf-sidebar-links a {
+  font-size: 13px;
+  color: var(--kuro1);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.15s;
+}
+
+.bf-sidebar-links a::before {
+  content: '›';
+  color: var(--daidai);
+  font-size: 16px;
+  line-height: 1;
+}
+
+.bf-sidebar-links a:hover { color: var(--daidai); opacity: 1; }
+
+.bf-sidebar-widget__desc {
+  font-size: 13px;
+  color: var(--kuro4);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.bf-sidebar-widget__meta {
+  font-size: 13px;
+  color: var(--kuro4);
+  line-height: 1.6;
+  margin-top: 10px;
+  font-family: var(--font-heading);
+}
+
+/* JSON button */
+.bf-json-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: var(--kuro1);
+  color: var(--shiro1);
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 8px;
+  font-family: var(--font-heading);
+  transition: background 0.15s;
+  word-break: break-all;
+}
+
+.bf-json-btn svg { flex-shrink: 0; }
+
+.bf-json-btn:hover { background: var(--kuro3); opacity: 1; }
+
+/* ----------------------------------------
+   9. Responsive
+   ---------------------------------------- */
+@media (max-width: 1024px) {
+  .bf-body__inner {
+    grid-template-columns: 1fr 240px;
+    gap: 40px;
+    padding: 40px 32px 80px;
+  }
+
+  .bf-page-header__inner { padding: 32px 32px 28px; }
+
+  .bf-infobox { width: 240px; }
+
+  .bf-metrics { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .bf-page-header__inner { padding: 24px 24px 20px; }
+
+  .bf-body__inner {
+    grid-template-columns: 1fr;
+    padding: 32px 24px 64px;
+    gap: 40px;
+  }
+
+  .bf-sidebar { position: static; order: -1; }
+
+  /* Move infobox: float none on mobile */
+  .bf-infobox {
+    float: none;
+    width: 100%;
+    margin: 0 0 28px;
+  }
+
+  .bf-toc { max-width: 100%; display: block; }
+
+  .bf-metrics { grid-template-columns: 1fr; gap: 12px; }
+
+  .bf-metric__num { font-size: 32px; }
+
+  .bf-history-table th { width: 80px; font-size: 13px; }
+
+  .bf-company-table th { width: 120px; }
+}
+
+@media (max-width: 480px) {
+  .bf-page-header__title { font-size: 32px; }
+
+  .bf-metrics { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,330 @@
+<!DOCTYPE html><html lang="ja"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- 計測タグ（GA4 + Clarity）は共通コンポーネントに集約 --><!-- Google tag (gtag.js) - GA4 --><script async src="https://www.googletagmanager.com/gtag/js?id=G-L86HGPXW6F"></script> <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-L86HGPXW6F');
+</script> <!-- Microsoft Clarity --><script>
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "xawjup0xoa");
+</script><link rel="icon" href="/p/416/favicon.svg" type="image/svg+xml"><link rel="icon" href="/p/416/favicon.ico" sizes="any"><link rel="apple-touch-icon" href="/p/416/apple-touch-icon.png"><title>事例データベース（サンプル）</title><meta name="description" content="社内向け事例DBの動作検証用サンプル"><meta property="og:type" content="website"><meta property="og:title" content="事例データベース（サンプル）"><meta property="og:description" content="社内向け事例DBの動作検証用サンプル"><meta property="og:site_name" content="IDEATECH"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://ideatech.jp/images/ogp-default.webp"><meta property="og:image:width" content="2400"><meta property="og:image:height" content="1260"><meta property="og:image:alt" content="事例データベース（サンプル）"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="事例データベース（サンプル）"><meta name="twitter:description" content="社内向け事例DBの動作検証用サンプル"><meta name="twitter:image" content="https://ideatech.jp/images/ogp-default.webp"><meta name="twitter:image:alt" content="事例データベース（サンプル）"><meta name="robots" content="noindex, nofollow"><meta name="theme-color" content="#0B1D3E"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"https://ideatech.jp/#website","name":"IDEATECH","alternateName":"株式会社IDEATECH","url":"https://ideatech.jp","inLanguage":"ja","publisher":{"@id":"https://ideatech.jp/#organization"},"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://ideatech.jp/column/?q={search_term_string}"},"query-input":"required name=search_term_string"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://ideatech.jp/#organization","name":"株式会社IDEATECH","alternateName":["アイデアテック","IDEATECH","IDEATECH Inc."],"legalName":"株式会社IDEATECH","url":"https://ideatech.jp","logo":{"@type":"ImageObject","url":"https://ideatech.jp/images/logo_yoko1_w.svg","width":200,"height":44},"description":"BtoB特化のPR・広報支援会社。リサピー®で2,500件超の調査PR実績、Yahoo!ニュース300件以上、NHK・日経新聞等への掲載実績を持つ。","foundingDate":"2010-02","founder":{"@type":"Person","name":"石川友夫","jobTitle":"代表取締役"},"areaServed":"JP","address":{"@type":"PostalAddress","streetAddress":"南青山2-11-17 第一法規ビル3F","addressLocality":"港区","addressRegion":"東京都","postalCode":"107-0062","addressCountry":"JP"},"contactPoint":{"@type":"ContactPoint","telephone":"+81-50-1871-0555","contactType":"customer support","areaServed":"JP","availableLanguage":["Japanese"]},"sameAs":["https://twitter.com/researchprjp","https://prtimes.jp/main/html/searchrlp/company_id/56536"]}</script><!-- Google Fonts --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Shippori+Mincho:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/p/416/assets/css/style.css"><link rel="stylesheet" href="/p/416/_astro/_slug_.p0TcAfBm.css">
+<link rel="stylesheet" href="/p/416/_astro/index.BKHtF9BX.css"><script type="module" src="/p/416/_astro/hoisted.Bce5PGyg.js"></script></head> <body data-mode="light"> <a href="#main" class="skip-to-content">メインコンテンツへスキップ</a> <!-- スプラッシュスクリーン --> <div class="splash" id="splash" aria-hidden="true"> <img src="/p/416/images/logo_w.svg" alt="" class="splash__logo" width="200" height="200"> </div>   <main id="main">  <div class="tpi-page cdb"> <!-- 専用ヘッダー --> <header class="cdb-header" role="banner"> <a href="/p/416/" class="cdb-header__logo" aria-label="IDEATECH トップ"> <img src="/p/416/images/logo_b.svg" alt="IDEATECH" width="120" height="26"> </a> <span class="cdb-header__divider" aria-hidden="true"></span> <span class="cdb-header__title">Database for IDEATECH</span> <div class="cdb-header__actions"> <a href="https://www.notion.so/368705b7267e80b5999cd3749b29eb8b?v=368705b7267e802aa289000c899e71a1" target="_blank" rel="noopener noreferrer" class="cdb-header__add"> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <line x1="12" y1="5" x2="12" y2="19"></line> <line x1="5" y1="12" x2="19" y2="12"></line> </svg> <span>事例を追加</span> </a> </div> </header> <!-- パスワードゲート --> <section class="cdb-gate" id="cdb-gate"> <div class="cdb-gate__inner"> <h2 class="cdb-gate__title">🔒 社内限定</h2> <p class="cdb-gate__lede">閲覧にはパスワードが必要です。</p> <form id="cdb-form" class="cdb-gate__form"> <input id="cdb-pw" type="password" autocomplete="off" class="cdb-gate__input" placeholder="パスワード" required> <button type="submit" class="cdb-gate__submit">閲覧する</button> </form> <p id="cdb-error" class="cdb-gate__error" hidden>パスワードが違います。</p> <noscript><p class="cdb-gate__noscript">この機能には JavaScript が必要です。</p></noscript> </div> </section> <!-- BODY: 2-column --> <section class="cdb-body" id="cdb-app" hidden> <div class="cdb-body__inner"> <!-- SIDEBAR --> <aside class="cdb-nav" aria-label="事例フィルター"> <div class="cdb-nav__search"> <svg class="cdb-nav__search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.3-4.3"></path> </svg> <input id="cdb-search" type="search" class="cdb-nav__search-input" placeholder="事例を検索…" aria-label="事例を検索"> </div> <h3 class="cdb-nav__heading">業種</h3> <div id="cdb-filter-industry" class="cdb-tagpill-wrap"></div> <h3 class="cdb-nav__heading">導入サービス</h3> <div id="cdb-filter-service" class="cdb-tagpill-wrap"></div> <h3 class="cdb-nav__heading">タグ</h3> <div id="cdb-filter-tag" class="cdb-tagpill-wrap"></div> <h3 class="cdb-nav__heading">公開年</h3> <div id="cdb-filter-year" class="cdb-tagpill-wrap"></div> <button type="button" id="cdb-clear" class="cdb-clear">条件をクリア</button> </aside> <!-- MAIN --> <div class="cdb-main"> <div class="cdb-toolbar"> <span id="cdb-count" class="cdb-count"></span> <div class="cdb-toolbar__right"> <label class="cdb-sort"> <span class="cdb-sort__label">並び替え</span> <select id="cdb-sort-select" class="cdb-sort__select"> <option value="date-desc">公開日（新しい順）</option> <option value="date-asc">公開日（古い順）</option> <option value="industry-asc">業種（あいうえお順）</option> <option value="company-asc">社名（あいうえお順）</option> </select> </label> <div class="cdb-viewtoggle" role="group" aria-label="表示切り替え"> <button type="button" class="cdb-viewtoggle__btn is-active" data-view="grid" aria-label="グリッド表示"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <rect x="3" y="3" width="7" height="7"></rect> <rect x="14" y="3" width="7" height="7"></rect> <rect x="3" y="14" width="7" height="7"></rect> <rect x="14" y="14" width="7" height="7"></rect> </svg> </button> <button type="button" class="cdb-viewtoggle__btn" data-view="list" aria-label="リスト表示"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <line x1="8" y1="6" x2="21" y2="6"></line> <line x1="8" y1="12" x2="21" y2="12"></line> <line x1="8" y1="18" x2="21" y2="18"></line> <line x1="3" y1="6" x2="3.01" y2="6"></line> <line x1="3" y1="12" x2="3.01" y2="12"></line> <line x1="3" y1="18" x2="3.01" y2="18"></line> </svg> </button> </div> </div> </div> <div id="cdb-results" class="cdb-results cdb-results--grid"></div> <p id="cdb-empty" class="cdb-empty" hidden>該当する事例はありません。</p> </div> </div> </section> </div> <script type="application/json" id="cdb-payload">{"iterations":200000,"salt":"r6803cqNAJhQxd5PZAv8oA==","iv":"SDbeicVzsICKvozP","ciphertext":"GR5mdZQlOnavRbzY8zkjnGYuMag2BLK4PonlMDJwe8Ny+ZJnauGj2E8k6wrDuQdLciEAxOjJGKN/KneNFn/gbRzQaicaQ0IFO6Hk2Yik7rRsN+XU6YqdbTvCUCGrDqQERUcqyAxf/ugHfdfb+9wYyEYjjJdxMIXTq3WBs0QvvFTrapXZ1D5LoxT0t4MHxozvDXvXjKUUFvKj0ZNObHCssMMMA82Xsnj0ZtCOm8ZhMLdsDd8bEnDgxUzxnQpbklwbwkm1lt2kPR9xkXg+7ZIxOS5+B/fHtm6XRtvP0Eqxzma5yEqOiggM6o93v1QIIAOwDVs7KMLBLZCR/sm75yKsqV69PS6zekrhJw0UbP5EzVkl2J1RhOeEN5LbismRZCiDFQWsmjs0izWmIULLoDDWeKFWEoEmd7zlKcmNRP/vYPl3iNeIZOkULTiWPlksjwx0L81MYKrd0UXDym6+0vfKgTivblI6VL2dVrMcoYWT0GVaMp8old7iA6Qy3+FMWo7rsdXi867TxuUqQRXx8z/UmNxZn5SscoaJx5Fg5qhK1xasJa8oPgMuJ/3CVihHh1AgA/dB9UWUo0EVu+JWpMkTdmpVji/viFsCUy4G2ieSVXQi9fGzo9MdF2YclkK5WeEgMuhuGGNEkGaOCd3BcpGFtIVz8HwtKoWMxfYaXUB6vzsvdqHkQlfq77TwGLUNvU6OY/gfU8kb9IH8O9kZgD3BpGBapnQiCF3YmKWdw0kqycXIxRVc9q+M29ANQbXj7Pkd+0PvSxxyg4eMzdY+ZnItkcybhDdBXy8wwnwtWn+QV+4vRCiGlUK/PMp4oDBodW/dgWM+hIrJafDgQJ4zTB9wUHQsDL6CEQORmbz7ITbF2+AHiRfrpXOGn79jrgrxZPrPodGbC61zFF9VCQDjXg=="}</script> <script>
+  (function () {
+    const payloadEl = document.getElementById('cdb-payload');
+    if (!payloadEl) return;
+    const payload = JSON.parse(payloadEl.textContent);
+
+    const SESSION_KEY = 'cdb-pw';
+
+    const gate = document.getElementById('cdb-gate');
+    const form = document.getElementById('cdb-form');
+    const pwInput = document.getElementById('cdb-pw');
+    const errEl = document.getElementById('cdb-error');
+    const app = document.getElementById('cdb-app');
+
+    function b64ToBytes(s) { return Uint8Array.from(atob(s), function (c) { return c.charCodeAt(0); }); }
+    function escapeHtml(s) {
+      return String(s).replace(/[&<>"']/g, function (c) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+      });
+    }
+    function formatDate(d) {
+      const m = d.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+      return m ? m[1] + '.' + m[2] + '.' + m[3] : d;
+    }
+
+    async function deriveKey(password, salt, iterations) {
+      const baseKey = await crypto.subtle.importKey(
+        'raw', new TextEncoder().encode(password),
+        { name: 'PBKDF2' }, false, ['deriveKey']
+      );
+      return crypto.subtle.deriveKey(
+        { name: 'PBKDF2', salt: salt, iterations: iterations, hash: 'SHA-256' },
+        baseKey,
+        { name: 'AES-GCM', length: 256 },
+        false, ['decrypt']
+      );
+    }
+
+    async function tryDecrypt(password) {
+      const salt = b64ToBytes(payload.salt);
+      const iv = b64ToBytes(payload.iv);
+      const ct = b64ToBytes(payload.ciphertext);
+      const key = await deriveKey(password, salt, payload.iterations);
+      const pt = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: iv }, key, ct);
+      return JSON.parse(new TextDecoder().decode(pt));
+    }
+
+    let allCases = [];
+    const state = {
+      industry: new Set(),
+      service: new Set(),
+      tag: new Set(),
+      year: new Set(),
+      q: '',
+      sort: 'date-desc',
+    };
+
+    function unique(arr) { return Array.from(new Set(arr)); }
+
+    function buildPills(containerId, values, type) {
+      const c = document.getElementById(containerId);
+      c.innerHTML = '';
+
+      // 「すべて」ピル
+      const allPill = document.createElement('button');
+      allPill.type = 'button';
+      allPill.className = 'cdb-tagpill is-active';
+      allPill.innerHTML =
+        '<span class="cdb-tagpill__name">すべて</span>' +
+        '<span class="cdb-tagpill__count">' + allCases.length + '</span>';
+      allPill.addEventListener('click', function () {
+        state[type].clear();
+        c.querySelectorAll('.cdb-tagpill').forEach(function (el) { el.classList.remove('is-active'); });
+        allPill.classList.add('is-active');
+        render();
+      });
+      c.appendChild(allPill);
+
+      for (const v of values) {
+        // この値を持つ件数
+        const count = allCases.filter(function (cs) {
+          if (type === 'industry') return cs.industry === v;
+          if (type === 'service') return cs.services.indexOf(v) >= 0;
+          if (type === 'tag') return cs.tags.indexOf(v) >= 0;
+          if (type === 'year') return cs.publishDate.slice(0, 4) === v;
+          return false;
+        }).length;
+
+        const pill = document.createElement('button');
+        pill.type = 'button';
+        pill.className = 'cdb-tagpill';
+        pill.innerHTML =
+          '<span class="cdb-tagpill__name">' + escapeHtml(v) + '</span>' +
+          '<span class="cdb-tagpill__count">' + count + '</span>';
+        pill.addEventListener('click', function () {
+          if (state[type].has(v)) {
+            state[type].delete(v);
+            pill.classList.remove('is-active');
+          } else {
+            state[type].add(v);
+            pill.classList.add('is-active');
+          }
+          // 「すべて」状態の同期
+          if (state[type].size === 0) allPill.classList.add('is-active');
+          else allPill.classList.remove('is-active');
+          render();
+        });
+        c.appendChild(pill);
+      }
+    }
+
+    function matches(c) {
+      if (state.industry.size && !state.industry.has(c.industry)) return false;
+      if (state.service.size && !c.services.some(function (s) { return state.service.has(s); })) return false;
+      if (state.tag.size && !c.tags.some(function (t) { return state.tag.has(t); })) return false;
+      if (state.year.size) {
+        const y = c.publishDate.slice(0, 4);
+        if (!state.year.has(y)) return false;
+      }
+      if (state.q) {
+        const q = state.q.toLowerCase();
+        const hay = [c.company, c.summary, c.comment, c.industry]
+          .concat(c.tags, c.services).join(' ').toLowerCase();
+        if (!hay.includes(q)) return false;
+      }
+      return true;
+    }
+
+    let currentView = 'grid';
+
+    function renderCard(c) {
+      return '<article class="cdb-card-wrap">' +
+        '<a href="/p/416/sample/cases-db/' + encodeURIComponent(c.slug) + '/" class="cdb-card" data-slug="' + escapeHtml(c.slug) + '">' +
+          '<div class="cdb-card__cover cdb-card__cover--brand">' +
+            '<span class="cdb-card__industry">' + escapeHtml(c.industry) + '</span>' +
+          '</div>' +
+          '<div class="cdb-card__body">' +
+            '<time class="cdb-card__date">' + formatDate(c.publishDate) + '</time>' +
+            '<div class="cdb-card__tags">' +
+              c.services.map(function (s) {
+                return '<span class="cdb-card__tag">' + escapeHtml(s) + '</span>';
+              }).join('') +
+            '</div>' +
+            '<h2 class="cdb-card__title">' + escapeHtml(c.company) + '</h2>' +
+            '<p class="cdb-card__summary">' + escapeHtml(c.summary) + '</p>' +
+            '<div class="cdb-card__hashtags">' +
+              c.tags.map(function (t) {
+                return '<span class="cdb-card__hashtag">#' + escapeHtml(t) + '</span>';
+              }).join('') +
+            '</div>' +
+            '<div class="cdb-card__comment">' +
+              '<span class="cdb-card__comment-label">IDEATECHコメント</span>' +
+              escapeHtml(c.comment) +
+            '</div>' +
+            '<span class="cdb-card__link">詳細を見る</span>' +
+          '</div>' +
+        '</a>' +
+      '</article>';
+    }
+
+    function renderRow(c) {
+      return '<a href="/p/416/sample/cases-db/' + encodeURIComponent(c.slug) + '/" class="cdb-row" data-slug="' + escapeHtml(c.slug) + '">' +
+        '<div class="cdb-row__industry"><span>' + escapeHtml(c.industry) + '</span></div>' +
+        '<div class="cdb-row__main">' +
+          '<h3 class="cdb-row__company">' + escapeHtml(c.company) + '</h3>' +
+          '<p class="cdb-row__summary">' + escapeHtml(c.summary) + '</p>' +
+        '</div>' +
+        '<div class="cdb-row__services">' +
+          c.services.map(function (s) {
+            return '<span class="cdb-row__service">' + escapeHtml(s) + '</span>';
+          }).join('') +
+        '</div>' +
+        '<div class="cdb-row__tags">' +
+          c.tags.map(function (t) {
+            return '<span class="cdb-row__tag">#' + escapeHtml(t) + '</span>';
+          }).join('') +
+        '</div>' +
+        '<time class="cdb-row__date">' + formatDate(c.publishDate) + '</time>' +
+        '<div class="cdb-row__comment">' + escapeHtml(c.comment) + '</div>' +
+      '</a>';
+    }
+
+    function sortCases(arr) {
+      const sorted = arr.slice();
+      switch (state.sort) {
+        case 'date-asc':
+          sorted.sort(function (a, b) { return a.publishDate.localeCompare(b.publishDate); });
+          break;
+        case 'industry-asc':
+          sorted.sort(function (a, b) { return a.industry.localeCompare(b.industry, 'ja'); });
+          break;
+        case 'company-asc':
+          sorted.sort(function (a, b) { return a.company.localeCompare(b.company, 'ja'); });
+          break;
+        case 'date-desc':
+        default:
+          sorted.sort(function (a, b) { return b.publishDate.localeCompare(a.publishDate); });
+          break;
+      }
+      return sorted;
+    }
+
+    function render() {
+      const filtered = sortCases(allCases.filter(matches));
+      document.getElementById('cdb-count').textContent =
+        filtered.length + ' 件 / ' + allCases.length + ' 件';
+      const results = document.getElementById('cdb-results');
+      const empty = document.getElementById('cdb-empty');
+      results.className = 'cdb-results cdb-results--' + currentView;
+      empty.hidden = filtered.length > 0;
+
+      if (currentView === 'list') {
+        let html = '<div class="cdb-row cdb-row--head">' +
+          '<div class="cdb-row__industry">業種</div>' +
+          '<div class="cdb-row__main">社名・概要</div>' +
+          '<div class="cdb-row__services">導入サービス</div>' +
+          '<div class="cdb-row__tags">タグ</div>' +
+          '<div class="cdb-row__date">公開日</div>' +
+          '<div class="cdb-row__comment">IDEATECHコメント</div>' +
+        '</div>';
+        for (const c of filtered) html += renderRow(c);
+        results.innerHTML = html;
+      } else {
+        let html = '';
+        for (const c of filtered) html += renderCard(c);
+        results.innerHTML = html;
+      }
+
+    }
+
+    // ビュー切り替え
+    document.querySelectorAll('.cdb-viewtoggle__btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        currentView = btn.dataset.view;
+        document.querySelectorAll('.cdb-viewtoggle__btn').forEach(function (b) {
+          b.classList.toggle('is-active', b === btn);
+        });
+        render();
+      });
+    });
+
+    document.getElementById('cdb-search').addEventListener('input', function (e) {
+      state.q = e.target.value.trim();
+      render();
+    });
+    document.getElementById('cdb-sort-select').addEventListener('change', function (e) {
+      state.sort = e.target.value;
+      render();
+    });
+    document.getElementById('cdb-clear').addEventListener('click', function () {
+      state.industry.clear();
+      state.service.clear();
+      state.tag.clear();
+      state.year.clear();
+      state.q = '';
+      document.getElementById('cdb-search').value = '';
+      document.querySelectorAll('.cdb-tagpill').forEach(function (el) { el.classList.remove('is-active'); });
+      // 各グループの「すべて」を active に
+      document.querySelectorAll('.cdb-tagpill-wrap').forEach(function (wrap) {
+        const first = wrap.querySelector('.cdb-tagpill');
+        if (first) first.classList.add('is-active');
+      });
+      render();
+    });
+
+    function initAfterUnlock(cases) {
+      allCases = cases;
+      buildPills('cdb-filter-industry', unique(allCases.map(function (c) { return c.industry; })).sort(), 'industry');
+      buildPills('cdb-filter-service', unique(allCases.flatMap(function (c) { return c.services; })).sort(), 'service');
+      buildPills('cdb-filter-tag', unique(allCases.flatMap(function (c) { return c.tags; })).sort(), 'tag');
+      buildPills('cdb-filter-year', unique(allCases.map(function (c) { return c.publishDate.slice(0, 4); })).sort().reverse(), 'year');
+      render();
+      gate.hidden = true;
+      app.hidden = false;
+    }
+
+    // セッション内の再認証スキップ
+    const saved = sessionStorage.getItem(SESSION_KEY);
+    if (saved) {
+      tryDecrypt(saved)
+        .then(initAfterUnlock)
+        .catch(function () { sessionStorage.removeItem(SESSION_KEY); });
+    }
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      errEl.hidden = true;
+      try {
+        const cases = await tryDecrypt(pwInput.value);
+        sessionStorage.setItem(SESSION_KEY, pwInput.value);
+        initAfterUnlock(cases);
+      } catch (err) {
+        errEl.hidden = false;
+        pwInput.select();
+      }
+    });
+  })();
+</script>   </main>  <script src="/p/416/assets/js/main.js"></script> <script>
+    (function () {
+      var splash = document.getElementById('splash');
+      if (!splash) return;
+      if (location.pathname !== '/' || sessionStorage.getItem('splash_shown')) {
+        splash.remove();
+        return;
+      }
+      sessionStorage.setItem('splash_shown', '1');
+      // ロゴフェードイン → 全体フェードアウト
+      setTimeout(function () {
+        splash.classList.add('is-visible');
+      }, 50);
+      setTimeout(function () {
+        splash.classList.add('is-leaving');
+      }, 2400);
+      setTimeout(function () {
+        splash.remove();
+      }, 3200);
+    })();
+  </script> </body> </html>

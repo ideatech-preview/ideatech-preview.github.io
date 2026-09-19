@@ -1,0 +1,362 @@
+/* ============================================================
+   IDEATECH - About Page Stylesheet  (prefix: ab-)
+   ダークモード・グランドデザインシステム準拠
+   ============================================================ */
+
+/* ----------------------------------------
+   1. ビジョン
+   ---------------------------------------- */
+.ab-vision {
+  background: var(--kuro2);
+}
+
+.ab-vision__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 96px 40px;
+}
+
+.ab-vision__header {
+  margin-bottom: 64px;
+}
+
+.ab-vision .section__label { color: var(--daidai); }
+.ab-vision .section__title { color: var(--shiro1); }
+
+.ab-vision__en {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--shiro1);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+}
+
+.ab-vision__en-sub {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  color: var(--daidai);
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.ab-vision__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.ab-vision__text {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--shiro3);
+  line-height: 2;
+}
+
+.ab-vision__quote {
+  background: var(--kuro3);
+  border-radius: 8px;
+  padding: 36px 32px;
+  border-left: 3px solid var(--daidai);
+  position: relative;
+}
+
+.ab-vision__quote::before {
+  content: '\201C';
+  font-family: var(--font-heading);
+  font-size: 80px;
+  line-height: 1;
+  color: var(--daidai);
+  opacity: 0.2;
+  position: absolute;
+  top: 12px;
+  left: 20px;
+  pointer-events: none;
+}
+
+.ab-vision__quote-text {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--shiro1);
+  line-height: 2;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+}
+
+.ab-vision__quote-text strong {
+  color: var(--daidai);
+  font-weight: 700;
+}
+
+.ab-vision__genten-link {
+  margin-top: 24px;
+}
+
+/* ----------------------------------------
+   2. ロゴ誕生の背景
+   ---------------------------------------- */
+.ab-logo {
+  background: var(--kuro1);
+  overflow: hidden;
+}
+
+.ab-logo__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 96px 40px;
+}
+
+.ab-logo__header {
+  margin-bottom: 64px;
+}
+
+.ab-logo .section__label { color: var(--daidai); }
+.ab-logo .section__title { color: var(--shiro1); }
+
+.ab-logo__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Logo Icon Visual */
+.ab-rgb-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ab-logo-icon {
+  width: 240px;
+  height: 240px;
+  object-fit: contain;
+}
+
+.ab-logo__text {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--shiro3);
+  line-height: 2;
+}
+
+.ab-logo__text-title {
+  font-family: var(--font-mincho);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--shiro1);
+  margin-bottom: 16px;
+}
+
+.ab-logo__rgb-legend {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ab-logo__rgb-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ab-logo__rgb-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.ab-logo__rgb-dot--r { background: #FF0000; }
+.ab-logo__rgb-dot--g { background: #00FF00; }
+.ab-logo__rgb-dot--b { background: #0000FF; }
+
+.ab-logo__rgb-item-text {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--shiro3);
+}
+
+.ab-logo__rgb-item-text strong {
+  color: var(--shiro1);
+  font-weight: 700;
+}
+
+/* ----------------------------------------
+   3. 5つのバリュー
+   ---------------------------------------- */
+.ab-values {
+  background: var(--kuro2);
+}
+
+.ab-values__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 96px 40px;
+}
+
+.ab-values__header {
+  margin-bottom: 64px;
+}
+
+.ab-values .section__label { color: var(--daidai); }
+.ab-values .section__title { color: var(--shiro1); }
+.ab-values .section__desc { color: var(--shiro3); }
+
+.ab-values-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.ab-value-card {
+  background: var(--kuro3);
+  border-radius: 8px;
+  padding: 32px 20px;
+  border: 0.5px solid var(--kuro4);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ab-value-card__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  background: var(--kuro1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent, var(--daidai));
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+
+.ab-value-card__en {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent, var(--daidai));
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+}
+
+.ab-value-card__keyword {
+  font-family: var(--font-mincho);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--shiro1);
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.ab-value-card__desc {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--shiro3);
+  line-height: 1.8;
+}
+
+/* ----------------------------------------
+   4. CTA
+   ---------------------------------------- */
+.ab-cta {
+  background: var(--kuro1);
+}
+
+.ab-cta__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 96px 40px;
+  text-align: center;
+}
+
+.ab-cta__label {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  color: var(--daidai);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.ab-cta__title {
+  font-family: var(--font-mincho);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--shiro1);
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.ab-cta__desc {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--shiro3);
+  margin-bottom: 40px;
+}
+
+.ab-cta__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ----------------------------------------
+   5. Responsive
+   ---------------------------------------- */
+@media (max-width: 1024px) {
+  .ab-values-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .ab-vision__body {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .ab-logo__body {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .ab-rgb-wrap {
+    order: -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .ab-vision__inner,
+  .ab-logo__inner,
+  .ab-values__inner,
+  .ab-cta__inner {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .ab-values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ab-logo-icon {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 400px) {
+  .ab-values-grid {
+    grid-template-columns: 1fr;
+  }
+}

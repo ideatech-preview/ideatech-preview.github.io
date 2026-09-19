@@ -1,0 +1,65 @@
+{
+  "updated": "2026-06-20",
+  "glossary": [
+    {
+      "term": "調査PR / リサーチPR",
+      "termEn": "Research PR",
+      "definition": "自社で実施した調査データを活用してメディア掲載を獲得するPR手法。従来の告知型PRより掲載率が高く、BtoB企業の認知拡大に効果的。"
+    },
+    {
+      "term": "ファクトベースPR",
+      "termEn": "Fact-based PR",
+      "definition": "独自データ・調査ファクトを核にしたPR手法。客観的なデータに基づくため、メディアからの信頼性が高く、AI検索（AEO）でも被引用されやすい。"
+    },
+    {
+      "term": "AEO",
+      "termEn": "Answer Engine Optimization",
+      "definition": "ChatGPT・Perplexity・Google AI OverviewsなどのAI検索エンジンに自社の情報が正確に引用されることを目指す最適化施策。"
+    },
+    {
+      "term": "LLMO",
+      "termEn": "Large Language Model Optimization",
+      "definition": "大規模言語モデル（LLM）に自社情報を正確に学習・引用させるための最適化。AEOとほぼ同義で使われる。"
+    },
+    {
+      "term": "ソートリーダーシップ",
+      "termEn": "Thought Leadership",
+      "definition": "業界における「第一人者」としてのポジション確立。調査レポートの継続発信で実現する。"
+    },
+    {
+      "term": "コンテンツ転用",
+      "termEn": "Content Repurposing",
+      "definition": "1つの調査データをコラム・ホワイトペーパー・営業資料・SNS・提案書など複数の施策に活用すること。"
+    },
+    {
+      "term": "ホワイトペーパー",
+      "termEn": "Whitepaper",
+      "definition": "企業の専門知識や調査データをまとめたリード獲得用の資料。レポートPRで活用される。"
+    },
+    {
+      "term": "エンタープライズ開拓",
+      "termEn": "Enterprise Sales",
+      "definition": "大手・上場企業への営業アプローチ。調査データは信頼性の証拠として機能し、商談獲得率を向上させる。"
+    },
+    {
+      "term": "メディア掲載",
+      "termEn": "Media Coverage",
+      "definition": "業界メディア・ビジネス誌・一般WEBメディアへの報道実績。BtoB営業における信頼材料となる。"
+    },
+    {
+      "term": "PR内製化",
+      "termEn": "In-house PR",
+      "definition": "PR活動を外部依存から脱却し、社内チームで実行できる体制を構築すること。"
+    },
+    {
+      "term": "KPI設計",
+      "termEn": "KPI Design",
+      "definition": "メディア掲載件数・指名検索数・商談化率などのPR成果指標を定義し測定すること。"
+    },
+    {
+      "term": "オーガニック流入",
+      "termEn": "Organic Traffic",
+      "definition": "広告ではなく自然検索（SEO・AEO）からのWebサイト訪問者。"
+    }
+  ]
+}
