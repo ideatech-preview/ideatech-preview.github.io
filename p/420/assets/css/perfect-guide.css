@@ -1,0 +1,616 @@
+/* ============================================================
+   IDEATECH - Perfect Guide Layout (prefix: pg-)
+   マガジン型1カラム・ライトモード記事レイアウト
+   ============================================================ */
+
+/* ----------------------------------------
+   1. ヒーロー
+   ---------------------------------------- */
+.pg-hero {
+  background: var(--kuro1);
+  padding: 64px 40px;
+}
+
+.pg-hero__inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.pg-hero__label {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--daidai);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.pg-hero__title {
+  font-family: var(--font-mincho);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--shiro1);
+  margin-bottom: 20px;
+}
+
+.pg-hero__desc {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: var(--shiro3);
+  margin-bottom: 24px;
+}
+
+.pg-hero__meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.pg-hero__date {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--shiro3);
+}
+
+.pg-hero__tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.pg-hero__tag {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--shiro3);
+  border: 0.5px solid var(--kuro4);
+  border-radius: 9999px;
+  padding: 2px 10px;
+}
+
+/* ----------------------------------------
+   2. プログレスバー
+   ---------------------------------------- */
+.pg-progress {
+  position: sticky;
+  top: var(--header-h);
+  z-index: 90;
+  height: 3px;
+  background: var(--shiro3);
+}
+
+.pg-progress__bar {
+  height: 100%;
+  width: 0%;
+  background: var(--daidai);
+  transition: width 0.1s linear;
+}
+
+/* ----------------------------------------
+   3. 本文エリア
+   ---------------------------------------- */
+.pg-body {
+  background: var(--shiro1);
+  max-width: calc(800px + 80px * 2);
+  margin: 0 auto;
+  padding: 64px 80px 96px;
+}
+
+/* ----------------------------------------
+   4. 定義ブロック
+   ---------------------------------------- */
+.pg-definition {
+  border-left: 3px solid var(--daidai);
+  background: var(--shiro2);
+  padding: 28px 32px;
+  margin-bottom: 48px;
+  border-radius: 0 8px 8px 0;
+}
+
+.pg-definition__text {
+  font-family: var(--font-mincho);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.7;
+  color: var(--kuro1);
+}
+
+/* ----------------------------------------
+   5. TL;DR
+   ---------------------------------------- */
+.pg-tldr {
+  background: var(--shiro2);
+  border-radius: 8px;
+  padding: 24px 28px;
+  margin-bottom: 48px;
+}
+
+.pg-tldr__label {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--daidai);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.pg-tldr__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pg-tldr__list li {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--kuro1);
+  padding-left: 20px;
+  position: relative;
+}
+
+.pg-tldr__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--daidai);
+}
+
+/* ----------------------------------------
+   6. 目次
+   ---------------------------------------- */
+.pg-toc {
+  background: var(--shiro2);
+  border: 0.5px solid var(--shiro3);
+  border-radius: 8px;
+  margin-bottom: 56px;
+}
+
+.pg-toc__toggle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 16px 24px;
+  list-style: none;
+}
+
+.pg-toc__toggle::-webkit-details-marker {
+  display: none;
+}
+
+.pg-toc__toggle::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-right: 0.5px solid var(--kuro4);
+  border-bottom: 0.5px solid var(--kuro4);
+  transform: rotate(-45deg);
+  transition: transform 0.2s ease;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.pg-toc[open] > .pg-toc__toggle::before {
+  transform: rotate(45deg);
+}
+
+.pg-toc__label {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--kuro4);
+  text-transform: uppercase;
+}
+
+.pg-toc__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 24px 20px;
+}
+
+.pg-toc__item {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.pg-toc__item--lv2 { font-weight: 600; }
+.pg-toc__item--lv3 { padding-left: 16px; font-weight: 400; font-size: 13px; }
+
+.pg-toc__link {
+  display: block;
+  color: var(--kuro4);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-left: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+  border-radius: 0 4px 4px 0;
+}
+
+.pg-toc__link:hover {
+  color: var(--kuro1);
+  background: var(--shiro3);
+}
+
+.pg-toc__link.is-active {
+  color: var(--kuro1);
+  border-left-color: var(--daidai);
+  font-weight: 700;
+}
+
+/* ----------------------------------------
+   7. 本文コンテンツ（ライトモード）
+   ---------------------------------------- */
+.pg-content {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--kuro1);
+  counter-reset: pg-chapter;
+}
+
+.pg-content > * + * {
+  margin-top: 1.5em;
+}
+
+/* 章番号付き h2 */
+.pg-content h2 {
+  font-family: var(--font-mincho);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--kuro1);
+  margin-top: 72px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 0.5px solid var(--shiro3);
+  scroll-margin-top: calc(var(--header-h) + 16px);
+  counter-increment: pg-chapter;
+}
+
+.pg-content h2::before {
+  content: counter(pg-chapter, decimal-leading-zero);
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--shiro3);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.pg-content h2:first-child {
+  margin-top: 0;
+}
+
+.pg-content h3 {
+  font-family: var(--font-mincho);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--kuro1);
+  margin-top: 40px;
+  margin-bottom: 14px;
+  padding-left: 16px;
+  border-left: 3px solid var(--daidai);
+  scroll-margin-top: calc(var(--header-h) + 16px);
+}
+
+.pg-content h4 {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--kuro1);
+  margin-top: 28px;
+  margin-bottom: 8px;
+}
+
+.pg-content p {
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--kuro1);
+}
+
+.pg-content strong {
+  font-weight: 700;
+}
+
+.pg-content a {
+  color: var(--daidai);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+.pg-content a:hover { opacity: 0.7; }
+
+/* リスト */
+.pg-content ul,
+.pg-content ol {
+  padding-left: 1.6em;
+}
+
+.pg-content li {
+  margin-bottom: 8px;
+  line-height: 1.8;
+}
+
+.pg-content li::marker {
+  color: var(--kuro4);
+}
+
+/* 引用 */
+.pg-content blockquote {
+  border-left: 3px solid var(--daidai);
+  padding: 12px 0 12px 24px;
+  margin-left: 0;
+  color: var(--kuro4);
+}
+
+.pg-content blockquote p { color: var(--kuro4); }
+
+/* テーブル */
+.pg-content table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin-top: 1.5em;
+}
+
+.pg-content table th,
+.pg-content table td {
+  border: 0.5px solid var(--shiro3);
+  padding: 12px 16px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.pg-content table th {
+  background: var(--shiro2);
+  font-weight: 700;
+  color: var(--kuro1);
+}
+
+.pg-content table td {
+  color: var(--kuro1);
+}
+
+/* コード */
+.pg-content code {
+  font-family: 'SFMono-Regular', 'Menlo', monospace;
+  font-size: 14px;
+  background: var(--shiro2);
+  color: var(--kuro1);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* 区切り線 */
+.pg-content hr {
+  border: none;
+  border-top: 0.5px solid var(--shiro3);
+  margin: 56px 0;
+}
+
+/* ----------------------------------------
+   8. ファクトカード
+   ---------------------------------------- */
+.pg-fact {
+  background: var(--shiro2);
+  border-radius: 8px;
+  padding: 32px;
+  margin: 40px 0;
+  text-align: center;
+}
+
+.pg-fact__number {
+  font-family: var(--font-heading);
+  font-size: 56px;
+  font-weight: 700;
+  color: var(--daidai);
+  line-height: 1;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+.pg-fact__text {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--kuro1);
+  margin-bottom: 8px;
+}
+
+.pg-fact__source {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--kuro4);
+}
+
+/* ----------------------------------------
+   9. IDEATECHの視点
+   ---------------------------------------- */
+.pg-insight {
+  background: var(--shiro2);
+  border-left: 3px solid var(--daidai);
+  border-radius: 0 8px 8px 0;
+  padding: 28px 32px;
+  margin: 48px 0;
+}
+
+.pg-insight__label {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--daidai);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.pg-insight__text {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--kuro1);
+}
+
+
+/* ----------------------------------------
+   10. FAQ（details/summary）
+   ---------------------------------------- */
+.pg-content details {
+  border: 0.5px solid var(--shiro3);
+  border-radius: 8px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.pg-content details summary {
+  padding: 16px 20px;
+  background: var(--shiro2);
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--kuro1);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pg-content details summary::-webkit-details-marker {
+  display: none;
+}
+
+.pg-content details summary::before {
+  content: 'Q.';
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--daidai);
+  flex-shrink: 0;
+}
+
+.pg-content details summary::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-right: 0.5px solid var(--kuro4);
+  border-bottom: 0.5px solid var(--kuro4);
+  transform: rotate(-45deg);
+  transition: transform 0.2s;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.pg-content details[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.pg-content details > div {
+  padding: 16px 20px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--kuro1);
+}
+
+/* ----------------------------------------
+   11. 記事フッター
+   ---------------------------------------- */
+.pg-footer {
+  margin-top: 72px;
+  padding-top: 32px;
+  border-top: 0.5px solid var(--shiro3);
+  text-align: center;
+}
+
+.pg-footer__dl {
+  background: var(--shiro2);
+  border-radius: 8px;
+  padding: 32px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.pg-footer__dl-label {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--daidai);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.pg-footer__dl-text {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--kuro4);
+  margin-bottom: 16px;
+}
+
+.pg-footer__cta {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ----------------------------------------
+   11b. インラインCTA
+   ---------------------------------------- */
+.pg-inline-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--shiro2);
+  border-radius: 8px;
+  padding: 20px 28px;
+  margin: 48px 0;
+}
+
+.pg-inline-cta__text {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--kuro4);
+}
+
+/* ----------------------------------------
+   12. レスポンシブ
+   ---------------------------------------- */
+@media (max-width: 1024px) {
+  .pg-body { padding: 48px 40px 80px; }
+}
+
+@media (max-width: 768px) {
+  .pg-hero { padding: 48px 24px; }
+  .pg-hero__title { font-size: 28px; }
+  .pg-body { padding: 40px 24px 64px; }
+  .pg-definition__text { font-size: 18px; }
+  .pg-content h2 { font-size: 24px; margin-top: 56px; }
+  .pg-content h2::before { font-size: 36px; }
+  .pg-content h3 { font-size: 18px; }
+  .pg-fact { padding: 24px 20px; }
+  .pg-fact__number { font-size: 40px; }
+  .pg-insight { padding: 20px 24px; }
+  .pg-inline-cta { flex-direction: column; gap: 12px; text-align: center; }
+  .pg-footer__dl { padding: 24px 20px; }
+}

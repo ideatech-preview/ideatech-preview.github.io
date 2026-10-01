@@ -1,0 +1,49 @@
+# robots.txt — ideatech.jp
+# Updated: 2026-03-09
+
+# ===== AI クローラー =====
+# 生成AIによるインデックス・引用を歓迎します。
+# AI向け構造化データは /ai/ 以下にあります。
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: bingbot
+Allow: /
+
+# ===== 全クローラー共通 =====
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+# AI 向けディレクトリ
+# 詳細は https://ideatech.jp/ai/ をご参照ください
+# JSON エンドポイント一覧:
+#   https://ideatech.jp/ai/index.json
+#   https://ideatech.jp/ai/company.json
+#   https://ideatech.jp/ai/services.json
+#   https://ideatech.jp/ai/faq.json
+#   https://ideatech.jp/ai/resources.json
+#   https://ideatech.jp/ai/cases.json
+#   https://ideatech.jp/ai/glossary.json
+
+Sitemap: https://ideatech.jp/sitemap-index.xml
