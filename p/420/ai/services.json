@@ -1,0 +1,123 @@
+{
+  "updated": "2026-06-20",
+  "services": [
+    {
+      "name": "リサピー®",
+      "nameEn": "Research PR",
+      "url": "https://ideatech.jp/service/research-pr/",
+      "category": "リサーチマーケティング",
+      "description": "BtoB特化の調査PRサービス。1本の調査から、メディア掲載・リード獲得・営業の説得力・AI推薦までを一気通貫で生み出す。標準提供は調査設計・アンケート実施・プレスリリース作成・二次活用提案・AI対策提案（LLMO）まで。目的から逆算した切り口設計と、1調査をホワイトペーパー・営業資料・セミナー・コラム・SNS・IR まで使い倒す多面活用が強み。サービス開始から5年で500社以上、2,500件以上の調査PR実績。第三者メディアプロモート・FAQPage実装・AI推薦論拠化（実装）はオプション。",
+      "metrics": { "clients": "500+", "projects": "2500+", "majorLLMRecommendation": "4/4" }
+    },
+    {
+      "name": "レポピー®",
+      "nameEn": "Report PR / Guidebook Marketing",
+      "url": "https://ideatech.jp/service/report-pr/",
+      "category": "ガイドブックマーケティング",
+      "description": "顧客理解 × 独自調査 × カスタマージャーニー設計で「読まれる」ガイドブック型コンテンツを制作。商談化率33.33%、工数削減95%を実現。",
+      "metrics": { "dealConversionRate": "33.33%", "workReduction": "95%", "reports": "200+" },
+      "pricing": [
+        { "plan": "1本", "price": "80万円（税抜）" },
+        { "plan": "3本", "price": "150万円（一括時45万円/本）" },
+        { "plan": "6本", "price": "270万円（一括時40万円/本）" },
+        { "plan": "12本", "price": "480万円（一括時35万円/本）" }
+      ]
+    },
+    {
+      "name": "ハクピー®",
+      "nameEn": "Hakupee / Thought Leadership Marketing",
+      "url": "https://ideatech.jp/service/hakupee/",
+      "category": "ソートリーダーシップマーケティング",
+      "description": "独自調査に基づく白書コンテンツで業界の主導者ポジションを確立。経営層・投資家・大手企業の意思決定者に対する信頼と権威を構築。米国調査ではソートリーダーシップを「重要」と回答した BtoB 担当者が 91.0%、購入意欲への影響を「与える」が 92.8%。",
+      "metrics": { "importance": "91.0%", "purchaseIntent": "92.8%", "scheduleMonths": "5-6" },
+      "pricing": [
+        { "plan": "基本パッケージ", "price": "200万円〜（税抜）／制作期間 5〜6ヶ月" }
+      ]
+    },
+    {
+      "name": "コラピー®",
+      "nameEn": "Colapy / LLMO Content",
+      "url": "https://ideatech.jp/service/colapy/",
+      "category": "LLMOコンテンツ",
+      "description": "リサピー® で掘ったユーザーの「課題」「関連KW」を「製品推奨」へと論理・文脈で繋ぐ LLMO 戦略コンテンツ。AI の連想ゲーム（課題 → 解決ロジック → 製品推奨）に最適化された構造でChatGPT・Gemini・Perplexity・Claude すべてに引用される設計。AI引用ドメインのうち検索順位1位と一致するのは約53%。",
+      "metrics": { "aiCitationOverlapWithSEO": "53%", "topLLMOFactor": "サイテーション（ブランド名の言及）" },
+      "pricing": [
+        { "plan": "1本", "price": "30万円（税抜）" },
+        { "plan": "3本", "price": "75万円（25万円/本）" },
+        { "plan": "6本", "price": "120万円（20万円/本）" },
+        { "plan": "12本", "price": "180万円（15万円/本）" }
+      ]
+    },
+    {
+      "name": "IDEA AI",
+      "nameEn": "IDEA AI / Reskilling Training",
+      "url": "https://ideatech.jp/service/idea-ai/",
+      "category": "生成AI研修",
+      "description": "中小企業のための実践型 AI 人材育成研修。e-ラーニング型 全21コマ・10.5時間。議事録 97% 削減・調査票 89% 削減等、IDEATECH 自社で実証済みのスキルを公開。プログラミング未経験から実務応用まで2ヶ月で引き上げる。",
+      "metrics": { "modules": 21, "totalHours": "10.5", "maxTimeReduction": "97%", "supportedClients": "800+" },
+      "pricing": [
+        { "plan": "基本料金", "price": "330,000円/人（税込）" },
+        { "plan": "中小企業（助成率75%後）", "price": "実質 180,000円/人" },
+        { "plan": "大企業（助成率60%後）", "price": "実質 230,000円/人" }
+      ]
+    },
+    {
+      "name": "IDEA DESIGN®",
+      "nameEn": "IDEA DESIGN®",
+      "url": "https://ideatech.jp/service/idea-design/",
+      "category": "動的平衡WEBサイト",
+      "description": "AEO/LLMO 対策を徹底した制作と週次の超高速 PDCA 運用で、AI 時代に選ばれ続ける『動的平衡 WEB サイト』を構築。変化し続けることを普遍とするデザインで、常に新しく生まれ変わる WEB をオーケストレーション。",
+      "metrics": { "approach": "週次PDCA", "concept": "動的平衡（Dynamic Equilibrium）" }
+    },
+    {
+      "name": "コンテンツセールス®",
+      "nameEn": "Content Sales",
+      "url": "https://ideatech.jp/service/content-sales/",
+      "category": "コンテンツ起点の受注・LTV向上",
+      "description": "トップセールスのノウハウをコンテンツ化し、顧客の「知りたい」を最適なタイミングで提供。優秀な営業に依存しない、コンテンツ起点の商談サイクル（見込み発掘 → コンタクト → 商談 → 受注 → CS引き継ぎ）を構築し「顧客から相談されるひとり目」のポジションを確立する。"
+    },
+    {
+      "name": "X-Questions®",
+      "nameEn": "X-Questions",
+      "url": "https://ideatech.jp/service/x-questions/",
+      "category": "Q&A型 AEO",
+      "description": "X（旧Twitter）でのQ&A投稿で ChatGPT・Perplexity 等のアンサーエンジンに引用される「AI検索対応PR」を実現。BtoB の指名検索・問い合わせ増加を支援する。",
+      "metrics": { "cumulativeQAPosts": "200+", "aiCitationImprovement": "約3倍（導入3ヶ月平均）", "monthlyPosts": "20本/月" }
+    },
+    {
+      "name": "IDEA INSIGHT",
+      "nameEn": "IDEA INSIGHT / Brand DNA Extraction",
+      "url": "https://ideatech.jp/service/idea-insight/",
+      "category": "ブランドDNA抽出",
+      "description": "対話を通じて企業の本質と独自性を言語化。PR・コンテンツ・AI 活用の判断軸となるインサイトに凝縮する、企画・戦略・AI 共創すべての起点となる「カルテ」設計。",
+      "status": "Coming Soon"
+    },
+    {
+      "name": "IDEA LLMO",
+      "nameEn": "IDEA LLMO / LLMO Strategy",
+      "url": "https://ideatech.jp/service/idea-llmo/",
+      "category": "LLMO戦略（FLAGSHIP）",
+      "description": "対話型生成 AI から推薦される BtoB 企業の選定基準そのものを設計する LLMO 戦略のフラッグシップサービス。プロンプト戦略・選定基準のルールメイク・第三者メディア掲載・FAQPage/Dataset/ScholarlyArticle スキーマ実装・推薦状況の定点モニタリングまで一気通貫。",
+      "metrics": { "selfDeployedLLMRecommendation": "4/4（ChatGPT/Gemini/Perplexity/Claude）" },
+      "pricing": [
+        { "plan": "LLMOコンサルティング スターター", "price": "月額35万円（税別）／6ヶ月契約" },
+        { "plan": "LLMOコンサルティング スタンダード", "price": "月額30万円（税別）／12ヶ月契約" },
+        { "plan": "LLMO実行支援 ライト", "price": "月額35万円（税別）／12ヶ月契約" },
+        { "plan": "LLMO実行支援 スタンダード", "price": "月額40万円（税別）／6ヶ月契約" },
+        { "plan": "LLMO実行支援 アドバンス", "price": "月額60万円（税別）／12ヶ月契約" }
+      ]
+    },
+    {
+      "name": "PR-GROWTH",
+      "nameEn": "PR-GROWTH",
+      "url": "https://ideatech.jp/service/pr-growth/",
+      "category": "PR戦略コンサルティング・内製化伴走",
+      "description": "コンテンツを中心に、PR・マーケティング・セールスを統合伴走する BtoB 特化の PR 戦略コンサルティング。情報整理から戦略設計・実行・PR 内製化まで一気通貫で支援。8 つの伴走領域 × 4 フェーズのコンテンツ活用。",
+      "metrics": { "supportAreas": 8, "contentFunnelPhases": 4 },
+      "pricing": [
+        { "plan": "月額固定", "price": "600,000円/月（税抜）／年間契約" },
+        { "plan": "プレスリリース追加作成", "price": "20,000円/本（通常40,000円）" }
+      ]
+    }
+  ]
+}

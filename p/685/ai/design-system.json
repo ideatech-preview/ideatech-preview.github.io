@@ -1,0 +1,438 @@
+{
+  "name": "IDEATECH Design System v4",
+  "url": "https://ideatech.jp/info/design-system/v4/",
+  "description": "4階層（どこに効くか）× ルールの強さ3段階（どれだけ強いか）で構成される。① 可読性の下限は逸脱不可で CI が落とす。② 語彙は理由を1行書けば外れてよい。③ 用法は縛らない。",
+  "layers": [
+    {
+      "layer": "第0層",
+      "name": "MOON",
+      "scope": "最上位権限",
+      "desc": "すべての層のルールを変更できる唯一の存在。"
+    },
+    {
+      "layer": "第1層",
+      "name": "コーポレートルール",
+      "scope": "すべてのページ",
+      "desc": "サイト全体に必ず適用されるインフラ。ヘッダー / フッター / パンくずリスト のみ。"
+    },
+    {
+      "layer": "第2層",
+      "name": "プラネットルール",
+      "scope": "プラネット単位",
+      "desc": "ページ群（プラネット）ごとに適用されるルール。本文スタイル・レイアウト・運用方針などはここに含まれる。"
+    },
+    {
+      "layer": "第3層",
+      "name": "サテライトルール",
+      "scope": "個別ページ単体",
+      "desc": "個別LP等、特定ページ専用のルール。"
+    }
+  ],
+  "ruleStrength": [
+    {
+      "tier": "① 不変",
+      "target": "可読性の下限（本文サイズ・コントラスト・フォーム）",
+      "force": "CI で落とす",
+      "escape": "不可",
+      "why": "趣味ではなく機能の要件。読めない文字はデザインの選択肢ではなく不具合。"
+    },
+    {
+      "tier": "② 語彙",
+      "target": "フォントサイズ・行間・角丸・カラー",
+      "force": "レビューで見る",
+      "escape": "理由を1行書けば可",
+      "why": "「どの値が存在してよいか」を閉じる。逃げ道のないルールは黙って無視され、分裂する。"
+    },
+    {
+      "tier": "③ 自由",
+      "target": "どのトークンをどこに使うか / レイアウト / モーション / 構成",
+      "force": "縛らない",
+      "escape": "—",
+      "why": "用法を縛ると表現が死ぬ。v2 で撤廃した「h1=48px」型のルールを復活させない。"
+    }
+  ],
+  "readabilityFloor": [
+    {
+      "rule": "本文は 16px 以上",
+      "scope": "PC・スマホ共通",
+      "reason": "スマホは画面が狭いのであって、文字を小さくする理由はない。距離が近く環境も悪いぶん、むしろ大きさが要る。"
+    },
+    {
+      "rule": "全用途 12px 未満は禁止",
+      "scope": "全要素",
+      "reason": "ラベル・キャプションでも 12px を下限とする。"
+    },
+    {
+      "rule": "コントラスト 4.5:1 以上",
+      "scope": "文字色 × 地の色",
+      "reason": "WCAG AA。薄い色は「上品」ではなく「読めない」。"
+    },
+    {
+      "rule": "フォーム入力は 16px 以上",
+      "scope": "input / textarea / select",
+      "reason": "これ未満だと iOS Safari が自動ズームし、レイアウトが壊れる。趣味ではなくバグ回避。"
+    }
+  ],
+  "vocabulary": [
+    {
+      "kind": "フォントサイズ",
+      "summary": "6 段階 + display",
+      "description": "12 / 14 / 16 / 18 / 22 / 28px / display(clamp)　※ 割り当ては「役割 → サイズ」に従う。数値と疑似要素の記号は載せない",
+      "values": [
+        12,
+        14,
+        16,
+        18,
+        22,
+        28
+      ],
+      "unit": "px"
+    },
+    {
+      "kind": "影",
+      "summary": "3 段階",
+      "description": "--shadow-1 浮く / --shadow-2 離れる / --shadow-3 手前に出る",
+      "values": [
+        "--shadow-1",
+        "--shadow-2",
+        "--shadow-3"
+      ]
+    },
+    {
+      "kind": "動き",
+      "summary": "2 段階",
+      "description": "--t-fast 150ms（色・枠・不透明度）/ --t-slow 250ms（位置・大きさ）＋ --ease",
+      "values": [
+        "--t-fast 150ms",
+        "--t-slow 250ms"
+      ]
+    },
+    {
+      "kind": "角丸",
+      "summary": "6 段階 + ピル + 円",
+      "description": "0 / 4 / 8 / 12 / 16 / 24 / 999px / 50%　※ 999px はピル、50% は円。面が大きいほど大きく",
+      "values": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        24,
+        999
+      ],
+      "unit": "px"
+    },
+    {
+      "kind": "字間",
+      "summary": "7 段階",
+      "description": "-0.02 / -0.01 / 0 / 0.02 / 0.06 / 0.12 / 0.2em　※ -0.02 大見出し / -0.01 中見出し / 0.02 本文 / 0.06 小ラベル / 0.12 英字大文字 / 0.2 特に広い字送り",
+      "values": [
+        -0.02,
+        -0.01,
+        0,
+        0.02,
+        0.06,
+        0.12,
+        0.2
+      ],
+      "unit": "em"
+    },
+    {
+      "kind": "段の幅",
+      "summary": "5 段階",
+      "description": "720 / 880 / 1080 / 1280 / 1440px　※ 720 読む幅 / 880 狭い段 / 1080 標準 / 1280 広い段 / 1440 最大。600px 未満は「段」ではなく部品の寸法なので縛らない",
+      "values": [
+        720,
+        880,
+        1080,
+        1280,
+        1440
+      ],
+      "unit": "px"
+    },
+    {
+      "kind": "カラー",
+      "summary": "パレット＋プラネットのトークン",
+      "description": "パレットと完全一致する色は var() に。知覚差 ΔE ≤ 3 は寄せる。ΔE > 8 はページ固有色なのでプラネットのトークンとして宣言する。白と黒はリテラルのまま"
+    },
+    {
+      "kind": "カードの内側の余白",
+      "summary": "8 段階",
+      "description": "4 / 8 / 12 / 16 / 24 / 32 / 40 / 48px　※ 適用範囲はカードの内側",
+      "values": [
+        4,
+        8,
+        12,
+        16,
+        24,
+        32,
+        40,
+        48
+      ],
+      "unit": "px"
+    },
+    {
+      "kind": "行間",
+      "summary": "5 段階",
+      "description": "1 / 1.2 / 1.4 / 1.65 / 1.85　※ 1 単行 / 1.2 大見出し / 1.4 見出し・識別子 / 1.65 走査・リード / 1.85 本文。読むほど広く、見るほど詰める",
+      "values": [
+        1,
+        1.2,
+        1.4,
+        1.65,
+        1.85
+      ]
+    }
+  ],
+  "readingModes": [
+    {
+      "mode": "読む（read）",
+      "px": "16px",
+      "what": "文として通読する。文意を追う"
+    },
+    {
+      "mode": "走査する（scan）",
+      "px": "14px",
+      "what": "一覧から目的のものを探す。全部は読まない"
+    },
+    {
+      "mode": "確認する（check）",
+      "px": "12px",
+      "what": "存在を認識するだけ。「日付がある」「タグがある」"
+    }
+  ],
+  "typeScale": [
+    {
+      "px": "clamp(36–56px)",
+      "role": "ディスプレイ",
+      "targets": "ヒーロー見出し（1ページに1つ）",
+      "read": "見る",
+      "lh": "1.2"
+    },
+    {
+      "px": "28px",
+      "role": "セクション見出し",
+      "targets": "h2 / section-title",
+      "read": "見る",
+      "lh": "1.2"
+    },
+    {
+      "px": "22px",
+      "role": "ブロック見出し",
+      "targets": "title / name / h3",
+      "read": "見る",
+      "lh": "1.4"
+    },
+    {
+      "px": "18px",
+      "role": "リード文・小見出し",
+      "targets": "lede / lead / h4",
+      "read": "読む（導入）",
+      "lh": "1.65"
+    },
+    {
+      "px": "16px",
+      "role": "本文・操作",
+      "targets": "text / desc / p / btn / link / more",
+      "read": "読む・押す",
+      "lh": "1.85（操作要素は 1）"
+    },
+    {
+      "px": "14px",
+      "role": "走査テキスト",
+      "targets": "table / row / list / カード内の説明",
+      "read": "走査する",
+      "lh": "1.65"
+    },
+    {
+      "px": "12px",
+      "role": "識別子・注釈",
+      "targets": "label / chip / tag / badge / note / date",
+      "read": "確認する",
+      "lh": "1.4"
+    }
+  ],
+  "outOfScale": [
+    {
+      "kind": "数値（実績・スコア）",
+      "example": "num / metric-num / stat-num",
+      "rule": "サイズ体系から外し、ウェイトと色で階層を作る。数字は文字より視認性が高く、本文と同じサイズでも本文より強く見える。サイズで差をつけると過剰になる。"
+    },
+    {
+      "kind": "疑似要素が出す記号・番号",
+      "example": "::before / ::after の content",
+      "rule": "読ませる文字ではないので段に載せない。文字で作った図形（矢印グリフなど）も同じ。"
+    }
+  ],
+  "cardTypes": [
+    {
+      "name": "面（Surface）",
+      "border": "なし",
+      "shadow": "なし",
+      "radius": "12px",
+      "pad": "24px",
+      "use": "セクションの中の区画。地の色を変えて区切るだけのもの"
+    },
+    {
+      "name": "カード（Card）",
+      "border": "1px",
+      "shadow": "なし",
+      "radius": "16px",
+      "pad": "24px",
+      "use": "並列に並ぶ情報。いちばん多い"
+    },
+    {
+      "name": "パネル（Panel）",
+      "border": "1px",
+      "shadow": "なし",
+      "radius": "16px",
+      "pad": "32px",
+      "use": "中に見出しと本文が入る大きな面"
+    },
+    {
+      "name": "押せるカード（Tile）",
+      "border": "1px",
+      "shadow": "--shadow-1",
+      "radius": "16px",
+      "pad": "24px",
+      "use": "クリックできるもの。ホバーで浮く。押せないものに影を付けない"
+    },
+    {
+      "name": "チップ（Chip）",
+      "border": "なし",
+      "shadow": "なし",
+      "radius": "999px",
+      "pad": "4px 12px",
+      "use": "ラベル・タグ。文字は 12px"
+    }
+  ],
+  "typefaces": [
+    {
+      "face": "欧文",
+      "family": "Roboto",
+      "role": "日本語に混ざる英数字。見出しも数値もここ",
+      "where": "ほぼ全ページ。数値は font-variant-numeric: tabular-nums で桁を揃える"
+    },
+    {
+      "face": "和文",
+      "family": "Noto Sans JP",
+      "role": "既定。説明する・売る文章",
+      "where": "ほぼ全ページ"
+    },
+    {
+      "face": "明朝",
+      "family": "Shippori Mincho / Cormorant Garamond",
+      "role": "述べる・遺す文章",
+      "where": "/info/genten/（原典 — 循環・自立・共助の書）のみ"
+    },
+    {
+      "face": "システム等幅",
+      "family": "ui-monospace ほか",
+      "role": "コード",
+      "where": "<code> のみ。読み込みなし"
+    }
+  ],
+  "mobile": [
+    {
+      "band": "見出し帯（22px〜）",
+      "policy": "clamp() で可変",
+      "note": "ここは縮めてよい。@media が不要になり、ブレークポイントの乱立も消える。"
+    },
+    {
+      "band": "本文帯（16〜18px）",
+      "policy": "固定。縮めない",
+      "note": "スマホで本文を縮めるのが最大の害。"
+    },
+    {
+      "band": "ラベル帯（12〜14px）",
+      "policy": "固定",
+      "note": "本文には使わない。"
+    }
+  ],
+  "inspections": [
+    {
+      "file": "scripts/check-readability.mjs",
+      "what": "① 可読性の下限（本文16px・全用途12px・コントラスト4.5:1・フォーム16px）",
+      "how": "CI。1件でも落とす",
+      "escape": "なし（① は逸脱不可）"
+    },
+    {
+      "file": "scripts/adis/readability-check.mjs",
+      "what": "同上をサイト全体で",
+      "how": "ADIS 日次。基準より増えたら",
+      "escape": "baseline を更新する"
+    },
+    {
+      "file": "scripts/adis/vocab-check.mjs",
+      "what": "② 語彙（角丸・字間・段の幅・行間・カードの余白）",
+      "how": "ADIS 日次。語彙外を報告",
+      "escape": "該当行に vocab-ok と理由"
+    },
+    {
+      "file": "scripts/adis/type-scale-check.mjs",
+      "what": "役割 → サイズ（段から外れた font-size）",
+      "how": "ADIS 日次。基準より増えたら",
+      "escape": "ブロックに vocab-ok / 数値は対象外"
+    },
+    {
+      "file": "scripts/adis/inline-style-check.mjs",
+      "what": "インラインの style=\"\"（カスタムプロパティ以外）",
+      "how": "ADIS 日次。1件でも報告",
+      "escape": "なし。値は CSS 側に書く"
+    },
+    {
+      "file": "scripts/adis/important-check.mjs",
+      "what": "!important の数",
+      "how": "ADIS 日次。基準より増えたら",
+      "escape": "baseline を更新する"
+    },
+    {
+      "file": "scripts/adis/token-scope-check.mjs",
+      "what": "そのページで解決できないトークンの参照",
+      "how": "ADIS 日次。1件でも報告",
+      "escape": "なし。定義するか、値をそのまま書く"
+    },
+    {
+      "file": "scripts/adis/service-catalog-check.mjs",
+      "what": "サービスページ・services.json・llms.txt の3者一致",
+      "how": "ADIS 日次。1件でも報告",
+      "escape": "未公開なら url を書かない"
+    },
+    {
+      "file": "scripts/adis/doc-sync-check.mjs",
+      "what": "検査の一覧と、実在する検査スクリプトの一致",
+      "how": "ADIS 日次。1件でも報告",
+      "escape": "なし"
+    },
+    {
+      "file": "scripts/adis/cover-check.mjs",
+      "what": "記事カバー画像の未設定",
+      "how": "ADIS 日次",
+      "escape": "なし"
+    },
+    {
+      "file": "scripts/adis/faq-check.mjs",
+      "what": "FAQ の画面表示と FAQPage スキーマの一致",
+      "how": "ADIS 日次。1件でも報告",
+      "escape": "なし"
+    },
+    {
+      "file": "scripts/adis/content-check.mjs",
+      "what": "コンテンツの slug 整合",
+      "how": "ADIS 日次",
+      "escape": "なし"
+    },
+    {
+      "file": "scripts/check-page-freshness.mjs",
+      "what": "変更したサービスページの LAST UPDATED",
+      "how": "CI。更新漏れで落とす",
+      "escape": "コミットに [skip-freshness]"
+    },
+    {
+      "file": "scripts/check-version-sync.mjs",
+      "what": "TOP の版数が semver か・日付が全ページ以上か",
+      "how": "CI",
+      "escape": "なし"
+    }
+  ]
+}
