@@ -1,0 +1,656 @@
+/* ============================================================
+   IDEATECH - Customer Voice (Case Study) Stylesheet
+   v13.0 - White base / Blue accent (TPI palette)
+   ============================================================ */
+
+/* ----------------------------------------
+   1. Sidebar Navigation (カテゴリ)
+   ---------------------------------------- */
+.cv-nav {
+  position: sticky;
+  top: calc(var(--header-h) + 24px);
+  align-self: start;
+  background: #F2F6FC;
+  border-radius: 8px;
+  padding: 28px 24px;
+}
+
+.cv-nav__search {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.cv-nav__search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #E2E8F4;
+  pointer-events: none;
+}
+
+.cv-nav__search-input {
+  width: 100%;
+  padding: 10px 12px 10px 36px;
+  background: #F2F6FC;
+  border: 0.5px solid #E2E8F4;
+  border-radius: 8px;
+  color: #0B1639;
+  font-family: 'Inter', 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: border-color var(--transition);
+  box-sizing: border-box;
+}
+
+.cv-nav__search-input::placeholder {
+  color: #E2E8F4;
+}
+
+.cv-nav__search-input:focus {
+  border-color: #1E50FF;
+}
+
+.cv-nav__heading {
+  font-family: 'Inter', 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1E50FF;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+}
+
+.cv-nav__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.cv-nav__item {
+  border-bottom: 0.5px solid #E2E8F4;
+}
+
+.cv-nav__item:last-child {
+  border-bottom: none;
+}
+
+.cv-nav__btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 14px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.cv-nav__btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: var(--bar-w, 100%);
+  height: 2px;
+  background: #1E50FF;
+  border-radius: 1px;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.cv-nav__btn:hover::after,
+.cv-nav__btn.is-active::after {
+  opacity: 1;
+}
+
+.cv-nav__name {
+  font-family: 'Inter', 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #4A5677;
+  transition: color var(--transition);
+}
+
+.cv-nav__count {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #E2E8F4;
+  transition: color var(--transition);
+}
+
+.cv-nav__btn:hover .cv-nav__name,
+.cv-nav__btn.is-active .cv-nav__name {
+  color: #0B1639;
+}
+
+.cv-nav__btn:hover .cv-nav__count,
+.cv-nav__btn.is-active .cv-nav__count {
+  color: #4A5677;
+}
+
+/* ----------------------------------------
+   2. Listing Body Layout
+   ---------------------------------------- */
+.cv-body {
+  background: #F2F6FC;
+}
+
+.cv-body__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 56px 40px 96px;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* ----------------------------------------
+   3. Case Card Grid
+   ---------------------------------------- */
+.cv-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.cv-card {
+  background: #F2F6FC;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cv-card__inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cv-card__meta-inline {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.cv-card__service-badge {
+  display: inline-block;
+  padding: 1px 8px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #1E50FF;
+  border: 0.5px solid #1E50FF;
+  border-radius: 9999px;
+}
+
+.cv-card__industry {
+  font-size: 13px;
+  font-weight: 400;
+  color: #4A5677;
+}
+
+.cv-card__content {
+  padding: 24px 28px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  flex: 1;
+}
+
+.cv-card__title {
+  font-family: 'Inter', 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #0B1639;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.cv-card__challenge-text {
+  font-family: 'Inter', 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #4A5677;
+  line-height: 1.8;
+  margin-bottom: 18px;
+  flex: 1;
+}
+
+.cv-card__content .cta-more {
+  margin-top: auto;
+  align-self: flex-end;
+}
+
+/* ============================================================
+   DETAIL PAGE
+   ============================================================ */
+
+/* ----------------------------------------
+   4. Detail: 企業概要
+   ---------------------------------------- */
+.cvd-overview {
+  background: #FFFFFF;
+  padding: 0 40px 64px;
+}
+
+.cvd-overview__inner {
+  max-width: 880px;
+  margin: 0 auto;
+  border-top: 0.5px solid #E2E8F4;
+  border-bottom: 0.5px solid #E2E8F4;
+}
+
+.cvd-overview__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.cvd-overview__row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 24px;
+  padding: 20px 8px;
+  border-bottom: 0.5px solid #E2E8F4;
+}
+
+.cvd-overview__row:last-child {
+  border-bottom: none;
+}
+
+.cvd-overview__row dt {
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  color: #4A5677;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  align-self: center;
+}
+
+.cvd-overview__row dd {
+  font-family: 'Inter', 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #0B1639;
+}
+
+.cvd-overview__row dd a {
+  color: #1E50FF;
+  text-decoration: underline;
+  word-break: break-all;
+}
+
+.cvd-overview__row dd a:hover {
+  opacity: 0.8;
+}
+
+/* ----------------------------------------
+   5. Detail: 本文（白島）
+   ---------------------------------------- */
+.cvd-article {
+  background: #FFFFFF;
+  padding: 0 40px 96px;
+}
+
+.cvd-article__inner {
+  max-width: 880px;
+  margin: 0 auto;
+  background: #0B1639;
+  border-radius: 8px;
+  padding: 64px 64px 72px;
+}
+
+.cvd-article__label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  color: #E2E8F4;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.cvd-article__heading {
+  font-family: 'Inter', 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #FFFFFF;
+  margin-bottom: 48px;
+  padding-bottom: 24px;
+  border-bottom: 0.5px solid #E2E8F4;
+}
+
+/* インタビュー本文（markdown） */
+.cvd-content > * + * {
+  margin-top: 1.6em;
+}
+
+.cvd-content h2 {
+  font-family: 'Inter', 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #FFFFFF;
+  margin-top: 3em;
+  margin-bottom: 0.8em;
+}
+
+.cvd-content h3 {
+  font-family: 'Inter', 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #FFFFFF;
+  margin-top: 2.4em;
+  margin-bottom: 0.6em;
+  padding-left: 16px;
+  border-left: 0.5px solid #1E50FF;
+}
+
+.cvd-content h2:first-child,
+.cvd-content h3:first-child {
+  margin-top: 0;
+}
+
+.cvd-content p {
+  font-family: 'Inter', 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #FFFFFF;
+}
+
+.cvd-content a {
+  color: #1E50FF;
+  text-decoration: underline;
+  word-break: break-all;
+}
+
+.cvd-content a:hover {
+  opacity: 0.8;
+}
+
+.cvd-content ul,
+.cvd-content ol {
+  font-family: 'Inter', 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #FFFFFF;
+  padding-left: 1.5em;
+}
+
+.cvd-content ul li,
+.cvd-content ol li {
+  margin-bottom: 0.4em;
+}
+
+.cvd-content blockquote {
+  border-left: 0.5px solid #E2E8F4;
+  padding: 0.4em 0 0.4em 20px;
+  color: #E2E8F4;
+  font-family: 'Inter', 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.cvd-content strong {
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+/* ----------------------------------------
+   6. Detail: 前後記事ナビ
+   ---------------------------------------- */
+.cvd-pager {
+  background: #FFFFFF;
+  padding: 0 40px 64px;
+}
+
+.cvd-pager__inner {
+  max-width: 880px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.cvd-pager__link {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 24px 28px;
+  background: #F2F6FC;
+  border: 0.5px solid #E2E8F4;
+  border-radius: 8px;
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.cvd-pager__link:hover {
+  background: #F2F6FC;
+  border-color: #4A5677;
+}
+
+.cvd-pager__link--next {
+  text-align: right;
+}
+
+.cvd-pager__placeholder {
+  display: block;
+}
+
+.cvd-pager__label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  color: #1E50FF;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.cvd-pager__company {
+  font-family: 'Inter', 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #0B1639;
+  margin-top: 4px;
+}
+
+.cvd-pager__title {
+  font-family: 'Inter', 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #4A5677;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cvd-pager__back {
+  max-width: 880px;
+  margin: 32px auto 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* ----------------------------------------
+   7. Detail: CTA
+   ---------------------------------------- */
+.cvd-cta {
+  background: #FFFFFF;
+  padding: 0 40px 96px;
+}
+
+.cvd-cta__inner {
+  max-width: 880px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 64px 40px;
+  border-top: 0.5px solid #E2E8F4;
+  border-bottom: 0.5px solid #E2E8F4;
+}
+
+.cvd-cta__label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  color: #1E50FF;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.cvd-cta__title {
+  font-family: 'Inter', 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #0B1639;
+  margin-bottom: 16px;
+}
+
+.cvd-cta__desc {
+  font-family: 'Inter', 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #4A5677;
+  margin-bottom: 32px;
+}
+
+/* ----------------------------------------
+   8. Responsive
+   ---------------------------------------- */
+@media (max-width: 1024px) {
+  .cv-body__inner { padding: 48px 32px 80px; gap: 32px; grid-template-columns: 220px 1fr; }
+}
+
+@media (max-width: 767px) {
+  .cv-body__inner { padding: 32px 20px 64px; grid-template-columns: 1fr; }
+  .cv-nav { position: static; }
+
+  .cvd-overview { padding: 0 20px 48px; }
+  .cvd-overview__row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 16px 4px;
+  }
+
+  .cvd-article { padding: 0 20px 64px; }
+  .cvd-article__inner { padding: 40px 24px 48px; }
+  .cvd-article__heading {
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+
+  .cvd-content h2 { font-size: 24px; }
+  .cvd-content h3 { font-size: 18px; }
+
+  .cvd-pager { padding: 0 20px 48px; }
+  .cvd-pager__inner {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .cvd-pager__link { padding: 20px 24px; }
+  .cvd-pager__link--next { text-align: left; }
+
+  .cvd-cta { padding: 0 20px 64px; }
+  .cvd-cta__inner { padding: 48px 24px; }
+  .cvd-cta__title { font-size: 24px; }
+}
+
+/* ============================================================
+   v13.0 — TOP // CASE STUDIES と同じカードスタイル
+   ============================================================ */
+.cv-case-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+/* TOP // CASE STUDIES と完全一致のカード（tpi-case__card 相当） */
+.cv-case-card {
+  background: #fff;
+  border: 1px solid #E2E8F4;
+  border-radius: 20px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform .2s, box-shadow .2s;
+}
+.cv-case-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(11,22,57,0.10);
+}
+.cv-case-card__cover {
+  aspect-ratio: 16/10;
+  background: #F2F6FC;
+  overflow: hidden;
+}
+.cv-case-card__cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cv-case-card__body { padding: 28px; }
+.cv-case-card__tag {
+  display: inline-block;
+  font-size: 13px;
+  color: #1E50FF;
+  background: rgba(30,80,255,0.08);
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.cv-case-card__name {
+  font-family: 'Inter', 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0B1639;
+  line-height: 1.5;
+  margin: 0 0 8px;
+}
+.cv-case-card__industry {
+  font-family: 'Inter', 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+  font-size: 14px;
+  color: #4A5677;
+  line-height: 1.6;
+  margin: 0 0 16px;
+}
+.cv-case-card__link {
+  font-size: 15px;
+  color: #1E50FF;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.cv-case-card__link::after { content: '→'; }
+
+@media (max-width: 1024px) {
+  .cv-case-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .cv-case-grid { grid-template-columns: 1fr; }
+}
+
+/* サイドバーカット時の1カラムレイアウト */
+.cv-body__inner--full {
+  display: block !important;
+  grid-template-columns: 1fr !important;
+  max-width: 1280px;
+  margin: 0 auto;
+}

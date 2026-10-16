@@ -1,0 +1,782 @@
+/* ============================================================
+   IDEATECH - CMS Article Layout (prefix: cms-)
+   コラム / 事例 / セミナー の記事詳細ページ共通レイアウト
+   1カラム中央寄せ（720px）
+   ============================================================ */
+
+/* ----------------------------------------
+   0. ヒーロー上書き（記事幅に合わせる）
+   cms.css は CMS記事ページでのみ読み込まれるため、
+   ここでの上書きは記事ページにのみ適用される。
+   ---------------------------------------- */
+.page-hero__inner {
+  max-width: calc(720px + 80px * 2);
+  margin: 0 auto;
+}
+
+.page-hero__title {
+  font-size: 32px;
+}
+
+/* ヒーロー内メタ情報 */
+.cms-hero-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.cms-hero-meta__row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.cms-hero-meta__label {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--shiro3);
+  white-space: nowrap;
+  min-width: 56px;
+}
+
+.cms-hero-meta__label::after {
+  content: ':';
+}
+
+.cms-hero-meta__value {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--shiro3);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.cms-hero-meta__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.cms-hero-meta__tag {
+  display: inline-block;
+  padding: 2px 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--shiro3);
+  border: 0.5px solid var(--shiro3);
+  border-radius: 9999px;
+  background: transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+a.cms-hero-meta__tag:hover {
+  color: var(--shiro1);
+  border-color: var(--shiro1);
+}
+
+/* ----------------------------------------
+   1. ラッパー: 1カラム中央寄せ
+   ---------------------------------------- */
+.cms-wrap {
+  max-width: calc(720px + 80px * 2);
+  margin: 0 auto;
+  padding: 48px 80px 96px;
+  background: var(--kuro1);
+}
+
+/* ----------------------------------------
+   2. 記事ヘッダー: インラインメタ情報
+   ---------------------------------------- */
+.cms-header {
+  margin-bottom: 40px;
+  padding-bottom: 32px;
+  border-bottom: 0.5px solid var(--kuro4);
+}
+
+.cms-header:empty {
+  display: none;
+}
+
+.cms-meta__card {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+.cms-meta__heading {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--shiro3);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.cms-meta__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+}
+
+.cms-meta__row {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.cms-meta__row dt {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--shiro3);
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.cms-meta__row dt::after {
+  content: ':';
+}
+
+.cms-meta__row dd {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--shiro1);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.cms-meta__row dd a {
+  color: var(--daidai);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* メタ情報 2カラムグリッド (事例・セミナー用) */
+.cms-meta__list--grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 24px;
+}
+
+/* CTA ボタン (メタ領域内) */
+.cms-meta__cta {
+  margin-top: 16px;
+  display: inline-flex;
+  gap: 10px;
+}
+
+.cms-meta__cta .cta-kuro,
+.cms-meta__cta .cta-shiro,
+.cms-meta__cta .cta-dl,
+.cms-meta__cta .cta-more {
+  width: auto;
+}
+
+/* 終了ステータス */
+.cms-meta__status {
+  font-size: 13px;
+  color: var(--shiro3);
+  padding: 0;
+  background: transparent;
+}
+
+/* タグリスト */
+.cms-meta__tags {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.cms-meta__tag {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--shiro3);
+  background: var(--kuro3);
+  border: 0.5px solid var(--kuro4);
+  border-radius: 8px;
+  padding: 2px 8px;
+}
+
+/* ----------------------------------------
+   3. 目次: 折りたたみ式 (details/summary)
+   ---------------------------------------- */
+.cms-toc {
+  background: var(--kuro2);
+  border: 0.5px solid var(--kuro4);
+  border-radius: 8px;
+  padding: 0;
+  margin-bottom: 48px;
+}
+
+.cms-toc__toggle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 16px 20px;
+  list-style: none;
+}
+
+.cms-toc__toggle::-webkit-details-marker {
+  display: none;
+}
+
+.cms-toc__toggle::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-right: 0.5px solid var(--shiro3);
+  border-bottom: 0.5px solid var(--shiro3);
+  transform: rotate(-45deg);
+  transition: transform 0.2s ease;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.cms-toc[open] > .cms-toc__toggle::before {
+  transform: rotate(45deg);
+}
+
+.cms-toc__label {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--shiro3);
+  text-transform: uppercase;
+}
+
+.cms-toc__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0 20px 16px;
+}
+
+.cms-toc__item {
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.cms-toc__item--lv2 {
+  font-weight: 600;
+}
+
+.cms-toc__item--lv3 {
+  padding-left: 16px;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.cms-toc__link {
+  display: block;
+  color: var(--shiro3);
+  text-decoration: none;
+  padding: 4px 0;
+  border-left: 0.5px solid transparent;
+  padding-left: 12px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.cms-toc__link:hover {
+  color: var(--shiro1);
+}
+
+.cms-toc__link.is-active {
+  color: var(--shiro1);
+  border-left-color: var(--daidai);
+  font-weight: 700;
+}
+
+/* ----------------------------------------
+   3b. TL;DR 要約ボックス
+   ---------------------------------------- */
+.cms-tldr {
+  background: var(--shiro2);
+  border-left: 3px solid var(--daidai);
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin-bottom: 48px;
+}
+
+.cms-tldr__label {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--daidai);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.cms-tldr__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cms-tldr__list li {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--kuro1);
+  padding-left: 16px;
+  position: relative;
+}
+
+.cms-tldr__list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--kuro4);
+}
+
+/* ----------------------------------------
+   4. 本文コンテンツ
+   ---------------------------------------- */
+.cms-content {
+  max-width: none;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--shiro1);
+}
+
+.cms-content > * + * {
+  margin-top: 1.5em;
+}
+
+/* 見出し（記事本文内はワンサイズ下げ: h1→h2相当, h2→h3相当, h3→h4相当） */
+.cms-content h1 {
+  font-family: var(--font-mincho);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--shiro1);
+  margin-top: 64px;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 0.5px solid var(--kuro4);
+  scroll-margin-top: 80px;
+}
+
+.cms-content h2 {
+  font-family: var(--font-mincho);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--shiro1);
+  margin-top: 48px;
+  margin-bottom: 16px;
+  scroll-margin-top: 80px;
+}
+
+.cms-content h3 {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: var(--shiro1);
+  margin-top: 32px;
+  margin-bottom: 12px;
+  scroll-margin-top: 80px;
+}
+
+.cms-content h4 {
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.55;
+  color: var(--shiro1);
+  margin-top: 32px;
+  margin-bottom: 12px;
+  padding-left: 12px;
+  border-left: 3px solid #4477FF;
+}
+
+.cms-content h5 {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.55;
+  color: var(--shiro1);
+  margin-top: 24px;
+  margin-bottom: 10px;
+}
+
+.cms-content h1:first-child,
+.cms-content h2:first-child,
+.cms-content h3:first-child,
+.cms-content h4:first-child {
+  margin-top: 0;
+}
+
+/* 段落 */
+.cms-content p {
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--shiro1);
+  margin-bottom: 0;
+}
+
+/* リスト */
+.cms-content ul,
+.cms-content ol {
+  padding-left: 1.6em;
+}
+
+.cms-content li {
+  margin-bottom: 8px;
+  line-height: 1.8;
+}
+
+.cms-content li::marker {
+  color: var(--shiro3);
+}
+
+/* リンク */
+.cms-content a {
+  color: var(--daidai);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: opacity 0.2s ease;
+}
+
+.cms-content a:hover {
+  opacity: 0.7;
+}
+
+/* 強調 */
+.cms-content strong {
+  font-weight: 700;
+  color: var(--shiro1);
+}
+
+.cms-content em {
+  font-style: italic;
+}
+
+/* 引用 */
+.cms-content blockquote {
+  border-left: 0.5px solid var(--daidai);
+  padding: 8px 0 8px 24px;
+  margin-left: 0;
+  color: var(--shiro3);
+  font-style: normal;
+}
+
+.cms-content blockquote p {
+  color: var(--shiro3);
+}
+
+/* インラインコード */
+.cms-content code {
+  font-family: 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', monospace;
+  font-size: 14px;
+  background: var(--kuro3);
+  color: var(--shiro1);
+  padding: 2px 6px;
+  border-radius: 8px;
+  border: 0.5px solid var(--kuro4);
+}
+
+/* コードブロック */
+.cms-content pre {
+  background: var(--kuro1);
+  color: var(--shiro1);
+  padding: 20px 24px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.cms-content pre code {
+  background: transparent;
+  color: var(--shiro1);
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  font-size: 13px;
+}
+
+/* テーブル */
+.cms-content table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.cms-content table th,
+.cms-content table td {
+  border: 0.5px solid var(--kuro4);
+  padding: 12px 16px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.cms-content table th {
+  background: var(--kuro3);
+  font-weight: 700;
+  color: var(--shiro1);
+}
+
+.cms-content table td {
+  color: var(--shiro1);
+}
+
+/* 画像 */
+.cms-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 0.5px solid var(--kuro4);
+}
+
+/* 区切り線 */
+.cms-content hr {
+  border: none;
+  border-top: 0.5px solid var(--kuro4);
+  margin: 48px 0;
+}
+
+/* ----------------------------------------
+   5. 記事フッター + ページャー
+   ---------------------------------------- */
+.cms-footer {
+  margin-top: 64px;
+  padding-top: 32px;
+  border-top: 0.5px solid var(--kuro4);
+}
+
+.cms-pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.cms-pager__link {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-decoration: none;
+  max-width: 48%;
+  transition: opacity 0.2s ease;
+}
+
+.cms-pager__link:hover {
+  opacity: 0.7;
+}
+
+.cms-pager__link--next {
+  align-items: flex-end;
+  margin-left: auto;
+  text-align: right;
+}
+
+.cms-pager__label {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--shiro3);
+  letter-spacing: 0.05em;
+}
+
+.cms-pager__company {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--shiro1);
+  line-height: 1.5;
+}
+
+.cms-footer__cta {
+  margin-top: 32px;
+  text-align: center;
+}
+
+/* ----------------------------------------
+   6. 調査グラフ（survey-bar）ダークモード対応
+   ---------------------------------------- */
+.cms-content .survey-question {
+  margin: 24px 0 32px;
+}
+
+.cms-content .survey-question h4 {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--shiro3);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+/* ----------------------------------------
+   5.5 要約ボックス（AI・読者向け）
+   ---------------------------------------- */
+.cms-summary {
+  margin: 0 0 40px;
+  padding: 24px 28px;
+  border: 0.5px solid var(--kuro4);
+  border-radius: 8px;
+  border-left: 3px solid var(--daidai);
+}
+
+.cms-summary__label {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--daidai);
+  margin-bottom: 10px;
+}
+
+.cms-summary__text {
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--shiro3);
+}
+
+/* ----------------------------------------
+   6. 調査レポート横棒グラフ
+   ---------------------------------------- */
+.cms-content .survey-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+.cms-content .survey-bar-label {
+  flex: 0 0 280px;
+  font-size: 13px;
+  color: var(--shiro3);
+  line-height: 1.5;
+  text-align: right;
+}
+
+.cms-content .survey-bar-track {
+  flex: 1;
+  height: 28px;
+  background: var(--kuro3);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  border: 0.5px solid var(--kuro4);
+}
+
+.cms-content .survey-bar-fill {
+  height: 100%;
+  width: var(--fill, 0%);
+  background: var(--sora);
+  border-radius: 8px 0 0 8px;
+  opacity: 0.85;
+}
+
+.cms-content .survey-bar-pct {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--shiro1);
+  letter-spacing: 0.02em;
+}
+
+/* ----------------------------------------
+   7. レスポンシブ
+   ---------------------------------------- */
+@media (max-width: 1199px) {
+  .cms-wrap {
+    padding: 40px 40px 80px;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-hero__title {
+    font-size: 24px;
+  }
+
+  .cms-wrap {
+    padding: 32px 20px 64px;
+  }
+
+  .cms-header {
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+  }
+
+  .cms-meta__list--grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cms-toc {
+    margin-bottom: 32px;
+  }
+
+  .cms-content h1 {
+    font-size: 24px;
+    margin-top: 48px;
+    margin-bottom: 16px;
+  }
+
+  .cms-content h2 {
+    font-size: 18px;
+    margin-top: 32px;
+  }
+
+  .cms-content h3 {
+    font-size: 16px;
+    margin-top: 24px;
+  }
+
+  .cms-content {
+    font-size: 16px;
+  }
+
+  .cms-pager {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .cms-pager__link {
+    max-width: 100%;
+  }
+
+  .cms-pager__link--next {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .cms-content .survey-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+  }
+
+  .cms-content .survey-bar-label {
+    flex: none;
+    text-align: left;
+    font-size: 13px;
+  }
+
+  .cms-content .survey-bar-track {
+    height: 24px;
+  }
+}

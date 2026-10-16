@@ -1,0 +1,218 @@
+/* ============================================================
+   IDEATECH - Doc Page (sitemap / privacy / terms 共通)
+   TPI v13.0 ライトテーマ
+   ============================================================ */
+.doc-page h1,
+.doc-page h2,
+.doc-page h3,
+.doc-page h4,
+.doc-page h5,
+.doc-page h6,
+.doc-page p { font-family: inherit; }
+
+.doc-page.tpi-page {
+  background: #FFFFFF;
+  color: var(--tpi-text);
+  font-family: 'Roboto', 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+  line-height: 1.85;
+  -webkit-font-smoothing: antialiased;
+  padding-top: 0;
+}
+.doc-page a {
+  color: var(--tpi-blue);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.doc-page a:hover { opacity: 0.7; }
+
+/* ===== HERO（標準形）=====
+   /logo/ のヒーローを標準とし、利用規約・プライバシーポリシー・サイトマップも同じ型で揃える。
+   定義はこの1か所だけに置く。各ページのスコープCSSで上書きしない */
+.doc-hero {
+  padding: 96px 64px 64px;
+  text-align: center;
+  background: var(--tpi-mist);
+}
+.doc-hero__inner { max-width: 880px; margin: 0 auto; }
+.doc-hero__title {
+  font-size: clamp(28px, 3.6vw, 40px); font-weight: 800;
+  letter-spacing: -0.02em; line-height: 1.2;
+  color: var(--tpi-text); margin: 0 0 16px;
+}
+.doc-hero__sub {
+  font-size: 16px; line-height: 1.85;
+  color: var(--tpi-muted); margin: 0;
+}
+
+/* ===== BODY ===== */
+.doc-body { padding: 80px 64px 120px; }
+.doc-body__inner { max-width: 880px; margin: 0 auto; }
+.doc-body__inner--wide { max-width: 1280px; }
+
+/* ===== Intro ===== */
+/* 箱の左端に青い縦線は引かない（全ページ共通）。地の色だけで引用箱とわかる */
+.doc-intro {
+  background: var(--tpi-mist);
+  padding: 28px 32px;
+  border-radius: 12px;
+  margin-bottom: 56px;
+}
+.doc-intro p {
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--tpi-muted);
+  margin: 0 0 14px;
+}
+.doc-intro p:last-child { margin-bottom: 0; }
+
+/* ===== Article ===== */
+.doc-article {
+  margin-bottom: 56px;
+  padding-bottom: 56px;
+  border-bottom: 1px solid var(--tpi-line);
+}
+.doc-article:last-child {
+  margin-bottom: 0; padding-bottom: 0; border-bottom: none;
+}
+.doc-article--mist {
+  background: var(--tpi-mist);
+  margin: 56px -36px 0;
+  padding: 56px 36px;
+  border-radius: 16px;
+  border-bottom: none;
+}
+
+.doc-h2 {
+  font-size: clamp(22px, 3vw, 28px);
+  font-weight: 800;
+  color: var(--tpi-text);
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+  margin: 0 0 32px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--tpi-blue);
+}
+
+.doc-item {
+  margin-bottom: 36px;
+}
+.doc-item:last-child { margin-bottom: 0; }
+
+.doc-h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--tpi-text);
+  line-height: 1.65;
+  margin: 0 0 14px;
+  padding-left: 14px;
+  /* シアン（#00C6FF）は暗い地の上で使う色で、白地では 1.9:1 しかなく
+     見出し番号の青とも噛み合わなかった。アクセントは青1色に寄せる */
+  border-left: 3px solid var(--tpi-blue);
+}
+.doc-h3__no {
+  font-size: 12px;
+  color: var(--tpi-blue);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-right: 6px;
+}
+
+.doc-item p {
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--tpi-muted);
+  margin: 0 0 14px;
+}
+.doc-item p:last-child { margin-bottom: 0; }
+
+.doc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.doc-list li {
+  font-size: 14px;
+  line-height: 1.85;
+  color: var(--tpi-muted);
+  padding-left: 20px;
+  position: relative;
+}
+.doc-list li::before {
+  content: '';
+  position: absolute;
+  left: 6px; top: 10px;
+  width: 5px; height: 5px;
+  background: var(--tpi-blue);
+  border-radius: 50%;
+}
+.doc-list--sub li::before {
+  background: #8893B2;
+}
+.doc-list--sub {
+  padding-left: 18px;
+}
+
+.doc-date {
+  margin: 32px 0 0;
+  text-align: right;
+  font-family: 'Roboto', sans-serif;
+    font-variant-numeric: tabular-nums;
+  font-size: 12px;
+  color: #8893B2;
+}
+
+/* ===== Contact (privacy) ===== */
+.doc-contact {
+  background: linear-gradient(135deg, var(--tpi-deep) 0%, var(--tpi-blue) 100%);
+  color: #fff;
+  border-radius: 16px;
+  padding: 36px 40px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 48px;
+}
+.doc-contact::before {
+  content: '';
+  position: absolute;
+  top: -30%; right: -10%;
+  width: 50%; height: 200%;
+  background: radial-gradient(circle, rgba(0,198,255,0.30) 0%, transparent 60%);
+  pointer-events: none;
+}
+.doc-contact > * { position: relative; z-index: 1; }
+.doc-contact__title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 20px;
+}
+.doc-contact__addr,
+.doc-contact__tel,
+.doc-contact__note {
+  margin: 0 0 8px;
+  font-size: 14px;
+  line-height: 1.85;
+  color: rgba(255,255,255,0.92);
+}
+.doc-contact__tel {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+.doc-contact__note {
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+  margin: 8px 0 0;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .doc-hero { padding: 64px 24px 48px; }
+  .doc-body { padding: 56px 24px 80px; }
+  .doc-intro { padding: 22px 22px; }
+  .doc-article--mist { margin-left: -16px; margin-right: -16px; padding: 36px 22px; }
+  .doc-contact { padding: 28px 24px; }
+}

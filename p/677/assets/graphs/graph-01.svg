@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <clipPath id="cardClip">
+      <rect width="800" height="600" rx="12"/>
+    </clipPath>
+  </defs>
+
+  <!-- カード背景 -->
+  <g clip-path="url(#cardClip)">
+    <rect width="800" height="600" fill="#FFFFFF"/>
+
+    <!-- タイトルエリア（ダークブルー背景・上部のみ角丸） -->
+    <rect width="800" height="80" fill="#1B4FA0"/>
+  </g>
+
+  <!-- カード外枠 -->
+  <rect x="0.5" y="0.5" width="799" height="599" rx="12" fill="none" stroke="#E0E0E0" stroke-width="1"/>
+
+  <!-- タイトルテキスト（2行・中央揃え） -->
+  <text x="400" y="34" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF">あなたが企業でウェビナーを実施する際に、</text>
+  <text x="400" y="60" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF">課題と感じることがあれば教えてください（複数回答）</text>
+
+  <!-- ===== グラフエリア ===== -->
+
+  <!-- Row 0: テーマ・内容 47.0% (blue) -->
+  <text x="158" y="109" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1B4FA0">テーマ・内容</text>
+  <rect x="170" y="95" width="225.6" height="28" fill="#4A7FC1" rx="4"/>
+  <text x="384" y="109" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">47.0%</text>
+
+  <!-- Row 1: 告知・集客 36.0% (blue) -->
+  <text x="158" y="151" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1B4FA0">告知・集客</text>
+  <rect x="170" y="137" width="172.8" height="28" fill="#4A7FC1" rx="4"/>
+  <text x="331" y="151" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">36.0%</text>
+
+  <!-- Row 2: 参加率 36.0% (blue) -->
+  <text x="158" y="193" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1B4FA0">参加率</text>
+  <rect x="170" y="179" width="172.8" height="28" fill="#4A7FC1" rx="4"/>
+  <text x="331" y="193" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">36.0%</text>
+
+  <!-- Row 3: リード獲得 31.0% (blue) -->
+  <text x="158" y="235" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1B4FA0">リード獲得</text>
+  <rect x="170" y="221" width="148.8" height="28" fill="#4A7FC1" rx="4"/>
+  <text x="307" y="235" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">31.0%</text>
+
+  <!-- Row 4: 効果測定 30.0% (blue) -->
+  <text x="158" y="277" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1B4FA0">効果測定</text>
+  <rect x="170" y="263" width="144.0" height="28" fill="#4A7FC1" rx="4"/>
+  <text x="302" y="277" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">30.0%</text>
+
+  <!-- Row 5: コスト 21.0% (yellow) -->
+  <text x="158" y="319" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-size="14" fill="#333333">コスト</text>
+  <rect x="170" y="305" width="100.8" height="28" fill="#F0C040" rx="4"/>
+  <text x="279" y="319" text-anchor="start" dominant-baseline="central" font-family="sans-serif" font-size="14" fill="#333333">21.0%</text>
+
+  <!-- Row 6: 人員不足 15.0% (yellow) -->
+  <text x="158" y="361" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-size="14" fill="#333333">人員不足</text>
+  <rect x="170" y="347" width="72.0" height="28" fill="#F0C040" rx="4"/>
+  <text x="250" y="361" text-anchor="start" dominant-baseline="central" font-family="sans-serif" font-size="14" fill="#333333">15.0%</text>
+
+  <!-- Row 7: 配信環境の準備 14.0% (yellow) -->
+  <text x="158" y="403" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-size="14" fill="#333333">配信環境の準備</text>
+  <rect x="170" y="389" width="67.2" height="28" fill="#F0C040" rx="4"/>
+  <text x="245" y="403" text-anchor="start" dominant-baseline="central" font-family="sans-serif" font-size="14" fill="#333333">14.0%</text>
+
+  <!-- Row 8: 配信ツールの選定 7.0% (yellow) -->
+  <text x="158" y="445" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-size="14" fill="#333333">配信ツールの選定</text>
+  <rect x="170" y="431" width="33.6" height="28" fill="#F0C040" rx="4"/>
+  <text x="212" y="445" text-anchor="start" dominant-baseline="central" font-family="sans-serif" font-size="14" fill="#333333">7.0%</text>
+
+  <!-- Row 9: その他 0.0% (none) -->
+  <text x="158" y="487" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-size="14" fill="#999999">その他</text>
+  <text x="178" y="487" text-anchor="start" dominant-baseline="central" font-family="sans-serif" font-size="14" fill="#999999">0.0%</text>
+
+  <!-- Row 10: 特にない 9.0% (gray) -->
+  <text x="158" y="529" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-size="14" fill="#333333">特にない</text>
+  <rect x="170" y="515" width="43.2" height="28" fill="#B0B0B0" rx="4"/>
+  <text x="221" y="529" text-anchor="start" dominant-baseline="central" font-family="sans-serif" font-size="14" fill="#333333">9.0%</text>
+
+  <!-- フッター -->
+  <text x="30" y="560" text-anchor="start" font-family="sans-serif" font-size="11" fill="#999999">株式会社IDEATECH｜BtoB企業のウェビナーに関する意識調査｜n=100</text>
+
+  <!-- IDEATECH ロゴ（右下） -->
+  <svg x="620" y="570" width="155" height="22" viewBox="0 0 751.18 170.08">
+    <!-- ロゴマーク（カラフル） -->
+    <path d="M72,64.61l3.72,3a41.74,41.74,0,0,1,39.92-.51L112,63.46l6.52-6.61-8.24-4.27,4.16-8.3-9.17-1.52,1.39-9.18L97.48,35,96,25.8,87.66,30l-4.27-8.25-6.61,6.52-6.62-6.52L65.89,30l-8.3-4.17L56.07,35l-9.18-1.39,1.39,9.18-9.16,1.52,4.16,8.3L35,56.85l6.52,6.61L35,70.08l1.14.59,6.34-5.52Z" fill="red"/>
+    <path d="M54.35,104a42,42,0,0,1,1.74-11.93l0-.13-9.18,1.39,1.39-9.18-9.16-1.52,4.16-8.3-7.11-3.68L20.3,84.48l-4.58,29.08L30.9,138.79l27.85,9.57,18.47-7.1A41.77,41.77,0,0,1,54.35,104Z" fill="blue"/>
+    <path d="M39.12,82.65l9.16,1.52-1.39,9.18L56.07,92l0,.13A41.88,41.88,0,0,1,75.67,67.62l-3.72-3-29.44.54-6.34,5.52,7.11,3.68Z" fill="#f0f"/>
+    <path d="M115.59,67.11l2.93,3-8.24,4.27,4.16,8.3-9.17,1.52,1.39,9.18L97.48,92l-.42,2.52L100.49,112,86.23,137.79l-9,3.47a41.75,41.75,0,0,0,38.37-74.15Z" fill="lime"/>
+    <path d="M75.67,67.62,94.85,83.13l2.21,11.35L97.48,92l9.18,1.39-1.39-9.18,9.17-1.52-4.16-8.3,8.24-4.27-2.93-3a41.74,41.74,0,0,0-39.92.51Z" fill="#ff0"/>
+    <path d="M100.49,112,97.06,94.48,96,101.13,87.66,97l-4.27,8.25-6.61-6.52-6.62,6.52L65.89,97l-8.3,4.17-1.5-9a41.76,41.76,0,0,0,21.13,49.17l9-3.47Z" fill="aqua"/>
+    <path d="M75.67,67.62A41.88,41.88,0,0,0,56.09,92.09l1.5,9L65.89,97l4.27,8.25,6.62-6.52,6.61,6.52L87.66,97,96,101.13l1.09-6.65L94.85,83.13Z" fill="#fff"/>
+    <!-- ロゴテキスト -->
+    <path d="M205.3,50.17v7.42H195.09V115H205.3v7.43H177.46V115h10.21V57.59H177.46V50.17H205.3m1.79-1.8H175.67v11h10.2v53.86h-10.2v11h31.42v-11h-10.2V59.39h10.2v-11Z" fill="#333"/>
+    <path d="M253.46,50.17c21.84,0,37.09,14.88,37.09,36.2s-15.25,36.1-37.09,36.1H229V50.17h24.44m-17,65.87h17c17.54,0,29.33-11.92,29.33-29.67S271,56.6,253.46,56.6h-17V116m17-67.67H227.23v75.89h26.23c22.89,0,38.88-15.58,38.88-37.89s-16-38-38.88-38Zm-15.22,65.88V58.39h15.22c16.47,0,27.54,11.24,27.54,28s-11.07,27.88-27.54,27.88Z" fill="#333"/>
+    <path d="M358.24,50.17V56.6H318.91V82.27h38.55V88.7H318.91V116h39.33v6.43H311.48V50.17h46.76m1.79-1.8H309.69v75.89H360v-10H320.7V90.49h38.55v-10H320.7V58.39H360v-10Z" fill="#333"/>
+    <path d="M416,50.17l29.16,72.3h-8.28l-6.11-15.31-.45-1.13H391.51l-.45,1.13L385,122.47h-8.29l29.05-72.3H416M393.47,99.6H428.2l-.95-2.44L412.56,59.31h-3.34L394.43,97.16l-1,2.44m23.69-51.23H404.51L374,124.26h12.15l6.55-16.44h36.34l6.55,16.44h12.16L417.16,48.37ZM396.1,97.81,410.48,61h.82l14.28,36.8Z" fill="#333"/>
+    <polygon points="451.59 57.05 475.03 57.05 475.03 122.93 486.04 122.93 486.04 57.05 509.59 57.05 509.59 47.04 451.59 47.04 451.59 57.05" fill="#333"/>
+    <polygon points="525.15 122.93 575.48 122.93 575.48 112.91 536.16 112.91 536.16 89.16 574.7 89.16 574.7 79.14 536.16 79.14 536.16 57.05 575.48 57.05 575.48 47.04 525.15 47.04 525.15 122.93" fill="#333"/>
+    <path d="M647.27,103.87a24.09,24.09,0,0,1-19.92,10.38C611.78,114.25,600,101.69,600,85c0-16.93,11.49-29.21,27.32-29.21a24.29,24.29,0,0,1,19.92,10.38l.46.68,9.37-5.21-.58-.82a34.37,34.37,0,0,0-29.17-15c-22,0-38.66,16.86-38.66,39.22s16.62,39.22,38.66,39.22c12.25,0,21.82-4.92,29.27-15l.61-.82-9.5-5.22Z" fill="#333"/>
+    <polygon points="724.45 47.04 724.45 78.92 682.92 78.92 682.92 47.04 671.91 47.04 671.91 122.93 682.92 122.93 682.92 88.94 724.45 88.94 724.45 122.93 735.46 122.93 735.46 47.04 724.45 47.04" fill="#333"/>
+  </svg>
+</svg>
