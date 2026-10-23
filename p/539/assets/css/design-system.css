@@ -1,0 +1,687 @@
+/* ============================================================
+   IDEATECH - Design Guidelines Page Stylesheet  (prefix: dg-)
+   グランドカラー準拠・フラットデザイン
+   ============================================================ */
+
+body { background: var(--kuro1); color: var(--shiro1); }
+
+/* ----------------------------------------
+   1. Hero
+   ---------------------------------------- */
+.dg-hero {
+  padding: calc(var(--header-h) + 64px) 80px 64px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.dg-hero__label {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--daidai);
+  margin-bottom: 24px;
+}
+
+.dg-hero__title {
+  color: var(--shiro1);
+  margin-bottom: 24px;
+}
+
+.dg-hero__desc {
+  color: var(--shiro3);
+  max-width: 640px;
+}
+
+/* ----------------------------------------
+   2. Section
+   ---------------------------------------- */
+.dg-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 80px;
+  border-top: 1px solid var(--kuro4);
+}
+
+.dg-table th:first-child,
+.dg-table td:first-child,
+.dg-table th:nth-child(2),
+.dg-table td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.dg-section__title {
+  color: var(--shiro1);
+  margin-bottom: 12px;
+}
+
+.dg-section__desc {
+  color: var(--shiro3);
+  font-size: 15px;
+  line-height: 1.95;
+  margin-bottom: 48px;
+}
+
+/* ----------------------------------------
+   3. Color Group
+   ---------------------------------------- */
+.dg-color-group {
+  margin-bottom: 48px;
+}
+
+.dg-color-group:last-child {
+  margin-bottom: 0;
+}
+
+.dg-color-group__title {
+  color: var(--shiro3);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.dg-color-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.dg-color-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid var(--kuro4);
+  border-radius: 4px;
+}
+
+.dg-color-swatch {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  border: 1px solid var(--kuro4);
+}
+
+.dg-color-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.dg-color-var {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--shiro1);
+}
+
+.dg-color-hex {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  color: var(--shiro3);
+}
+
+/* ----------------------------------------
+   4. Color Rules
+   ---------------------------------------- */
+.dg-rules {
+  margin-top: 48px;
+  padding: 32px;
+  border: 1px solid var(--kuro4);
+  border-radius: 4px;
+}
+
+.dg-rules__title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--shiro1);
+  margin-bottom: 20px;
+}
+
+.dg-rules__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dg-rules__item {
+  font-size: 14px;
+  color: var(--shiro3);
+  line-height: 1.7;
+  padding-left: 1.2em;
+  position: relative;
+}
+
+.dg-rules__item::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--kuro4);
+}
+
+/* ----------------------------------------
+   5. Font Variables
+   ---------------------------------------- */
+.dg-font-vars {
+  margin-bottom: 48px;
+  padding: 24px;
+  background: var(--kuro2);
+  border-radius: 4px;
+  border: 1px solid var(--kuro4);
+}
+
+.dg-font-var {
+  display: flex;
+  gap: 12px;
+  padding: 8px 0;
+  font-family: var(--font-heading);
+  font-size: 13px;
+  line-height: 1.6;
+  border-bottom: 1px solid var(--kuro4);
+}
+
+.dg-font-var:last-child {
+  border-bottom: none;
+}
+
+.dg-font-var__name {
+  color: var(--sora);
+  min-width: 140px;
+  flex-shrink: 0;
+}
+
+.dg-font-var__value {
+  color: var(--shiro3);
+}
+
+/* ----------------------------------------
+   6. Table
+   ---------------------------------------- */
+.dg-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  margin-bottom: 32px;
+}
+
+.dg-table th {
+  text-align: left;
+  font-weight: 600;
+  color: var(--shiro3);
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--kuro4);
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.dg-table td {
+  padding: 20px 20px;
+  color: var(--shiro1);
+  border-bottom: 1px solid var(--kuro4);
+  line-height: 1.95;
+  vertical-align: top;
+}
+
+.dg-table tr:last-child td {
+  border-bottom: none;
+}
+
+.dg-table td:first-child {
+  font-weight: 600;
+}
+
+/* ----------------------------------------
+   7. Layout Group (Grand Layout subsections)
+   ---------------------------------------- */
+.dg-layout-group {
+  margin-bottom: 48px;
+}
+
+.dg-layout-group:last-child {
+  margin-bottom: 0;
+}
+
+.dg-layout-group__title {
+  color: var(--shiro1);
+  margin-top: 56px;
+  margin-bottom: 24px;
+}
+
+.dg-layout-group__desc {
+  color: var(--shiro3);
+  font-size: 15px;
+  line-height: 1.95;
+  margin-bottom: 28px;
+}
+
+.dg-layout-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.dg-layout-list__item {
+  font-size: 15px;
+  color: var(--shiro3);
+  line-height: 1.95;
+  padding-left: 1.5em;
+  position: relative;
+}
+
+.dg-layout-list__item::before {
+  content: '●';
+  position: absolute;
+  left: 0;
+  color: var(--kuro4);
+  font-size: 8px;
+  top: 0.5em;
+}
+
+.dg-layout-note {
+  color: var(--shiro3);
+  font-size: 13px;
+  margin-top: 16px;
+}
+
+/* ----------------------------------------
+   8. Button Cards
+   ---------------------------------------- */
+.dg-btn-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.dg-btn-card {
+  border: 1px solid var(--kuro4);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.dg-btn-card__previews {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.dg-btn-card__sample {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 24px 16px;
+  background: var(--kuro2);
+  position: relative;
+}
+
+.dg-btn-card__sample--light {
+  background: var(--shiro1);
+}
+
+.dg-btn-card__sample--dark {
+  background: var(--kuro1);
+}
+
+.dg-btn-card__mode-label {
+  font-family: var(--font-heading);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.dg-btn-card__sample--light .dg-btn-card__mode-label {
+  color: var(--kuro4);
+}
+
+.dg-btn-card__sample--dark .dg-btn-card__mode-label {
+  color: var(--kuro4);
+}
+
+.dg-btn-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px;
+}
+
+.dg-btn-card__type {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--shiro1);
+}
+
+.dg-btn-card__class {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  color: var(--sora);
+}
+
+.dg-btn-card__detail {
+  font-size: 13px;
+  color: var(--shiro3);
+  line-height: 1.6;
+}
+
+.dg-btn-card__usage {
+  font-size: 12px;
+  color: var(--kuro4);
+}
+
+/* ----------------------------------------
+   9. Principles
+   ---------------------------------------- */
+.dg-principles {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dg-principle {
+  font-size: 15px;
+  color: var(--shiro3);
+  line-height: 1.8;
+  padding-left: 1.5em;
+  position: relative;
+}
+
+.dg-principle::before {
+  content: '●';
+  position: absolute;
+  left: 0;
+  color: var(--kuro4);
+  font-size: 8px;
+  top: 0.5em;
+}
+
+/* ----------------------------------------
+   8. Responsive
+   ---------------------------------------- */
+@media (max-width: 768px) {
+  .dg-hero {
+    padding: calc(var(--header-h) + 40px) 24px 40px;
+  }
+
+  .dg-section {
+    padding: 48px 24px;
+  }
+
+  .dg-color-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+
+  .dg-font-var {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .dg-font-var__name {
+    min-width: auto;
+  }
+
+  .dg-table {
+    font-size: 13px;
+  }
+
+  .dg-table th,
+  .dg-table td {
+    padding: 10px 12px;
+  }
+
+  .dg-btn-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .dg-color-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dg-table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .dg-btn-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   Archive Banner (v1 凍結表示)
+   ============================================ */
+.dg-archive-banner {
+  max-width: 880px;
+  margin: 32px auto;
+  padding: 24px 28px;
+  background: var(--kuro2);
+  border: 1px solid var(--karashi);
+  border-radius: 8px;
+}
+.dg-archive-banner__title {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--karashi);
+  margin: 0 0 8px;
+  letter-spacing: 0.04em;
+}
+.dg-archive-banner__text {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--shiro3);
+  margin: 0;
+}
+.dg-archive-banner__text a {
+  color: var(--daidai);
+  text-decoration: underline;
+}
+
+/* ============================================
+   Version Selector (index landing)
+   ============================================ */
+.dg-vlist {
+  max-width: 720px;
+  margin: 48px auto 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.dg-vlist__item {
+  display: block;
+  padding: 28px 32px;
+  background: var(--kuro2);
+  border: 1px solid var(--kuro4);
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s;
+}
+.dg-vlist__item:hover {
+  border-color: var(--daidai);
+}
+.dg-vlist__item--current {
+  border-color: var(--daidai);
+}
+.dg-vlist__head {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+.dg-vlist__ver {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--shiro1);
+  letter-spacing: 0.02em;
+}
+.dg-vlist__badge {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+.dg-vlist__badge--current {
+  background: var(--daidai);
+  color: var(--kuro1);
+}
+.dg-vlist__badge--archived {
+  background: var(--kuro4);
+  color: var(--shiro3);
+}
+.dg-vlist__date {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  color: var(--shiro3);
+  margin-left: auto;
+}
+.dg-vlist__desc {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--shiro3);
+  margin: 0;
+}
+
+/* ============================================
+   Layer Architecture additions
+   ============================================ */
+.dg-subgroup__title {
+  font-family: var(--font-mincho);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--shiro1);
+  margin: 32px 0 12px;
+  padding-left: 12px;
+  border-left: 3px solid var(--daidai);
+}
+.dg-chunk-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  margin: 2px 4px 2px 0;
+  background: var(--kuro3);
+  color: var(--shiro3);
+  font-family: var(--font-body);
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.dg-vlist__badge--strict {
+  background: var(--daidai);
+  color: var(--kuro1);
+}
+.dg-vlist__badge--flex {
+  background: var(--karashi);
+  color: var(--kuro1);
+}
+.dg-vlist__badge--indep {
+  background: var(--sora);
+  color: var(--kuro1);
+}
+.dg-planet {
+  margin: 16px 0;
+  padding: 20px 24px;
+  background: var(--kuro2);
+  border: 1px solid var(--kuro4);
+  border-radius: 8px;
+}
+.dg-planet__head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.dg-planet__id {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--daidai);
+  letter-spacing: 0.04em;
+}
+.dg-planet__name {
+  font-family: var(--font-mincho);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--shiro1);
+}
+.dg-planet__path {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--shiro3);
+  margin: 0 0 4px;
+}
+.dg-planet__todo {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--karashi);
+  margin: 0;
+}
+
+/* ============================================
+   Corporate Gradients (v2 / v13.0)
+   ============================================ */
+.dg-grad-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px;
+  margin-bottom: 56px;
+}
+.dg-grad-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--kuro2);
+  border: 1px solid var(--kuro4);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.dg-grad-swatch {
+  height: 120px;
+  width: 100%;
+}
+.dg-grad-info {
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.dg-grad-name {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--shiro1);
+  margin: 0;
+}
+.dg-grad-css {
+  margin: 0;
+}
+.dg-grad-css code {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  color: var(--sora);
+  background: rgba(106,155,204,0.1);
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  word-break: break-all;
+  line-height: 1.5;
+}
+.dg-grad-usage {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--shiro3);
+  line-height: 1.6;
+  margin: 0;
+}

@@ -1,0 +1,423 @@
+/* =========================================================
+   home.css — TOPページ専用 Layer 2 CSS
+   - グランドカラー（kuro1〜4 / shiro1〜3 / daidai / sora）に準拠
+   - レイアウト・配置のみ。共通要素は style.css の class を再利用
+   ========================================================= */
+
+/* ----------------------------------------
+   セクション共通：ダーク背景でのテキスト色を上書き
+   （style.css の .section__title 等はデフォルト黒のため）
+   ---------------------------------------- */
+.home-shift .section__label,
+.home-why .section__label,
+.home-llmo .section__label,
+.home-other .section__label { color: var(--daidai); }
+
+.home-shift .section__title,
+.home-why .section__title,
+.home-llmo .section__title,
+.home-other .section__title { color: var(--shiro1); }
+
+.home-shift .section__desc,
+.home-why .section__desc,
+.home-llmo .section__desc,
+.home-other .section__desc { color: var(--shiro3); }
+
+/* ----------------------------------------
+   A. THE SHIFT
+   ---------------------------------------- */
+.home-shift {
+  background: var(--kuro1);
+}
+
+.home-shift__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  max-width: 1080px;
+  margin: 0 auto 56px;
+  border-top: 0.5px solid var(--kuro4);
+  border-bottom: 0.5px solid var(--kuro4);
+}
+
+.home-shift__stat {
+  padding: 40px 32px;
+  border-right: 0.5px solid var(--kuro4);
+}
+
+.home-shift__stat:last-child {
+  border-right: none;
+}
+
+.home-shift__stat-num {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--daidai);
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.home-shift__stat-unit {
+  font-size: 20px;
+  font-weight: 700;
+  margin-left: 4px;
+  color: var(--daidai);
+  letter-spacing: 0;
+}
+
+.home-shift__stat-text {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--shiro3);
+  margin: 0;
+}
+
+.home-shift__close {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 32px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--shiro1);
+  text-align: center;
+  border: 0.5px solid var(--kuro4);
+  border-radius: 12px;
+  background: var(--kuro2);
+}
+
+.home-shift__close strong {
+  color: var(--daidai);
+  font-weight: 700;
+}
+
+/* ----------------------------------------
+   B. WHY IDEATECH
+   ---------------------------------------- */
+.home-why {
+  background: var(--kuro1);
+}
+
+.home-why__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.home-why__card {
+  position: relative;
+  padding: 40px 36px;
+  background: var(--kuro2);
+  border: 0.5px solid var(--kuro4);
+  border-radius: 12px;
+}
+
+.home-why__index {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--daidai);
+  margin-bottom: 16px;
+}
+
+.home-why__title {
+  font-family: var(--font-mincho);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--shiro1);
+  margin: 0 0 12px;
+  line-height: 1.4;
+}
+
+.home-why__lead {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--sora);
+  margin: 0 0 16px;
+  line-height: 1.6;
+}
+
+.home-why__text {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.85;
+  color: var(--shiro3);
+  margin: 0;
+}
+
+/* ----------------------------------------
+   C. IDEA LLMO 導線
+   ---------------------------------------- */
+.home-llmo {
+  background: var(--kuro1);
+}
+
+.home-llmo__diagram {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 32px;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto 48px;
+}
+
+.home-llmo__core {
+  padding: 48px 36px;
+  background: var(--kuro2);
+  border: 0.5px solid var(--daidai);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.home-llmo__core-label {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--daidai);
+  text-transform: uppercase;
+}
+
+.home-llmo__core-name {
+  font-family: var(--font-mincho);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--shiro1);
+  line-height: 1.2;
+}
+
+.home-llmo__core-lead {
+  font-family: var(--font-mincho);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.55;
+  color: var(--daidai);
+  margin: 8px 0 4px;
+  padding-top: 16px;
+  border-top: 0.5px solid var(--kuro4);
+  letter-spacing: 0.01em;
+}
+
+.home-llmo__core-text {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.95;
+  color: var(--shiro3);
+  margin: 0 0 8px;
+}
+
+.home-llmo__satellites {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.home-llmo__satellite {
+  padding: 28px 24px;
+  background: var(--kuro2);
+  border: 0.5px solid var(--kuro4);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.home-llmo__satellite-tag {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--sora);
+  text-transform: uppercase;
+}
+
+.home-llmo__satellite-name {
+  font-family: var(--font-mincho);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--shiro1);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.home-llmo__satellite-name sup {
+  font-size: 0.5em;
+  vertical-align: super;
+  margin-left: 2px;
+}
+
+.home-llmo__satellite-text {
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.75;
+  color: var(--shiro3);
+  margin: 0;
+  flex-grow: 1;
+}
+
+.home-llmo__cta {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ----------------------------------------
+   D. その他のサービス（IDEA LLMO サテライトと同じトンマナ）
+   ---------------------------------------- */
+.home-other {
+  background: var(--kuro1);
+}
+
+.home-other__grid {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.home-other__card {
+  padding: 28px 24px;
+  background: var(--kuro2);
+  border: 0.5px solid var(--kuro4);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.home-other__tag {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--sora);
+  text-transform: uppercase;
+}
+
+.home-other__name {
+  font-family: var(--font-mincho);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--shiro1);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.home-other__name sup {
+  font-size: 0.5em;
+  vertical-align: super;
+  margin-left: 2px;
+}
+
+.home-other__text {
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.75;
+  color: var(--shiro3);
+  margin: 0;
+  flex-grow: 1;
+}
+
+/* ----------------------------------------
+   レスポンシブ
+   ---------------------------------------- */
+@media (max-width: 1199px) {
+  .home-llmo__diagram {
+    grid-template-columns: 1fr;
+  }
+
+  .home-other__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .home-shift__stats {
+    grid-template-columns: 1fr;
+  }
+
+  .home-shift__stat {
+    border-right: none;
+    border-bottom: 0.5px solid var(--kuro4);
+    padding: 28px 16px;
+  }
+
+  .home-shift__stat:last-child {
+    border-bottom: none;
+  }
+
+  .home-shift__stat-num {
+    font-size: 44px;
+  }
+
+  .home-shift__close {
+    font-size: 15px;
+    padding: 24px 20px;
+  }
+
+  .home-why__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-why__card {
+    padding: 32px 24px;
+  }
+
+  .home-why__title {
+    font-size: 20px;
+  }
+
+  .home-llmo__core {
+    padding: 32px 24px;
+  }
+
+  .home-llmo__core-name {
+    font-size: 28px;
+  }
+
+  .home-llmo__core-lead {
+    font-size: 17px;
+  }
+
+  .home-llmo__satellites {
+    grid-template-columns: 1fr;
+  }
+
+  .home-llmo__satellite {
+    padding: 24px 20px;
+  }
+
+  .home-llmo__cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .home-other__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-other__card {
+    padding: 24px 20px;
+  }
+}

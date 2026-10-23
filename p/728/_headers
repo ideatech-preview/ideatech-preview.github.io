@@ -1,0 +1,19 @@
+# Cloudflare Workers Static Assets のヘッダー設定（GitHub Pages では使われない）。
+#
+# ⚠️ GitHub Pages は .txt / .md に charset=utf-8 を付けていたが、Workers は付けない。
+#    付けないとブラウザが Shift_JIS と誤推定し、llms.txt やページの .md が文字化けする。
+#    AI 向けの本文供給（llms.txt / llms-full.txt / 各ページの .md）なので、必ず明示する。
+
+/*.txt
+  Content-Type: text/plain; charset=utf-8
+
+/*.md
+  Content-Type: text/markdown; charset=utf-8
+
+# 資料の PDF（scripts/export-doc-pdf.mjs が公開時に作る）。資料ページ自体が noindex なので、PDF も検索に載せない。
+# SMB版は限定公開（URL を知っている人だけ）。
+/service/idea-design/document/*.pdf
+  X-Robots-Tag: noindex, nofollow
+
+/service/idea-design/document-smb/*.pdf
+  X-Robots-Tag: noindex, nofollow
