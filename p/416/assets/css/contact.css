@@ -1,0 +1,282 @@
+/* ============================================================
+   IDEATECH - Contact Page Stylesheet  (prefix: ct-)
+   ページ固有レイアウトのみ。フォーム要素は style.css のグランドフォーム定義を使用。
+   ============================================================ */
+
+/* ----------------------------------------
+   Section wrapper
+   ---------------------------------------- */
+.ct-section {
+  background: var(--kuro2);
+}
+
+.ct-section__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 80px 40px 96px;
+}
+
+/* ----------------------------------------
+   Body layout (form + sidebar)
+   ---------------------------------------- */
+.ct-body {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 56px;
+  align-items: start;
+}
+
+/* ----------------------------------------
+   Form card
+   ---------------------------------------- */
+.ct-form-card {
+  background: var(--shiro2);
+  border-radius: 8px;
+  padding: 56px;
+  border: 0.5px solid var(--shiro3);
+}
+
+.ct-form-card__title {
+  font-family: var(--font-mincho);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--kuro1);
+  margin-bottom: 8px;
+}
+
+.ct-form-card__sub {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--kuro4);
+  margin-bottom: 40px;
+  padding-bottom: 32px;
+  border-bottom: 0.5px solid var(--shiro3);
+}
+
+/* ----------------------------------------
+   Submit button
+   ---------------------------------------- */
+.ct-submit-wrap {
+  text-align: center;
+}
+
+.ct-submit-note {
+  margin-top: 16px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--kuro4);
+  letter-spacing: 0.02em;
+}
+
+/* ----------------------------------------
+   Thanks message
+   ---------------------------------------- */
+.ct-thanks {
+  text-align: center;
+  padding: 80px 40px;
+}
+
+.ct-thanks__icon {
+  width: 72px;
+  height: 72px;
+  background: var(--shiro3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 28px;
+}
+
+.ct-thanks__icon svg {
+  width: 36px;
+  height: 36px;
+  color: var(--yomogi);
+}
+
+.ct-thanks__title {
+  font-family: var(--font-mincho);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--kuro1);
+  margin-bottom: 16px;
+}
+
+.ct-thanks__desc {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--kuro4);
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.ct-thanks__desc strong {
+  color: var(--kuro1);
+  font-weight: 700;
+}
+
+.ct-thanks__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--daidai);
+  transition: gap 0.2s ease, opacity 0.2s ease;
+}
+
+.ct-thanks__back:hover {
+  opacity: 1;
+  gap: 10px;
+}
+
+/* ----------------------------------------
+   Sidebar
+   ---------------------------------------- */
+.ct-side-widget {
+  background: var(--kuro3);
+  border-radius: 8px;
+  padding: 32px;
+  border: 0.5px solid var(--kuro4);
+}
+
+.ct-side-widget + .ct-side-widget {
+  margin-top: 24px;
+}
+
+.ct-side-widget__heading {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: var(--daidai);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/* FAQ accordion */
+.ct-faq {
+  border-top: 0.5px solid var(--kuro4);
+}
+
+.ct-faq details {
+  border-bottom: 0.5px solid var(--kuro4);
+}
+
+.ct-faq summary {
+  padding: 15px 28px 15px 0;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--shiro1);
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  line-height: 1.5;
+}
+
+.ct-faq summary::-webkit-details-marker { display: none; }
+
+.ct-faq summary::after {
+  content: '';
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' stroke='%23e3dacc' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.2s ease;
+}
+
+.ct-faq details[open] summary::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.ct-faq__answer {
+  padding: 0 0 16px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--shiro3);
+  line-height: 1.8;
+}
+
+/* Phone / hours widget */
+.ct-info-widget {
+  background: var(--kuro1);
+  border: 0.5px solid var(--kuro4);
+}
+
+.ct-info-widget .ct-side-widget__heading {
+  color: var(--shiro3);
+}
+
+.ct-phone {
+  font-family: var(--font-heading);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--shiro1);
+  letter-spacing: 0.03em;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ct-phone::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d97757' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.07a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 15.92z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.ct-hours {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--shiro3);
+  margin-bottom: 16px;
+}
+
+.ct-info-note {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--shiro3);
+  line-height: 1.7;
+  padding-top: 16px;
+  border-top: 0.5px solid var(--shiro3);
+}
+
+/* ----------------------------------------
+   Responsive
+   ---------------------------------------- */
+@media (max-width: 1024px) {
+  .ct-section__inner { padding: 72px 32px 80px; }
+  .ct-body { grid-template-columns: 1fr 300px; gap: 40px; }
+  .ct-form-card { padding: 44px; }
+}
+
+@media (max-width: 768px) {
+  .ct-section__inner { padding: 56px 24px 64px; }
+  .ct-body { grid-template-columns: 1fr; gap: 32px; }
+  .ct-form-card { padding: 32px 24px; }
+  .ct-thanks { padding: 56px 24px; }
+}
+
+@media (max-width: 480px) {
+  .ct-form-card { padding: 24px 20px; }
+}
+
+/* ── Inline-style migration ── */
+.ct-required-mark {
+  color: var(--daidai);
+  font-weight: 700;
+}
+.ct-consent-error {
+  margin-bottom: 16px;
+}
