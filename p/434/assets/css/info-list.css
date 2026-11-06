@@ -1,0 +1,150 @@
+/* ============================================================
+   IDEATECH - Info List Page Stylesheet  (prefix: ifl-)
+   ダークモード・グランドデザインシステム準拠
+   ============================================================ */
+
+/* ----------------------------------------
+   1. カードセクション
+   ---------------------------------------- */
+.ifl-section {
+  background: var(--kuro2);
+}
+
+.ifl-section__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 80px;
+}
+
+/* ----------------------------------------
+   2. カードグリッド
+   ---------------------------------------- */
+.ifl-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+/* ----------------------------------------
+   3. ページカード
+   ---------------------------------------- */
+.ifl-card {
+  background: var(--kuro3);
+  border: 0.5px solid var(--kuro4);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.ifl-card__accent {
+  height: 4px;
+  width: 100%;
+}
+
+.ifl-card__accent--daidai  { background: var(--daidai); }
+.ifl-card__accent--yomogi  { background: var(--yomogi); }
+.ifl-card__accent--kinari  { background: var(--kinari); }
+.ifl-card__accent--sora    { background: var(--sora); }
+
+.ifl-card__body {
+  padding: 28px 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.ifl-card__label {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--shiro3);
+  margin-bottom: 8px;
+}
+
+.ifl-card__name {
+  font-family: var(--font-mincho);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--shiro1);
+  margin-bottom: 12px;
+}
+
+.ifl-card__desc {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--shiro3);
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+.ifl-card .cta-more {
+  align-self: flex-start;
+}
+
+/* ----------------------------------------
+   4. CTA
+   ---------------------------------------- */
+.ifl-cta {
+  background: var(--kuro1);
+}
+
+.ifl-cta__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 80px;
+  text-align: center;
+}
+
+.ifl-cta__title {
+  font-family: var(--font-mincho);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--shiro1);
+  margin-bottom: 16px;
+}
+
+.ifl-cta__desc {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--shiro3);
+  max-width: 480px;
+  margin: 0 auto 40px;
+}
+
+.ifl-cta__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ----------------------------------------
+   5. Responsive
+   ---------------------------------------- */
+@media (max-width: 1199px) {
+  .ifl-section__inner,
+  .ifl-cta__inner {
+    padding: 64px 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .ifl-section__inner,
+  .ifl-cta__inner {
+    padding: 48px 24px;
+  }
+  .ifl-grid {
+    grid-template-columns: 1fr;
+  }
+  .ifl-cta__title {
+    font-size: 32px;
+  }
+}

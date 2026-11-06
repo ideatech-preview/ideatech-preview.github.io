@@ -1,0 +1,186 @@
+/* ============================================================
+   IDEATECH - Privacy Policy Page Stylesheet  (prefix: pp-)
+   ダークモード・グランドデザインシステム準拠
+   ============================================================ */
+
+/* ----------------------------------------
+   1. 冒頭方針文
+   ---------------------------------------- */
+.pp-intro {
+  background: var(--kuro2);
+}
+
+.pp-intro__inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 96px 40px;
+}
+
+.pp-intro__text {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--shiro1);
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.pp-intro__text:last-child {
+  margin-bottom: 0;
+}
+
+/* ----------------------------------------
+   2. 詳細セクション
+   ---------------------------------------- */
+.pp-detail {
+  background: var(--kuro1);
+}
+
+.pp-detail__inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 96px 40px;
+}
+
+.pp-detail__header {
+  margin-bottom: 64px;
+}
+
+.pp-detail .section__title {
+  color: var(--shiro1);
+}
+
+/* ----------------------------------------
+   3. 各項目
+   ---------------------------------------- */
+.pp-item {
+  margin-bottom: 48px;
+}
+
+.pp-item:last-child {
+  margin-bottom: 0;
+}
+
+.pp-item__title {
+  font-family: var(--font-mincho);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--shiro1);
+  line-height: 1.4;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 0.5px solid var(--kuro4);
+}
+
+.pp-item__text {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--shiro1);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.pp-item__text:last-child {
+  margin-bottom: 0;
+}
+
+.pp-item__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.pp-item__list:last-child {
+  margin-bottom: 0;
+}
+
+.pp-item__list li {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--shiro1);
+  line-height: 1.8;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.pp-item__list li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 8px;
+  background: var(--shiro1);
+  flex-shrink: 0;
+  margin-top: 10px;
+}
+
+/* ----------------------------------------
+   4. お問い合わせ窓口
+   ---------------------------------------- */
+.pp-contact {
+  background: var(--kuro2);
+}
+
+.pp-contact__inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 96px 40px;
+}
+
+.pp-contact__title {
+  font-family: var(--font-mincho);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--shiro1);
+  line-height: 1.4;
+  margin-bottom: 24px;
+}
+
+.pp-contact__box {
+  background: var(--kuro3);
+  border: 0.5px solid var(--kuro4);
+  border-radius: 8px;
+  padding: 32px;
+}
+
+.pp-contact__text {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--shiro1);
+  line-height: 1.8;
+}
+
+.pp-contact__tel {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--shiro1);
+  margin-top: 8px;
+}
+
+.pp-contact__note {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--shiro1);
+  margin-top: 4px;
+  line-height: 1.6;
+}
+
+/* ----------------------------------------
+   5. Responsive
+   ---------------------------------------- */
+@media (max-width: 640px) {
+  .pp-intro__inner,
+  .pp-detail__inner,
+  .pp-contact__inner {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .pp-contact__box {
+    padding: 24px 20px;
+  }
+}

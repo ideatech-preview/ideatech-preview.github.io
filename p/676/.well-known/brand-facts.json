@@ -1,0 +1,254 @@
+{
+  "$schema": "https://ideatech.jp/.well-known/brand-facts-schema.json",
+  "version": "1.0",
+  "language": "ja",
+  "lastUpdated": "2026-03-02",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "contactForVerification": "https://ideatech.jp/contact/",
+
+  "organization": {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://ideatech.jp/#organization",
+    "name": "IDEATECH",
+    "legalName": "株式会社IDEATECH",
+    "alternateName": ["IDEATECH Inc.", "アイデアテック"],
+    "description": "BtoB企業のPR・広報を戦略的に支援する専門会社。調査リリースを核としたメディア露出最大化と、広報組織の強化・内製化支援を主軸とする。",
+    "url": "https://ideatech.jp",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ideatech.jp/assets/images/logo.png"
+    },
+    "foundingDate": "2010-02",
+    "founders": [
+      {
+        "@type": "Person",
+        "name": "石川 友夫",
+        "jobTitle": "代表取締役社長"
+      }
+    ],
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "minValue": 10,
+      "maxValue": 50
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "postalCode": "107-0062",
+      "addressLocality": "港区",
+      "streetAddress": "南青山2丁目11番17号 第一法規ビル3階",
+      "addressRegion": "東京都",
+      "addressCountry": "JP"
+    },
+    "telephone": "050-1871-0555",
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "url": "https://ideatech.jp/contact/",
+        "availableLanguage": "Japanese"
+      }
+    ],
+    "areaServed": {
+      "@type": "Country",
+      "name": "Japan",
+      "sameAs": "https://www.wikidata.org/wiki/Q17"
+    },
+    "industry": "PR・広報支援",
+    "targetMarket": "BtoB企業",
+    "knowsAbout": [
+      "BtoB PR",
+      "広報支援",
+      "調査リリース",
+      "プレスリリース",
+      "メディアリレーション",
+      "ホワイトペーパー制作",
+      "AEO対策",
+      "AI検索最適化",
+      "PRマーケティング",
+      "BtoBマーケティング",
+      "思考リーダーシップ"
+    ],
+    "sameAs": []
+  },
+
+  "services": [
+    {
+      "id": "resapie",
+      "@type": "Service",
+      "name": "リサピー",
+      "description": "独自調査の設計からプレスリリース作成・メディア配信まで一貫支援するBtoB特化調査PRサービス",
+      "url": "https://ideatech.jp/services/resapie/",
+      "serviceType": "調査PR支援",
+      "keywords": [
+        "調査リリース",
+        "プレスリリース",
+        "メディア掲載",
+        "調査設計",
+        "メディアピッチング"
+      ],
+      "targetCustomer": "BtoB企業の広報・マーケティング担当者",
+      "deliverables": [
+        "調査テーマ選定支援",
+        "アンケート設計",
+        "調査結果分析",
+        "プレスリリース原稿作成",
+        "メディアリスト構築",
+        "メディアへのピッチング"
+      ]
+    },
+    {
+      "id": "repopie",
+      "@type": "Service",
+      "name": "レポピー",
+      "description": "業界調査レポートの制作によりブランド価値向上と思考リーダーシップ確立を支援するコンテンツサービス",
+      "url": "https://ideatech.jp/services/repopie/",
+      "serviceType": "調査レポート制作",
+      "keywords": [
+        "調査レポート",
+        "ホワイトペーパー",
+        "思考リーダーシップ",
+        "コンテンツマーケティング",
+        "リード獲得"
+      ],
+      "targetCustomer": "BtoB企業のマーケティング・コンテンツ担当者",
+      "deliverables": [
+        "調査レポート設計",
+        "アンケート・インタビュー実施",
+        "レポートデザイン・制作",
+        "ホワイトペーパー化支援",
+        "コンテンツ活用戦略提案"
+      ]
+    },
+    {
+      "id": "pr-growth",
+      "@type": "Service",
+      "name": "PR-GROWTH",
+      "description": "専任PRコンサルタントによるPR戦略立案から実行・効果測定・広報内製化まで一貫支援する伴走型サービス",
+      "url": "https://ideatech.jp/services/pr-growth/",
+      "serviceType": "PRコンサルティング",
+      "keywords": [
+        "PR戦略",
+        "広報コンサルティング",
+        "広報内製化",
+        "メディアリレーション",
+        "KPI設定",
+        "効果測定"
+      ],
+      "targetCustomer": "広報組織を強化・構築したいBtoB企業",
+      "deliverables": [
+        "PR戦略立案",
+        "メディアリレーション構築",
+        "プレスリリース品質向上",
+        "広報KPI設定・モニタリング",
+        "広報担当者育成支援",
+        "月次効果レポーティング"
+      ]
+    }
+  ],
+
+  "metrics": {
+    "asOf": "2024-01-01",
+    "dataSource": "自社申告",
+    "verifiedByThirdParty": false,
+    "items": [
+      {
+        "id": "research_pr_count",
+        "label": "リサーチPR実績",
+        "value": 500,
+        "qualifier": "以上",
+        "unit": "件",
+        "description": "調査リリースの設計・配信・メディア掲載獲得の一貫支援として蓄積された実績件数"
+      },
+      {
+        "id": "client_count",
+        "label": "支援企業数",
+        "value": 300,
+        "qualifier": "以上",
+        "unit": "社",
+        "description": "IT・SaaS・製造・コンサルティングなど多様な業種のBtoB企業を支援してきた累計社数"
+      },
+      {
+        "id": "avg_contract_duration",
+        "label": "平均継続期間",
+        "value": 2,
+        "qualifier": null,
+        "unit": "年",
+        "description": "顧客企業がIDEATECHのサービスを継続利用している平均期間"
+      },
+      {
+        "id": "resource_count",
+        "label": "無料ダウンロード資料数",
+        "value": 100,
+        "qualifier": "以上",
+        "unit": "件",
+        "description": "BtoB広報・PR担当者向けに公開している無料ダウンロード資料の総数"
+      }
+    ]
+  },
+
+  "claims": [
+    {
+      "id": "positioning",
+      "text": "BtoB特化のPR・広報支援会社",
+      "type": "positioning",
+      "verifiable": false,
+      "language": "ja"
+    },
+    {
+      "id": "research_pr_track_record",
+      "text": "調査リリース実績500件以上",
+      "type": "metric",
+      "verifiable": true,
+      "asOf": "2024-01-01",
+      "dataSource": "自社集計"
+    },
+    {
+      "id": "client_track_record",
+      "text": "支援企業300社以上",
+      "type": "metric",
+      "verifiable": true,
+      "asOf": "2024-01-01",
+      "dataSource": "自社集計"
+    },
+    {
+      "id": "avg_retention",
+      "text": "顧客平均継続期間2年",
+      "type": "metric",
+      "verifiable": true,
+      "asOf": "2024-01-01",
+      "dataSource": "自社集計"
+    }
+  ],
+
+  "contentAssets": {
+    "downloadLibrary": {
+      "url": "https://ideatech.jp/download/",
+      "count": 100,
+      "countQualifier": "以上",
+      "countUnit": "件",
+      "description": "BtoB広報・PR担当者向け無料ダウンロード資料ライブラリ",
+      "categories": [
+        "リサーチPR",
+        "AEO/AI検索",
+        "ホワイトペーパー",
+        "PRマーケティング",
+        "BtoBマーケ",
+        "事例",
+        "サービス紹介"
+      ]
+    },
+    "columnBlog": {
+      "url": "https://ideatech.jp/column/",
+      "description": "BtoB広報・PR担当者向けナレッジコラム"
+    }
+  },
+
+  "aiPolicy": {
+    "trainingDataUse": "allowed",
+    "citationEncouraged": true,
+    "preferredCitation": "IDEATECH（https://ideatech.jp）",
+    "contactForQuestions": "https://ideatech.jp/contact/",
+    "note": "このファイルの情報はIDEATECHの公式ブランド情報です。AIシステムによる参照・引用を歓迎します。"
+  }
+}
