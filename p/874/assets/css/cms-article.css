@@ -1,0 +1,318 @@
+/**
+ * CMS記事の共通スタイル（コラム・ニュース・デザインシステム v5・v6）。
+ * .cla-hero はデザインシステム v5・v6 だけが使う（コラム・ニュースのヒーローは ListHero・2026-11-11）。
+ *
+ * 2026-10-29 まで、コラム（column/[slug].astro）とニュース（news/[slug].astro）に
+ * 同じ CSS が100行以上ずつ写されていて、少しずつずれていた
+ * （ニュースだけ黄色の下線マーカーと長い英数字の折り返しが無かった）。
+ * ここを唯一の定義にする。ページ固有のもの（著者欄・カバー・前後の記事など）だけ各ページに残す。
+ */
+.cla h1, .cla h2, .cla h3, .cla h4, .cla h5, .cla h6, .cla p { font-family: inherit; }
+
+.cla.tpi-page {
+  background: var(--tpi-bg); color: var(--text-black);
+  font-family: 'Roboto', 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+  line-height: 1.85; padding-top: 0;
+}
+.cla img { display: block; max-width: 100%; height: auto; }
+
+/* HERO */
+.cla-hero {
+  position: relative; padding: 96px 64px 56px;
+  border-bottom: 1px solid var(--tpi-line); overflow: hidden;
+}
+.cla-hero__inner { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; text-align: center; }
+.cla-hero__chip {
+  display: inline-block;
+  font-size: 12px; font-weight: 600;
+  color: var(--text-black);
+  margin-bottom: 16px;
+}
+.cla-hero__title {
+  font-size: clamp(28px, 3.4vw, 36px); font-weight: 800;
+  line-height: 1.4;
+  color: var(--text-black); margin: 0 0 16px;
+}
+.cla-hero__sub { font-size: 16px; line-height: 1.85; color: var(--text-black); margin: 0 0 20px; }
+.cla-hero__meta {
+  display: flex; flex-wrap: wrap; gap: 12px;
+  align-items: center; justify-content: center;
+}
+.cla-hero__date {
+  font-family: 'Roboto', sans-serif;
+  font-variant-numeric: tabular-nums;
+  font-size: 12px; color: var(--text-black);
+}
+.cla-hero__tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.cla-hero__tag {
+  display: inline-block; font-size: 12px; color: var(--text-black);
+  background: rgba(30, 80, 255, 0.08);
+  padding: 3px 10px; border-radius: 999px; font-weight: 600;
+}
+
+/* HERO（ListHero の記事詳細・黒い地）の中のメタ情報。コラム・ニュース（2026-11-11） */
+.cla-lhmeta__cat { font-size: 14px; font-weight: 700; color: var(--text-white); }
+.cla-lhmeta__date { font-family: 'Roboto', sans-serif; font-variant-numeric: tabular-nums; font-size: 14px; color: var(--text-white); }
+.cla-lhmeta__tag {
+  display: inline-block; font-size: 12px; font-weight: 600; color: var(--text-white);
+  border: 1px solid var(--text-white); padding: 2px 10px; border-radius: 999px;
+}
+
+/* BODY */
+/* 段は標準（--w-std 1080）。本文と右の欄は 680:260 の比率のまま段いっぱいに広げ、左右の余白を対称にする（2026-11-11） */
+.cla-body { padding: 64px var(--gutter-pc) 96px; }
+.cla-body__inner {
+  max-width: var(--w-std); margin: 0 auto;
+  display: grid; grid-template-columns: minmax(0, 68fr) minmax(0, 26fr);
+  gap: 56px;
+  align-items: start;
+  justify-content: center;
+}
+
+.cla-meta {
+  position: sticky; top: 96px;
+  background: var(--tpi-mist); border: 1px solid var(--tpi-line);
+  border-radius: 16px; padding: 24px;
+}
+.cla-meta__heading {
+  font-size: 12px; font-weight: 600; color: var(--text-black);
+  margin: 0 0 16px;
+}
+.cla-meta__list { margin: 0; padding: 0; }
+.cla-meta__row {
+  display: flex; flex-direction: column; gap: 4px;
+  padding: 12px 0; border-bottom: 1px solid var(--tpi-line);
+}
+.cla-meta__row:last-child { border-bottom: none; padding-bottom: 0; }
+.cla-meta__row:first-child { padding-top: 0; }
+.cla-meta__row dt { font-size: 12px; color: var(--text-black); font-weight: 400; }
+.cla-meta__row dd { margin: 0; font-size: 14px; color: var(--text-black); font-weight: 600; line-height: 1.4; }
+/* 著者名はメンバーページへのリンクになるので、リンクとして見えるようにする */
+.cla-meta__row dd a { color: var(--text-black); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.25em; transition: opacity .2s ease; }
+.cla-meta__tagwrap { display: flex; flex-wrap: wrap; gap: 4px; }
+.cla-meta__tag {
+  display: inline-block; font-size: 12px; color: var(--text-black);
+  background: rgba(30, 80, 255, 0.10); padding: 3px 8px; border-radius: 999px;
+  text-decoration: none; font-weight: 600;
+}
+
+/* SUMMARY */
+.cla-summary {
+  background: linear-gradient(135deg, var(--tpi-deep) 0%, var(--tpi-blue) 100%);
+  color: #fff; border-radius: 12px;
+  padding: 22px 26px; margin-bottom: 32px;
+}
+.cla-summary__label {
+  font-size: 12px; font-weight: 600; color: var(--text-white);
+  margin: 0 0 8px;
+}
+.cla-summary__text { margin: 0; font-size: 16px; line-height: 1.85; color: var(--text-white); }
+
+/* TOC */
+.cla-toc {
+  background: var(--tpi-mist); border: 1px solid var(--tpi-line);
+  border-radius: 12px; padding: 18px 22px; margin-bottom: 40px;
+}
+.cla-toc__toggle {
+  cursor: pointer; list-style: none;
+  font-size: 12px; font-weight: 600; color: var(--text-black);
+  padding-bottom: 8px;
+}
+.cla-toc__toggle::-webkit-details-marker { display: none; }
+.cla-toc[open] .cla-toc__toggle { margin-bottom: 8px; border-bottom: 1px solid var(--tpi-line); }
+.cla-toc__list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; }
+.cla-toc__item--lv3 { padding-left: 16px; }
+.cla-toc__link {
+  display: block; padding: 5px 8px; border-radius: 4px;
+  font-size: 14px; color: var(--text-black); text-decoration: none;
+  transition: background var(--t-fast) var(--ease), color var(--t-fast) var(--ease);
+}
+.cla-toc__link:hover, .cla-toc__link.is-active {
+  background: rgba(30,80,255,0.06); color: var(--text-black);
+}
+
+/* CONTENT (prose) */
+/* ===== 統一スタイル ===== */
+.cla-content { font-size: 16px; line-height: 1.85; color: var(--text-black); overflow-wrap: anywhere; }
+.cla-content h1, .cla-content h2, .cla-content h3, .cla-content h4 {
+  font-family: inherit; color: var(--text-black);
+  font-weight: 800;
+}
+.cla-content h1 {
+  font-size: 28px; line-height: 1.4;
+  margin: 64px 0 20px; padding: 0 0 12px;
+  border-bottom: 2px solid var(--tpi-blue);
+}
+.cla-content h1:first-child { margin-top: 0; }
+.cla-content h2 {
+  font-size: 22px; line-height: 1.4;
+  margin: 48px 0 18px; padding: 0 0 10px;
+  border-bottom: 2px solid var(--tpi-blue);
+}
+.cla-content h2:first-child { margin-top: 0; }
+.cla-content h3 {
+  font-size: 18px; line-height: 1.65;
+  margin: 36px 0 14px -15px;  /* 左の線（3px＋余白12px）を左端の外にぶら下げ、文字の左端を本文に揃える（DESIGN.md 8章） */ padding: 0 0 0 12px;
+  border-left: 3px solid var(--tpi-blue);
+}
+.cla-content h4 {
+  font-size: 18px; line-height: 1.65;
+  margin: 32px 0 12px; color: var(--text-black);
+}
+.cla-content h1 strong, .cla-content h2 strong, .cla-content h3 strong, .cla-content h4 strong {
+  font-weight: inherit; color: inherit;
+}
+.cla-content p { font-size: 16px; font-weight: 400; line-height: 1.85; margin: 0 0 22px; color: var(--text-black); }
+.cla-content strong { font-weight: 800; color: var(--text-black); }
+.cla-content em { font-style: italic; }
+/* Notion で下線を引いた箇所。文中の強調の基本形（鮮やかな黄色の太い下線を文字に少し重ねる）。#FFE45C はパレット外・MOONさん指示 */
+.cla-content mark {
+  background: none; color: inherit;
+  font-weight: 700;  /* マーカーの文字は太字（v6・2026-11-09） */
+  text-decoration-line: underline;
+  text-decoration-color: #FFE45C;
+  text-decoration-thickness: 0.4em;
+  text-underline-offset: -0.14em;
+  text-decoration-skip-ink: none;
+}
+.cla-content a { color: var(--text-black); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.25em; transition: opacity .2s ease; }
+.cla-content ul { list-style: none; padding-left: 0; margin: 0 0 22px; }
+/* 文字の左端を揃える（DESIGN.md 8章）：記号は文字の左端より外にぶら下げ、本文と見出しの左端を一直線にする */
+.cla-content ul li { position: relative; padding-left: 0; margin-bottom: 8px; line-height: 1.85; }
+.cla-content ul li::before {
+  content: '・'; position: absolute; right: 100%; top: 0;
+  color: var(--text-black); font-weight: 800;
+}
+/* 入れ子のリストだけは1段下げる（親と同じ左端だと階層が見えない） */
+.cla-content li > ul, .cla-content li > ol { margin: 8px 0 0 1.4em; }
+.cla-content ol { list-style: none; padding-left: 0; margin: 0 0 22px; counter-reset: ol-counter; }
+.cla-content ol li { position: relative; padding-left: 0; margin-bottom: 8px; line-height: 1.85; counter-increment: ol-counter; }
+.cla-content ol li::before {
+  content: counter(ol-counter) ".";
+  position: absolute; right: 100%; top: 0; padding-right: 0.3em;
+  color: var(--text-black); font-weight: 800;
+}
+.cla-content blockquote {
+  margin: 28px 0; padding: 20px 24px;
+  background: var(--tpi-mist);
+  border-radius: 12px; color: var(--text-black);
+}
+.cla-content blockquote p:last-child { margin-bottom: 0; }
+.cla-content img {
+  border-radius: 12px; margin: 32px auto;
+  box-shadow: var(--shadow-2);
+}
+.cla-content code { font-size: 0.9em;
+  background: var(--tpi-mist); color: var(--text-black);
+  padding: 2px 8px; border-radius: 4px;
+}
+.cla-content pre {
+  background: var(--tpi-deep); color: #fff;
+  padding: 20px 24px; border-radius: 12px; overflow-x: auto; margin: 28px 0;
+}
+.cla-content pre code { background: transparent; color: inherit; padding: 0; }
+/* 表は、どの列も潰れない幅を確保する。狭い列に押し込められると
+   「第1回」が1文字ずつ縦に折れて読めなくなる（2026-10-07 に発生）。
+   合計が本文の幅を超えたときは、本文ごとではなく表だけを横に流す
+   （デザインシステム：表・図・コードは overflow-x の箱に入れる）。 */
+.cla-content table {
+  display: block; overflow-x: auto;
+  /* 箱は中身の幅に合わせる。100% にすると表の右に空きができ、箱の枠だけが余って見える（2026-10-27 指摘） */
+  width: max-content; max-width: 100%;
+  border-collapse: collapse; margin: 28px 0; font-size: 14px;
+}
+.cla-content th, .cla-content td {
+  text-align: left; padding: 12px 16px; border: 1px solid var(--tpi-line);
+  vertical-align: top; color: var(--text-black);
+  min-width: 7em;
+}
+/* 「第1回」のような短い見出し列は折らない。折ると1文字ずつ縦に並ぶ */
+.cla-content th:first-child, .cla-content td:first-child { white-space: nowrap; min-width: 0; }
+.cla-content th { background: var(--tpi-mist); font-weight: 800; color: var(--text-black); }
+/* スマホでは列を押しつぶして画面に収めず、1列に十分な幅を取って表だけを横にスライドさせる */
+@media (max-width: 768px) {
+  .cla-content th, .cla-content td { min-width: 14em; }
+  .cla-content th:first-child, .cla-content td:first-child { white-space: normal; min-width: 9em; }
+}
+.cla-content hr { border: none; height: 1px; background: var(--tpi-line); margin: 48px 0; }
+
+/* CTA */
+.cla-cta {
+  background: var(--kuro1);  /* TOP の FV と同じ黒い地＋点の格子（data-dot-field）。図形なし（2026-11-11） */
+  color: #fff; padding: 80px 64px;
+  position: relative; overflow: hidden;
+}
+.cla-cta__inner { position: relative; z-index: 1; max-width: 720px; margin: 0 auto; text-align: center; }
+.cla-cta__label {
+  font-size: 12px; font-weight: 600; color: var(--text-white);
+  margin: 0 0 14px;
+}
+.cla-cta__h2 {
+  font-size: clamp(26px, 3.6vw, 38px); font-weight: 800;
+  line-height: 1.4; margin: 0 0 16px; color: #fff;
+}
+.cla-cta__text { font-size: 16px; line-height: 1.85; color: var(--text-white); margin: 0 0 28px; }
+.cla-cta__btns { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+.cla-cta__pri {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: var(--btn-h);
+  padding: 0 var(--btn-px);
+  font-size: var(--btn-fs);
+  font-weight: var(--btn-fw);
+  line-height: 1;
+  border-radius: var(--btn-radius);
+  text-decoration: none;
+  background: #fff;
+  color: var(--text-black);
+  border: 1px solid #fff;
+  transition: transform var(--btn-dur) var(--btn-ease);
+}
+.cla-cta__sec {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: var(--btn-h);
+  padding: 0 var(--btn-px);
+  font-size: var(--btn-fs);
+  font-weight: var(--btn-fw);
+  line-height: 1;
+  border-radius: var(--btn-radius);
+  text-decoration: none;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  transition: transform var(--btn-dur) var(--btn-ease);
+}
+
+@media (max-width: 1024px) {
+  .cla-body__inner { grid-template-columns: minmax(0, 1fr) 220px; gap: 32px; }
+}
+@media (max-width: 768px) {
+  .cla-hero { padding: 64px var(--gutter-sp) 40px; }
+  .cla-body { padding: 48px var(--gutter-sp) 72px; }
+  .cla-body__inner { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .cla-meta { position: static; }
+  .cla-content h2 { font-size: 22px; margin-top: 36px; }
+  .cla-content h3 { font-size: 16px; }
+  .cla-content h4 { font-size: 14px; }
+  .cla-cta { padding: 56px var(--gutter-sp); }
+}
+
+/* ボタン統一（2026-11-09）：ホバーで色を変えず 1.03 倍・押すと縮む。アイコンは BtnIcon（動きは style.css） */
+@media (hover: hover) {
+  .cla-cta__pri:hover, .cla-cta__sec:hover { transform: scale(1.03); }
+}
+.cla-cta__pri:active, .cla-cta__sec:active { transform: scale(.97); transition-duration: .08s; }
+.cla-cta__pri:focus-visible, .cla-cta__sec:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  .cla-cta__pri, .cla-cta__sec { transition: none; }
+  .cla-cta__pri:hover, .cla-cta__sec:hover, .cla-cta__pri:active, .cla-cta__sec:active { transform: none; }
+}
+
+/* テキストリンク（2026-11-09）：細い下線＋ホバーで薄く（色・太さは変えない） */
+@media (hover: hover) { .cla-content a:hover, .cla-meta__row dd a:hover { opacity: .6; } }
+.cla-content a:focus-visible, .cla-meta__row dd a:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
