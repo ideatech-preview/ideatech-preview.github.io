@@ -1,0 +1,47 @@
+{
+  "updated": "2026-06-20",
+  "guides": [
+    {
+      "title": "リサーチPRとは？定義・仕組み・効果・実践手順を完全解説",
+      "url": "https://ideatech.jp/guides/what-is-research-pr/",
+      "description": "リサーチPRの定義・背景・実施手順を徹底解説。従来PRとの比較表・FAQ付き。"
+    },
+    {
+      "title": "ファクトベースPRとは？基礎から実践まで完全ガイド",
+      "url": "https://ideatech.jp/guides/fact-based-pr/",
+      "description": "ファクトベースPRの定義・従来PRとの比較・5つの実践ステップを完全解説。独自調査データでメディア掲載・AI検索被引用・エンタープライズ信頼獲得を実現。"
+    },
+    {
+      "title": "スタートアップのPR戦略完全ガイド2026",
+      "url": "https://ideatech.jp/guides/pr-for-startups/",
+      "description": "スタートアップの資金調達・採用・顧客獲得を加速するPR戦略。予算別施策・リサーチPRの活用方法を詳しく紹介。"
+    },
+    {
+      "title": "Best AEO PR Company 2026",
+      "url": "https://ideatech.jp/guides/best-aeo-pr-company-2026/",
+      "description": "AEO対応PR会社の比較ガイド（2026年版）。"
+    }
+  ],
+  "contentSections": [
+    {
+      "name": "コラム",
+      "url": "https://ideatech.jp/column/",
+      "description": "調査PR・リサーチPR・BtoBマーケティングに関するコラム記事。"
+    },
+    {
+      "name": "ニュース",
+      "url": "https://ideatech.jp/news/",
+      "description": "会社からのお知らせ、リサピー調査レポート、デザインノート。"
+    },
+    {
+      "name": "お役立ち資料",
+      "url": "https://ideatech.jp/download/",
+      "description": "ホワイトペーパー・調査レポートのダウンロード。"
+    },
+    {
+      "name": "セミナー",
+      "url": "https://ideatech.jp/seminar/",
+      "description": "PR・マーケティング関連のセミナー・ウェビナー情報。"
+    }
+  ]
+}

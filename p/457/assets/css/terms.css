@@ -1,0 +1,157 @@
+/* ============================================================
+   IDEATECH - Terms of Service Page Stylesheet  (prefix: tm-)
+   ダークモード・グランドデザインシステム準拠
+   ============================================================ */
+
+/* ----------------------------------------
+   1. 前文
+   ---------------------------------------- */
+.tm-intro {
+  background: var(--kuro2);
+}
+
+.tm-intro__inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 96px 40px;
+}
+
+.tm-intro__text {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--shiro1);
+  line-height: 1.8;
+}
+
+/* ----------------------------------------
+   2. 条文セクション
+   ---------------------------------------- */
+.tm-detail {
+  background: var(--kuro1);
+}
+
+.tm-individual {
+  background: var(--kuro2);
+}
+
+.tm-detail__inner,
+.tm-individual__inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 96px 40px;
+}
+
+.tm-individual__header {
+  margin-bottom: 64px;
+}
+
+.tm-section-title {
+  font-family: var(--font-mincho);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--shiro1);
+  line-height: 1.4;
+}
+
+/* ----------------------------------------
+   3. 各条項
+   ---------------------------------------- */
+.tm-item {
+  margin-bottom: 48px;
+}
+
+.tm-item:last-child {
+  margin-bottom: 0;
+}
+
+.tm-item__title {
+  font-family: var(--font-mincho);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--shiro1);
+  line-height: 1.4;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 0.5px solid var(--kuro4);
+}
+
+.tm-item__text {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--shiro1);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.tm-item__text:last-child {
+  margin-bottom: 0;
+}
+
+/* 番号付きサブ項目 (1)(2)... */
+.tm-item__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding-left: 1.5em;
+}
+
+.tm-item__list:last-child {
+  margin-bottom: 0;
+}
+
+.tm-item__list li {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--shiro1);
+  line-height: 1.8;
+}
+
+/* ネスト項目 ①②... */
+.tm-item__sublist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  padding-left: 3em;
+}
+
+.tm-item__sublist:last-child {
+  margin-bottom: 0;
+}
+
+.tm-item__sublist li {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--shiro1);
+  line-height: 1.8;
+}
+
+/* ----------------------------------------
+   4. 日付
+   ---------------------------------------- */
+.tm-date {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--shiro1);
+  line-height: 1.8;
+  margin-top: 64px;
+  text-align: right;
+}
+
+/* ----------------------------------------
+   5. Responsive
+   ---------------------------------------- */
+@media (max-width: 640px) {
+  .tm-intro__inner,
+  .tm-detail__inner,
+  .tm-individual__inner {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+}

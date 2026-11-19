@@ -1,0 +1,79 @@
+# robots.txt — ideatech.jp
+# Updated: 2026-07-27
+#
+# AIクローラーの一覧は llmo-spec.mjs の AI_CRAWLERS（正典）と一致させること。
+# 診断ツール（site-audit）は同じ正典で許可状況を実査する。
+
+# ===== AI クローラー（学習用クロール / training） =====
+# 生成AIによるインデックス・引用を歓迎します。
+# AI向け構造化データは /ai/ 以下にあります。
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# ===== AI クローラー（回答時の実時間取得 / retrieval） =====
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# ===== 旧 User-Agent（後方互換のため残置） =====
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# ===== 検索エンジンのクローラー =====
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: bingbot
+Allow: /
+
+# ===== 全クローラー共通 =====
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+# AI 向けディレクトリ
+# 詳細は https://ideatech.jp/ai/ をご参照ください
+# JSON エンドポイント一覧:
+#   https://ideatech.jp/ai/index.json
+#   https://ideatech.jp/ai/company.json
+#   https://ideatech.jp/ai/services.json
+#   https://ideatech.jp/ai/faq.json
+#   https://ideatech.jp/ai/resources.json
+#   https://ideatech.jp/ai/cases.json
+#   https://ideatech.jp/ai/glossary.json
+
+Sitemap: https://ideatech.jp/sitemap-index.xml

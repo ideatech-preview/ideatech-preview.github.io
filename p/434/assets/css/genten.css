@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap');
+
+/* ============================================================
+   IDEATECH - Genten (原典) Page Stylesheet  (prefix: ge-)
+   グランドカラー準拠・フラットデザイン
+   ============================================================ */
+
+/* ページ全体をライト背景に */
+body { background: var(--shiro1); color: var(--kuro1); }
+
+/* ----------------------------------------
+   1. Progress Bar
+   ---------------------------------------- */
+.ge-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--daidai);
+  z-index: 1000;
+  transition: none;
+}
+
+/* ----------------------------------------
+   2. TOC
+   ---------------------------------------- */
+.ge-toc-toggle {
+  position: fixed;
+  top: 80px;
+  right: 24px;
+  z-index: 900;
+  width: 40px;
+  height: 40px;
+  border: 0.5px solid var(--kuro4);
+  border-radius: 4px;
+  background: var(--kuro1);
+  color: var(--shiro3);
+  font-family: var(--font-mincho);
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.ge-toc-toggle:hover {
+  color: var(--shiro1);
+}
+
+.ge-toc-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(480px, 85vw);
+  height: 100vh;
+  background: var(--kuro1);
+  border-left: 0.5px solid var(--kuro4);
+  z-index: 950;
+  overflow-y: auto;
+  padding: 80px 40px 40px;
+  transform: translateX(100%);
+  transition: transform 0.35s ease;
+}
+
+.ge-toc-panel.is-open {
+  transform: translateX(0);
+}
+
+.ge-toc-panel h3 {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--shiro3);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.ge-toc-panel a {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 10px 0;
+  color: var(--shiro3);
+  text-decoration: none;
+  font-family: var(--font-mincho);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  border-bottom: 0.5px solid var(--kuro4);
+  transition: color 0.2s;
+}
+
+.ge-toc-panel a:hover {
+  color: var(--shiro1);
+}
+
+.ge-toc-num {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  color: var(--kuro4);
+  min-width: 24px;
+}
+
+.ge-toc-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--kuro1);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 940;
+  transition: opacity 0.35s ease;
+}
+
+.ge-toc-overlay.is-open {
+  opacity: 0.6;
+  pointer-events: auto;
+}
+
+/* ----------------------------------------
+   3. Cover (参照: hkisou-sketch/genten-lp)
+   ---------------------------------------- */
+.ge-cover {
+  --ge-ink: #1c1915;
+  --ge-paper: #f6f1e7;
+  --ge-warm: #b8896a;
+  --ge-warm-deep: #96643e;
+  --ge-muted: #8a8078;
+
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 2rem;
+  position: relative;
+  background: var(--ge-ink);
+  color: var(--ge-paper);
+}
+
+.ge-cover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 50% at 30% 70%, rgba(184,137,106,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 70% at 70% 30%, rgba(184,137,106,0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.ge-cover__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+
+.ge-cover__label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--ge-warm);
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  opacity: 0;
+  animation: ge-fadeIn 1s 0.3s forwards;
+}
+
+.ge-cover__title {
+  font-family: var(--font-mincho);
+  font-size: clamp(2.2rem, 5.5vw, 3.6rem);
+  font-weight: 800;
+  color: var(--ge-paper);
+  line-height: 1.5;
+  letter-spacing: 0.12em;
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: ge-fadeIn 1s 0.6s forwards;
+}
+
+.ge-cover__subtitle {
+  font-family: var(--font-mincho);
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  font-weight: 400;
+  color: var(--ge-warm);
+  letter-spacing: 0.2em;
+  margin-bottom: 3rem;
+  opacity: 0;
+  animation: ge-fadeIn 1s 0.9s forwards;
+}
+
+.ge-cover__scroll-arrow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(to bottom, transparent, var(--ge-warm));
+  opacity: 0;
+  animation: ge-fadeIn 1s 1.1s forwards, ge-pulse 2.5s 2.1s infinite;
+}
+
+.ge-cover__company {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.8rem;
+  color: var(--ge-muted);
+  letter-spacing: 0.3em;
+  opacity: 0;
+  animation: ge-fadeIn 1s 1.3s forwards;
+}
+
+.ge-cover__scroll {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  opacity: 0;
+  animation: ge-fadeIn 1s 1.8s forwards;
+}
+
+.ge-cover__scroll-arrow {
+  width: 1px;
+  height: 50px;
+  background: linear-gradient(to bottom, transparent, var(--ge-warm));
+  margin: 0 auto;
+  animation: ge-pulse 2.5s infinite;
+}
+
+@keyframes ge-fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes ge-pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
+
+/* ----------------------------------------
+   4. Content area
+   ---------------------------------------- */
+.ge-content {
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.ge-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  background: var(--shiro1);
+  z-index: -1;
+}
+
+/* ----------------------------------------
+   5. Preface
+   ---------------------------------------- */
+.ge-preface {
+  padding: 96px 0;
+  border-bottom: 0.5px solid var(--shiro3);
+}
+
+.ge-preface p.ge-preface__label {
+  font-family: var(--font-mincho);
+  font-size: 0.85rem;
+  color: var(--daidai);
+  letter-spacing: 0.2em;
+  margin-bottom: 48px;
+}
+
+.ge-preface p {
+  font-family: var(--font-mincho);
+  font-size: 1rem;
+  color: var(--kuro1);
+  line-height: 2.2;
+  margin-bottom: 1.5em;
+}
+
+/* ----------------------------------------
+   6. Chapters
+   ---------------------------------------- */
+.ge-chapter {
+  padding: 96px 0;
+  border-bottom: 0.5px solid var(--shiro3);
+}
+
+.ge-chapter--alt {
+  margin: 0 -40px;
+  padding: 96px 40px;
+}
+
+.ge-chapter__header {
+  margin-bottom: 48px;
+}
+
+.ge-chapter p.ge-chapter__num {
+  font-family: var(--font-mincho);
+  font-size: 0.85rem;
+  color: var(--daidai);
+  letter-spacing: 0.15em;
+  margin-bottom: 12px;
+}
+
+.ge-chapter__title {
+  font-family: var(--font-mincho);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--kuro1);
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+
+.ge-chapter__title::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 1px;
+  background: var(--daidai);
+  margin-top: 16px;
+}
+
+.ge-chapter p {
+  font-family: var(--font-mincho);
+  font-size: 1rem;
+  color: var(--kuro1);
+  line-height: 2.2;
+  margin-bottom: 1.5em;
+}
+
+/* ----------------------------------------
+   7. Appendix
+   ---------------------------------------- */
+.ge-appendix {
+  margin: 0 -40px;
+  padding: 96px 40px;
+}
+
+.ge-appendix__title {
+  font-family: var(--font-mincho);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--daidai);
+  text-align: center;
+  margin-bottom: 64px;
+  letter-spacing: 0.15em;
+}
+
+.ge-appendix__word {
+  margin-bottom: 64px;
+}
+
+.ge-appendix__word:last-child {
+  margin-bottom: 0;
+}
+
+.ge-appendix__kanji {
+  font-family: var(--font-mincho);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--kuro1);
+  text-align: center;
+  margin-bottom: 16px;
+  letter-spacing: 0.2em;
+}
+
+.ge-appendix__sep {
+  width: 24px;
+  height: 1px;
+  background: var(--daidai);
+  margin: 0 auto 24px;
+}
+
+.ge-appendix__word p {
+  font-family: var(--font-mincho);
+  font-size: 0.95rem;
+  color: var(--kuro1);
+  line-height: 2;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ----------------------------------------
+   8. Colophon
+   ---------------------------------------- */
+.ge-colophon {
+  padding: 64px 0;
+  text-align: center;
+  border-top: 0.5px solid var(--shiro3);
+}
+
+.ge-colophon__mark {
+  font-family: var(--font-mincho);
+  font-size: 0.85rem;
+  color: var(--kuro4);
+  letter-spacing: 0.1em;
+}
+
+/* ----------------------------------------
+   9. Responsive
+   ---------------------------------------- */
+@media (max-width: 768px) {
+  .ge-cover {
+    padding: 64px 24px;
+    min-height: 80vh;
+  }
+
+  .ge-content {
+    padding: 0 24px;
+  }
+
+  .ge-preface,
+  .ge-chapter {
+    padding: 64px 0;
+  }
+
+  .ge-chapter--alt {
+    margin: 0 -24px;
+    padding: 64px 24px;
+  }
+
+  .ge-appendix {
+    margin: 0 -24px;
+    padding: 64px 24px;
+  }
+
+  .ge-toc-toggle {
+    right: 16px;
+    top: 72px;
+  }
+
+  .ge-toc-panel {
+    padding: 64px 24px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ge-cover__title {
+    font-size: 2.5rem;
+  }
+
+  .ge-preface p,
+  .ge-chapter p {
+    font-size: 0.95rem;
+    line-height: 2;
+  }
+
+  .ge-toc-panel {
+    width: 100vw;
+  }
+}
